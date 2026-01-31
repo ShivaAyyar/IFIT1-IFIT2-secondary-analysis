@@ -207,7 +207,8 @@ def call_peaks_clipper(ip_bam, output_dir, sample_name, species='hg19', fdr=0.05
             cmd,
             check=True,
             capture_output=True,
-            text=True
+            text=True,
+            errors='replace'  # Handle non-UTF-8 characters in CLIPper output
         )
 
         # Count peaks
