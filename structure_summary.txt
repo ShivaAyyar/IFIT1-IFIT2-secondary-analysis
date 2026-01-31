@@ -1,0 +1,434 @@
+.
+├── 02_Glasner_et_al_NatMicro_2025_IFITs.pdf
+├── data
+│   ├── aligned
+│   │   ├── IFIT2_alone_FLAG_IP_Aligned.sortedByCoord.out.bam
+│   │   ├── IFIT2_alone_FLAG_IP_Aligned.sortedByCoord.out.bam.bai
+│   │   ├── IFIT2_alone_FLAG_IP_Chimeric.out.junction
+│   │   ├── IFIT2_alone_FLAG_IP_dedup.bam
+│   │   ├── IFIT2_alone_FLAG_IP_dedup.log
+│   │   ├── IFIT2_alone_FLAG_IP_Log.final.out
+│   │   ├── IFIT2_alone_FLAG_IP_Log.out
+│   │   ├── IFIT2_alone_FLAG_IP_Log.progress.out
+│   │   ├── IFIT2_alone_FLAG_IP_SJ.out.tab
+│   │   ├── IFIT2_alone_FLAG_IP__STARtmp
+│   │   │   └── BAMsort
+│   │   │       ├── 0
+│   │   │       ├── 1
+│   │   │       ├── 2
+│   │   │       ├── 3
+│   │   │       ├── 4
+│   │   │       ├── 5
+│   │   │       ├── 6
+│   │   │       └── 7
+│   │   ├── IFIT2_alone_SMInput_Aligned.sortedByCoord.out.bam
+│   │   ├── IFIT2_alone_SMInput_Aligned.sortedByCoord.out.bam.bai
+│   │   ├── IFIT2_alone_SMInput_Chimeric.out.junction
+│   │   ├── IFIT2_alone_SMInput_dedup.bam
+│   │   ├── IFIT2_alone_SMInput_dedup.log
+│   │   ├── IFIT2_alone_SMInput_Log.final.out
+│   │   ├── IFIT2_alone_SMInput_Log.out
+│   │   ├── IFIT2_alone_SMInput_Log.progress.out
+│   │   ├── IFIT2_alone_SMInput_SJ.out.tab
+│   │   ├── IFIT2_alone_SMInput__STARtmp
+│   │   │   └── BAMsort
+│   │   │       ├── 0
+│   │   │       ├── 1
+│   │   │       ├── 2
+│   │   │       ├── 3
+│   │   │       ├── 4
+│   │   │       ├── 5
+│   │   │       ├── 6
+│   │   │       └── 7
+│   │   ├── IFIT2_IFIT3_FLAG_IP_Aligned.sortedByCoord.out.bam
+│   │   ├── IFIT2_IFIT3_FLAG_IP_Aligned.sortedByCoord.out.bam.bai
+│   │   ├── IFIT2_IFIT3_FLAG_IP_Chimeric.out.junction
+│   │   ├── IFIT2_IFIT3_FLAG_IP_dedup.bam
+│   │   ├── IFIT2_IFIT3_FLAG_IP_dedup.log
+│   │   ├── IFIT2_IFIT3_FLAG_IP_Log.final.out
+│   │   ├── IFIT2_IFIT3_FLAG_IP_Log.out
+│   │   ├── IFIT2_IFIT3_FLAG_IP_Log.progress.out
+│   │   ├── IFIT2_IFIT3_FLAG_IP_SJ.out.tab
+│   │   ├── IFIT2_IFIT3_FLAG_IP__STARtmp
+│   │   │   └── BAMsort
+│   │   │       ├── 0
+│   │   │       ├── 1
+│   │   │       ├── 2
+│   │   │       ├── 3
+│   │   │       ├── 4
+│   │   │       ├── 5
+│   │   │       ├── 6
+│   │   │       └── 7
+│   │   ├── IFIT2_IFIT3_FLAG_SMInput_Aligned.sortedByCoord.out.bam
+│   │   ├── IFIT2_IFIT3_FLAG_SMInput_Aligned.sortedByCoord.out.bam.bai
+│   │   ├── IFIT2_IFIT3_FLAG_SMInput_Chimeric.out.junction
+│   │   ├── IFIT2_IFIT3_FLAG_SMInput_dedup.bam
+│   │   ├── IFIT2_IFIT3_FLAG_SMInput_dedup.log
+│   │   ├── IFIT2_IFIT3_FLAG_SMInput_Log.final.out
+│   │   ├── IFIT2_IFIT3_FLAG_SMInput_Log.out
+│   │   ├── IFIT2_IFIT3_FLAG_SMInput_Log.progress.out
+│   │   ├── IFIT2_IFIT3_FLAG_SMInput_SJ.out.tab
+│   │   ├── IFIT2_IFIT3_FLAG_SMInput__STARtmp
+│   │   │   └── BAMsort
+│   │   │       ├── 0
+│   │   │       ├── 1
+│   │   │       ├── 2
+│   │   │       ├── 3
+│   │   │       ├── 4
+│   │   │       ├── 5
+│   │   │       ├── 6
+│   │   │       └── 7
+│   │   ├── IFIT2_IFIT3_HA_IP_Aligned.sortedByCoord.out.bam
+│   │   ├── IFIT2_IFIT3_HA_IP_Aligned.sortedByCoord.out.bam.bai
+│   │   ├── IFIT2_IFIT3_HA_IP_Chimeric.out.junction
+│   │   ├── IFIT2_IFIT3_HA_IP_dedup.bam
+│   │   ├── IFIT2_IFIT3_HA_IP_dedup.bam.bai
+│   │   ├── IFIT2_IFIT3_HA_IP_dedup.log
+│   │   ├── IFIT2_IFIT3_HA_IP_dedup_stats_edit_distance.tsv
+│   │   ├── IFIT2_IFIT3_HA_IP_dedup_stats_per_umi_per_position.tsv
+│   │   ├── IFIT2_IFIT3_HA_IP_dedup_stats_per_umi.tsv
+│   │   ├── IFIT2_IFIT3_HA_IP_Log.final.out
+│   │   ├── IFIT2_IFIT3_HA_IP_Log.out
+│   │   ├── IFIT2_IFIT3_HA_IP_Log.progress.out
+│   │   ├── IFIT2_IFIT3_HA_IP_SJ.out.tab
+│   │   ├── IFIT2_IFIT3_HA_IP__STARtmp
+│   │   │   └── BAMsort
+│   │   │       ├── 0
+│   │   │       ├── 1
+│   │   │       ├── 2
+│   │   │       ├── 3
+│   │   │       ├── 4
+│   │   │       ├── 5
+│   │   │       ├── 6
+│   │   │       └── 7
+│   │   ├── IFIT2_IFIT3_HA_SMInput_Aligned.sortedByCoord.out.bam
+│   │   ├── IFIT2_IFIT3_HA_SMInput_Aligned.sortedByCoord.out.bam.bai
+│   │   ├── IFIT2_IFIT3_HA_SMInput_Chimeric.out.junction
+│   │   ├── IFIT2_IFIT3_HA_SMInput_dedup.bam
+│   │   ├── IFIT2_IFIT3_HA_SMInput_dedup.log
+│   │   ├── IFIT2_IFIT3_HA_SMInput_Log.final.out
+│   │   ├── IFIT2_IFIT3_HA_SMInput_Log.out
+│   │   ├── IFIT2_IFIT3_HA_SMInput_Log.progress.out
+│   │   ├── IFIT2_IFIT3_HA_SMInput_SJ.out.tab
+│   │   ├── IFIT2_IFIT3_HA_SMInput__STARtmp
+│   │   │   └── BAMsort
+│   │   │       ├── 0
+│   │   │       ├── 1
+│   │   │       ├── 2
+│   │   │       ├── 3
+│   │   │       ├── 4
+│   │   │       ├── 5
+│   │   │       ├── 6
+│   │   │       └── 7
+│   │   ├── IFIT3_alone_HA_IP_Aligned.sortedByCoord.out.bam
+│   │   ├── IFIT3_alone_HA_IP_Aligned.sortedByCoord.out.bam.bai
+│   │   ├── IFIT3_alone_HA_IP_Chimeric.out.junction
+│   │   ├── IFIT3_alone_HA_IP_dedup.bam
+│   │   ├── IFIT3_alone_HA_IP_dedup.log
+│   │   ├── IFIT3_alone_HA_IP_Log.final.out
+│   │   ├── IFIT3_alone_HA_IP_Log.out
+│   │   ├── IFIT3_alone_HA_IP_Log.progress.out
+│   │   ├── IFIT3_alone_HA_IP_SJ.out.tab
+│   │   ├── IFIT3_alone_HA_IP__STARtmp
+│   │   │   └── BAMsort
+│   │   │       ├── 0
+│   │   │       ├── 1
+│   │   │       ├── 2
+│   │   │       ├── 3
+│   │   │       ├── 4
+│   │   │       ├── 5
+│   │   │       ├── 6
+│   │   │       └── 7
+│   │   ├── IFIT3_alone_SMInput_Aligned.sortedByCoord.out.bam
+│   │   ├── IFIT3_alone_SMInput_Aligned.sortedByCoord.out.bam.bai
+│   │   ├── IFIT3_alone_SMInput_Chimeric.out.junction
+│   │   ├── IFIT3_alone_SMInput_dedup.bam
+│   │   ├── IFIT3_alone_SMInput_dedup.log
+│   │   ├── IFIT3_alone_SMInput_Log.final.out
+│   │   ├── IFIT3_alone_SMInput_Log.out
+│   │   ├── IFIT3_alone_SMInput_Log.progress.out
+│   │   ├── IFIT3_alone_SMInput_SJ.out.tab
+│   │   ├── IFIT3_alone_SMInput__STARtmp
+│   │   │   └── BAMsort
+│   │   │       ├── 0
+│   │   │       ├── 1
+│   │   │       ├── 2
+│   │   │       ├── 3
+│   │   │       ├── 4
+│   │   │       ├── 5
+│   │   │       ├── 6
+│   │   │       └── 7
+│   │   ├── WT_FLAG_IP_Aligned.sortedByCoord.out.bam
+│   │   ├── WT_FLAG_IP_Aligned.sortedByCoord.out.bam.bai
+│   │   ├── WT_FLAG_IP_Chimeric.out.junction
+│   │   ├── WT_FLAG_IP_dedup.bam
+│   │   ├── WT_FLAG_IP_dedup.log
+│   │   ├── WT_FLAG_IP_Log.final.out
+│   │   ├── WT_FLAG_IP_Log.out
+│   │   ├── WT_FLAG_IP_Log.progress.out
+│   │   ├── WT_FLAG_IP_SJ.out.tab
+│   │   ├── WT_FLAG_IP__STARtmp
+│   │   │   └── BAMsort
+│   │   │       ├── 0
+│   │   │       ├── 1
+│   │   │       ├── 2
+│   │   │       ├── 3
+│   │   │       ├── 4
+│   │   │       ├── 5
+│   │   │       ├── 6
+│   │   │       └── 7
+│   │   ├── WT_FLAG_SMInput_Aligned.sortedByCoord.out.bam
+│   │   ├── WT_FLAG_SMInput_Aligned.sortedByCoord.out.bam.bai
+│   │   ├── WT_FLAG_SMInput_Chimeric.out.junction
+│   │   ├── WT_FLAG_SMInput_dedup.bam
+│   │   ├── WT_FLAG_SMInput_dedup.log
+│   │   ├── WT_FLAG_SMInput_Log.final.out
+│   │   ├── WT_FLAG_SMInput_Log.out
+│   │   ├── WT_FLAG_SMInput_Log.progress.out
+│   │   ├── WT_FLAG_SMInput_SJ.out.tab
+│   │   ├── WT_FLAG_SMInput__STARtmp
+│   │   │   └── BAMsort
+│   │   │       ├── 0
+│   │   │       ├── 1
+│   │   │       ├── 2
+│   │   │       ├── 3
+│   │   │       ├── 4
+│   │   │       ├── 5
+│   │   │       ├── 6
+│   │   │       └── 7
+│   │   ├── WT_HA_IP_Aligned.sortedByCoord.out.bam
+│   │   ├── WT_HA_IP_Aligned.sortedByCoord.out.bam.bai
+│   │   ├── WT_HA_IP_Chimeric.out.junction
+│   │   ├── WT_HA_IP_dedup.bam
+│   │   ├── WT_HA_IP_dedup.bam.bai
+│   │   ├── WT_HA_IP_dedup.log
+│   │   ├── WT_HA_IP_dedup_stats_edit_distance.tsv
+│   │   ├── WT_HA_IP_dedup_stats_per_umi_per_position.tsv
+│   │   ├── WT_HA_IP_dedup_stats_per_umi.tsv
+│   │   ├── WT_HA_IP_Log.final.out
+│   │   ├── WT_HA_IP_Log.out
+│   │   ├── WT_HA_IP_Log.progress.out
+│   │   ├── WT_HA_IP_SJ.out.tab
+│   │   ├── WT_HA_IP__STARtmp
+│   │   │   └── BAMsort
+│   │   │       ├── 0
+│   │   │       ├── 1
+│   │   │       ├── 2
+│   │   │       ├── 3
+│   │   │       ├── 4
+│   │   │       ├── 5
+│   │   │       ├── 6
+│   │   │       └── 7
+│   │   ├── WT_HA_SMInput_Aligned.sortedByCoord.out.bam
+│   │   ├── WT_HA_SMInput_Aligned.sortedByCoord.out.bam.bai
+│   │   ├── WT_HA_SMInput_Chimeric.out.junction
+│   │   ├── WT_HA_SMInput_dedup.bam
+│   │   ├── WT_HA_SMInput_dedup.log
+│   │   ├── WT_HA_SMInput_Log.final.out
+│   │   ├── WT_HA_SMInput_Log.out
+│   │   ├── WT_HA_SMInput_Log.progress.out
+│   │   ├── WT_HA_SMInput_SJ.out.tab
+│   │   └── WT_HA_SMInput__STARtmp
+│   │       └── BAMsort
+│   │           ├── 0
+│   │           ├── 1
+│   │           ├── 2
+│   │           ├── 3
+│   │           ├── 4
+│   │           ├── 5
+│   │           ├── 6
+│   │           └── 7
+│   ├── peaks
+│   ├── qc
+│   │   ├── SRR31773512_fastqc.html
+│   │   ├── SRR31773512_fastqc.zip
+│   │   ├── SRR31773513_fastqc.html
+│   │   ├── SRR31773513_fastqc.zip
+│   │   ├── SRR31773514_fastqc.html
+│   │   ├── SRR31773514_fastqc.zip
+│   │   ├── SRR31773515_fastqc.html
+│   │   ├── SRR31773515_fastqc.zip
+│   │   ├── SRR31773516_fastqc.html
+│   │   ├── SRR31773516_fastqc.zip
+│   │   ├── SRR31773517_fastqc.html
+│   │   ├── SRR31773517_fastqc.zip
+│   │   ├── SRR31773518_fastqc.html
+│   │   ├── SRR31773518_fastqc.zip
+│   │   ├── SRR31773519_fastqc.html
+│   │   ├── SRR31773519_fastqc.zip
+│   │   ├── SRR31773538_fastqc.html
+│   │   ├── SRR31773538_fastqc.zip
+│   │   ├── SRR31773539_fastqc.html
+│   │   ├── SRR31773539_fastqc.zip
+│   │   ├── SRR31773540_fastqc.html
+│   │   ├── SRR31773540_fastqc.zip
+│   │   ├── SRR31773541_fastqc.html
+│   │   └── SRR31773541_fastqc.zip
+│   ├── raw_fastq
+│   │   ├── SRR31773512.fastq.gz
+│   │   ├── SRR31773513.fastq.gz
+│   │   ├── SRR31773514.fastq.gz
+│   │   ├── SRR31773515.fastq.gz
+│   │   ├── SRR31773516.fastq.gz
+│   │   ├── SRR31773517.fastq.gz
+│   │   ├── SRR31773518.fastq.gz
+│   │   ├── SRR31773519.fastq.gz
+│   │   ├── SRR31773538.fastq.gz
+│   │   ├── SRR31773539.fastq.gz
+│   │   ├── SRR31773540.fastq.gz
+│   │   └── SRR31773541.fastq.gz
+│   ├── reference
+│   │   ├── 5utr_regions.bed
+│   │   ├── gencode.v19.annotation.gtf
+│   │   ├── gencode.v19.annotation.gtf.gz
+│   │   ├── hg19.chrom.sizes
+│   │   ├── hg19.fa
+│   │   ├── hg19.fa.gz
+│   │   └── STAR_index_hg19
+│   │       ├── chrLength.txt
+│   │       ├── chrNameLength.txt
+│   │       ├── chrName.txt
+│   │       ├── chrStart.txt
+│   │       ├── exonGeTrInfo.tab
+│   │       ├── exonInfo.tab
+│   │       ├── geneInfo.tab
+│   │       ├── Genome
+│   │       ├── genomeParameters.txt
+│   │       ├── Log.out
+│   │       ├── SA
+│   │       ├── SAindex
+│   │       ├── sjdbInfo.txt
+│   │       ├── sjdbList.fromGTF.out.tab
+│   │       ├── sjdbList.out.tab
+│   │       └── transcriptInfo.tab
+│   ├── results
+│   │   └── figures
+│   └── trimmed
+│       ├── SRR31773512_trimmed.fastq.gz
+│       ├── SRR31773512_umi_extract.log
+│       ├── SRR31773512_umi.fastq.gz
+│       ├── SRR31773513_trimmed.fastq.gz
+│       ├── SRR31773513_umi_extract.log
+│       ├── SRR31773513_umi.fastq.gz
+│       ├── SRR31773514_trimmed.fastq.gz
+│       ├── SRR31773514_umi_extract.log
+│       ├── SRR31773514_umi.fastq.gz
+│       ├── SRR31773515_trimmed.fastq.gz
+│       ├── SRR31773515_umi_extract.log
+│       ├── SRR31773515_umi.fastq.gz
+│       ├── SRR31773516_trimmed.fastq.gz
+│       ├── SRR31773516_umi_extract.log
+│       ├── SRR31773516_umi.fastq.gz
+│       ├── SRR31773517_trimmed.fastq.gz
+│       ├── SRR31773517_umi_extract.log
+│       ├── SRR31773517_umi.fastq.gz
+│       ├── SRR31773518_trimmed.fastq.gz
+│       ├── SRR31773518_umi_extract.log
+│       ├── SRR31773518_umi.fastq.gz
+│       ├── SRR31773519_trimmed.fastq.gz
+│       ├── SRR31773519_umi_extract.log
+│       ├── SRR31773519_umi.fastq.gz
+│       ├── SRR31773538_trimmed.fastq.gz
+│       ├── SRR31773538_umi_extract.log
+│       ├── SRR31773538_umi.fastq.gz
+│       ├── SRR31773539_trimmed.fastq.gz
+│       ├── SRR31773539_umi_extract.log
+│       ├── SRR31773539_umi.fastq.gz
+│       ├── SRR31773540_trimmed.fastq.gz
+│       ├── SRR31773540_umi_extract.log
+│       ├── SRR31773540_umi.fastq.gz
+│       ├── SRR31773541_trimmed.fastq.gz
+│       ├── SRR31773541_umi_extract.log
+│       └── SRR31773541_umi.fastq.gz
+├── environment.yml
+├── IFIT2_IFIT3_eCLIP_Human_Analysis.ipynb
+├── INSTALLATION_GUIDE.md
+├── logs
+│   ├── download_data.log
+│   ├── peak_calling.log
+│   ├── sample_processing.log
+│   ├── setup_reference.log
+│   ├── slurm_download_3107616.err
+│   ├── slurm_download_3107616.out
+│   ├── slurm_reference_3107574.err
+│   ├── slurm_reference_3107574.out
+│   ├── slurm_sample_3107604_0.err
+│   ├── slurm_sample_3107604_0.out
+│   ├── slurm_sample_3107604_10.err
+│   ├── slurm_sample_3107604_10.out
+│   ├── slurm_sample_3107604_11.err
+│   ├── slurm_sample_3107604_11.out
+│   ├── slurm_sample_3107604_1.err
+│   ├── slurm_sample_3107604_1.out
+│   ├── slurm_sample_3107604_2.err
+│   ├── slurm_sample_3107604_2.out
+│   ├── slurm_sample_3107604_3.err
+│   ├── slurm_sample_3107604_3.out
+│   ├── slurm_sample_3107604_4.err
+│   ├── slurm_sample_3107604_4.out
+│   ├── slurm_sample_3107604_5.err
+│   ├── slurm_sample_3107604_5.out
+│   ├── slurm_sample_3107604_6.err
+│   ├── slurm_sample_3107604_6.out
+│   ├── slurm_sample_3107604_7.err
+│   ├── slurm_sample_3107604_7.out
+│   ├── slurm_sample_3107604_8.err
+│   ├── slurm_sample_3107604_8.out
+│   ├── slurm_sample_3107604_9.err
+│   ├── slurm_sample_3107604_9.out
+│   ├── slurm_sample_3108147_0.err
+│   ├── slurm_sample_3108147_0.out
+│   ├── slurm_sample_3108147_10.err
+│   ├── slurm_sample_3108147_10.out
+│   ├── slurm_sample_3108147_11.err
+│   ├── slurm_sample_3108147_11.out
+│   ├── slurm_sample_3108147_1.err
+│   ├── slurm_sample_3108147_1.out
+│   ├── slurm_sample_3108147_2.err
+│   ├── slurm_sample_3108147_2.out
+│   ├── slurm_sample_3108147_3.err
+│   ├── slurm_sample_3108147_3.out
+│   ├── slurm_sample_3108147_4.err
+│   ├── slurm_sample_3108147_4.out
+│   ├── slurm_sample_3108147_5.err
+│   ├── slurm_sample_3108147_5.out
+│   ├── slurm_sample_3108147_6.err
+│   ├── slurm_sample_3108147_6.out
+│   ├── slurm_sample_3108147_7.err
+│   ├── slurm_sample_3108147_7.out
+│   ├── slurm_sample_3108147_8.err
+│   ├── slurm_sample_3108147_8.out
+│   ├── slurm_sample_3108147_9.err
+│   ├── slurm_sample_3108147_9.out
+│   └── utr_analysis.log
+├── README.md
+├── scripts
+│   ├── 01_setup_reference.py
+│   ├── 02_download_data.py
+│   ├── 03_process_samples.py
+│   ├── 04_call_peaks.py
+│   ├── 05_analyze_utrs.py
+│   ├── 06_visualize.py
+│   ├── analysis.py
+│   ├── config.py
+│   ├── __pycache__
+│   │   ├── analysis.cpython-310.pyc
+│   │   ├── analysis.cpython-313.pyc
+│   │   ├── config.cpython-310.pyc
+│   │   ├── config.cpython-313.pyc
+│   │   └── utils.cpython-310.pyc
+│   ├── run_pipeline.py
+│   ├── utils.py
+│   ├── visualization.py
+│   └── yeolab
+│       ├── compress_peaks.pl
+│       └── overlap_peakfi_with_bam.pl
+├── slurm
+│   ├── download_data.sbatch
+│   ├── process_sample.sbatch
+│   ├── run_all_samples.sbatch
+│   └── setup_reference.sbatch
+├── SraRunTable.csv
+└── structure_summary.txt
+
+135 directories, 296 files

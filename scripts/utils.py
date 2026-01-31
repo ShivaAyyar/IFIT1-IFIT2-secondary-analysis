@@ -14,6 +14,7 @@ This module contains all utility functions for:
 
 import subprocess
 import logging
+import shutil
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
@@ -430,6 +431,12 @@ def run_star_alignment_single_end(fastq, genome_dir, output_dir,
         # Parse alignment stats
         stats = parse_star_log(output_prefix.parent / f"{sample_name}_Log.final.out")
 
+        # Clean up STAR temporary directory
+        star_tmp = output_prefix.parent / f"{sample_name}__STARtmp"
+        if star_tmp.exists():
+            shutil.rmtree(star_tmp)
+            logger.info(f"Cleaned up STAR temporary directory: {star_tmp}")
+
         return {'bam': bam_file, 'stats': stats}
 
     except subprocess.CalledProcessError as e:
@@ -455,7 +462,7 @@ def deduplicate_bam(input_bam, output_dir, use_umi=True):
     output_dir.mkdir(parents=True, exist_ok=True)
 
     sample_name = input_bam.stem.replace('_Aligned.sortedByCoord.out', '')
-    dedup_bam = output_dir / f"{sample_name}_dedup.bam"
+    dedup_bam = output_dir / f"{sample_name}_Aligned.sortedByCoord.dedup.bam"
 
     logger.info(f"Deduplicating {sample_name}...")
 
