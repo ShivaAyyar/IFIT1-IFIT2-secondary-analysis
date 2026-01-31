@@ -12,10 +12,12 @@ This module contains functions for:
 
 import gzip
 import logging
+import subprocess
 from pathlib import Path
 from collections import defaultdict
 import pandas as pd
-from scipy.stats import mannwhitneyu
+import numpy as np
+from scipy.stats import mannwhitneyu, poisson
 
 logger = logging.getLogger(__name__)
 
@@ -154,70 +156,201 @@ def create_utr5_bed(utr_df, output_file):
     return output_file
 
 
-def call_peaks_simple(ip_bam, input_bam, output_dir, sample_name,
-                       window_size=50, min_reads=10, fold_enrichment=2.0):
+def call_peaks_clipper(ip_bam, output_dir, sample_name, species='hg19', fdr=0.05):
     """
-    Simple peak calling using coverage comparison.
+    Call peaks using CLIPper (Yeo lab eCLIP peak caller).
 
-    For each position, calculate IP/Input ratio and call peaks
-    where the ratio exceeds the threshold.
+    CLIPper is the standard peak caller for eCLIP data from the Yeo lab.
+    It uses a Poisson-based statistical model to identify enriched regions.
 
     Parameters:
     -----------
     ip_bam : Path
-        IP sample BAM file
-    input_bam : Path
-        Input control BAM file (can be None)
+        IP sample BAM file (coordinate sorted)
     output_dir : Path
         Output directory for peaks
     sample_name : str
         Sample name for output files
-    window_size : int
-        Window size for merging nearby reads
-    min_reads : int
-        Minimum read count to call a peak
-    fold_enrichment : float
-        Minimum fold enrichment over input
+    species : str
+        Genome build (e.g., 'hg19', 'mm10')
+    fdr : float
+        False discovery rate threshold (default: 0.05)
+
+    Returns:
+    --------
+    Path : Path to output BED file with peaks
+
+    References:
+    -----------
+    https://github.com/YeoLab/clipper
     """
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    peaks_file = output_dir / f"{sample_name}_peaks.bed"
+    peaks_file = output_dir / f"{sample_name}_clipper_peaks.bed"
 
-    logger.info(f"Calling peaks for {sample_name} using coverage method...")
+    logger.info(f"Calling peaks for {sample_name} using CLIPper...")
+    logger.info(f"  Species: {species}")
+    logger.info(f"  FDR threshold: {fdr}")
 
-    if not PYBEDTOOLS_AVAILABLE:
-        logger.error("pybedtools required for peak calling")
+    # CLIPper command
+    cmd = [
+        'clipper',
+        '--bam', str(ip_bam),
+        '--species', species,
+        '--outfile', str(peaks_file),
+        '--FDR', str(fdr)
+    ]
+
+    try:
+        result = subprocess.run(
+            cmd,
+            check=True,
+            capture_output=True,
+            text=True
+        )
+
+        # Count peaks
+        if peaks_file.exists():
+            peak_count = sum(1 for _ in open(peaks_file))
+            logger.info(f"CLIPper found {peak_count:,} peaks")
+        else:
+            logger.warning("CLIPper did not produce output file")
+            return None
+
+        return peaks_file
+
+    except subprocess.CalledProcessError as e:
+        logger.error(f"CLIPper failed: {e.stderr}")
+        return None
+    except FileNotFoundError:
+        logger.error("clipper command not found. Install via: conda install -c bioconda clipper")
         return None
 
-    # Convert BAM to BED
-    ip_bed = pybedtools.BedTool(str(ip_bam)).bam_to_bed()
 
-    if input_bam:
-        input_bed = pybedtools.BedTool(str(input_bam)).bam_to_bed()
+def normalize_peaks_with_input(ip_peaks, ip_bam, input_bam, output_dir, sample_name,
+                                 fold_change_threshold=2.0, pvalue_threshold=0.001):
+    """
+    Normalize IP peaks against size-matched input using Yeo lab's Perl script.
 
-        # Get coverage in windows
-        genome_file = output_dir / "genome.txt"  # Need to create this
+    This uses the official eCLIP normalization script (overlap_peakfi_with_bam.pl)
+    from the Yeo lab, which calculates fold-change enrichment and statistical
+    significance using Fisher's exact test or chi-square test.
 
-        # For now, use a simpler approach: merge overlapping reads
-        peaks = ip_bed.merge(d=window_size, c=1, o='count')
+    Parameters:
+    -----------
+    ip_peaks : Path
+        BED file of IP peaks from CLIPper
+    ip_bam : Path
+        IP sample BAM file
+    input_bam : Path
+        Input control BAM file
+    output_dir : Path
+        Output directory
+    sample_name : str
+        Sample name for output files
+    fold_change_threshold : float
+        Minimum log2 fold-change over input (default: 2.0)
+    pvalue_threshold : float
+        Maximum p-value threshold (-log10, default: 0.001 = 3.0)
 
-        # Filter by minimum read count
-        peaks = peaks.filter(lambda x: int(x[3]) >= min_reads)
+    Returns:
+    --------
+    Path : Path to normalized peaks BED file
 
-    else:
-        # No input - just merge IP reads
-        peaks = ip_bed.merge(d=window_size, c=1, o='count')
-        peaks = peaks.filter(lambda x: int(x[3]) >= min_reads)
+    References:
+    -----------
+    https://github.com/YeoLab/eclip/blob/master/bin/overlap_peakfi_with_bam.pl
+    """
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-    # Save peaks
-    peaks.saveas(str(peaks_file))
+    # Get total mapped read counts
+    ip_reads = int(subprocess.run(
+        ['samtools', 'view', '-c', '-F', '4', str(ip_bam)],
+        capture_output=True, text=True
+    ).stdout.strip())
 
-    # Count peaks
-    peak_count = sum(1 for _ in open(peaks_file))
-    logger.info(f"Found {peak_count:,} peaks")
+    input_reads = int(subprocess.run(
+        ['samtools', 'view', '-c', '-F', '4', str(input_bam)],
+        capture_output=True, text=True
+    ).stdout.strip())
 
-    return peaks_file
+    # Create read count files (required by Perl script)
+    ip_count_file = output_dir / f"{sample_name}_ip_read_count.txt"
+    input_count_file = output_dir / f"{sample_name}_input_read_count.txt"
+
+    ip_count_file.write_text(str(ip_reads))
+    input_count_file.write_text(str(input_reads))
+
+    # Output file from Perl script
+    overlap_output = output_dir / f"{sample_name}_overlap.bed"
+
+    logger.info(f"Normalizing peaks against input for {sample_name}...")
+    logger.info(f"  IP reads: {ip_reads:,}")
+    logger.info(f"  Input reads: {input_reads:,}")
+
+    # Find the Perl script
+    script_dir = Path(__file__).parent / 'yeolab'
+    perl_script = script_dir / 'overlap_peakfi_with_bam.pl'
+
+    if not perl_script.exists():
+        logger.error(f"Yeo lab script not found: {perl_script}")
+        return None
+
+    # Run Yeo lab normalization script
+    cmd = [
+        'perl',
+        str(perl_script),
+        str(ip_bam),
+        str(input_bam),
+        str(ip_peaks),
+        str(ip_count_file),
+        str(input_count_file),
+        str(overlap_output)
+    ]
+
+    try:
+        result = subprocess.run(cmd, check=True, capture_output=True, text=True)
+
+        if not overlap_output.exists():
+            logger.error("Normalization script did not produce output")
+            return None
+
+        # Filter peaks by thresholds
+        # Output format: chr, start, stop, -log10(pval), log2(FC), strand
+        normalized_peaks = output_dir / f"{sample_name}_normalized_peaks.bed"
+
+        pval_threshold_log10 = -np.log10(pvalue_threshold)
+
+        with open(overlap_output) as f_in, open(normalized_peaks, 'w') as f_out:
+            enriched_count = 0
+            for line in f_in:
+                fields = line.strip().split('\t')
+                if len(fields) < 5:
+                    continue
+
+                neg_log10_pval = float(fields[3])
+                log2_fc = float(fields[4])
+
+                # Filter by thresholds
+                if neg_log10_pval >= pval_threshold_log10 and log2_fc >= fold_change_threshold:
+                    f_out.write(line)
+                    enriched_count += 1
+
+        logger.info(f"Normalized peaks: {enriched_count:,} pass thresholds")
+        logger.info(f"  (FC >= {fold_change_threshold}, -log10(p) >= {pval_threshold_log10:.2f})")
+
+        return normalized_peaks
+
+    except subprocess.CalledProcessError as e:
+        logger.error(f"Normalization failed: {e.stderr}")
+        return None
+    except FileNotFoundError as e:
+        logger.error(f"Perl not found. Install with: conda install perl")
+        return None
+
+
 
 
 def identify_bound_transcripts(peaks_file, utr_bed, utr_df, min_overlap=1):

@@ -206,9 +206,11 @@ ADAPTER_SEQUENCE = "AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC"  # Illumina TruSeq adapt
 STAR_THREADS = 8
 STAR_SJDB_OVERHANG = 74  # For 75nt single-end reads
 
-# Peak calling parameters
-PEAK_MIN_COVERAGE = 5  # Minimum read coverage to call a peak
-PEAK_FOLD_ENRICHMENT = 2.0  # Minimum fold enrichment over input
+# Peak calling parameters (CLIPper - Yeo lab eCLIP)
+CLIPPER_SPECIES = 'hg19'  # Genome build for CLIPper
+CLIPPER_FDR = 0.05  # False discovery rate threshold
+PEAK_FOLD_ENRICHMENT = 2.0  # Minimum fold enrichment over input for normalization
+PEAK_PVALUE_THRESHOLD = 0.001  # P-value threshold for significant peaks
 
 # UTR analysis parameters
 UTR_SHORT_THRESHOLD = 50  # Threshold for defining "short" 5' UTRs (nt)
@@ -221,5 +223,6 @@ REQUIRED_TOOLS = {
     'STAR': 'STAR aligner (alignment)',
     'samtools': 'SAMtools (BAM processing)',
     'bedtools': 'BEDTools (genomic intervals)',
-    'umi_tools': 'UMI-tools (UMI deduplication)'
+    'umi_tools': 'UMI-tools (UMI deduplication)',
+    'clipper': 'CLIPper (Yeo lab eCLIP peak caller)'
 }

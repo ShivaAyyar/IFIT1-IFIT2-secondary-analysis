@@ -5,6 +5,10 @@
 #SBATCH --mem=64G
 #SBATCH --cpus-per-task=8
 #SBATCH --time=2:00:00
+#SBATCH --mail-user=ssa163@case.edu
+#SBATCH --mail-type=end
+
+
 
 # SLURM batch script for reference genome setup
 # This job requires ~64 GB RAM for STAR indexing

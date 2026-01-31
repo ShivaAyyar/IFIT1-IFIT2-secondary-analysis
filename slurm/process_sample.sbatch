@@ -6,6 +6,9 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --time=4:00:00
 #SBATCH --array=0-11
+#SBATCH --mail-user=ssa163@case.edu
+#SBATCH --mail-type=end
+
 
 # SLURM array job script for processing all 12 samples in parallel
 # Each array task processes one sample

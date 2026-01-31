@@ -2,26 +2,46 @@
 
 ## Overview
 
-This pipeline requires several bioinformatics tools for processing eCLIP sequencing data. Since you're on Windows, the recommended approach is to use **Windows Subsystem for Linux (WSL)** or **conda/mamba** environments.
+This pipeline requires bioinformatics tools for processing eCLIP sequencing data. The pipeline uses command-line Python scripts and can be run on HPC systems (SLURM) or local machines.
 
-## Option 1: Using Conda/Mamba (Recommended for Windows)
+## Quick Start (Recommended)
 
-### Step 1: Install Miniforge (includes conda and mamba)
+### Step 1: Install Conda/Mamba
 
-If you don't already have conda installed:
+If you don't already have conda installed, download Miniforge:
+- **Linux/HPC**: https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+- **Windows**: https://github.com/conda-forge/miniforge/releases/latest
+- **macOS**: https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-x86_64.sh
 
-1. Download Miniforge for Windows: https://github.com/conda-forge/miniforge/releases/latest
-2. Run the installer and follow the prompts
-3. Open "Miniforge Prompt" from Start Menu
+```bash
+# Linux/HPC installation
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+bash Miniforge3-Linux-x86_64.sh -b
+~/miniforge3/bin/conda init bash
+source ~/.bashrc
+```
 
 ### Step 2: Create Analysis Environment
 
+**Option A: Install from environment file (recommended)**
+
 ```bash
-# Create a new conda environment for eCLIP analysis
+# Clone the repository
+cd /path/to/IFIT1-IFIT2-secondary-analysis
+
+# Create environment from file
+conda env create -f environment.yml
+conda activate eclip
+```
+
+**Option B: Manual installation**
+
+```bash
+# Create environment
 conda create -n eclip python=3.10 -y
 conda activate eclip
 
-# Install bioinformatics tools from bioconda
+# Install tools from bioconda
 conda install -c bioconda -c conda-forge \
     sra-tools \
     fastqc \
@@ -30,10 +50,16 @@ conda install -c bioconda -c conda-forge \
     samtools \
     bedtools \
     umi_tools \
+    perl \
+    perl-statistics-basic \
+    perl-statistics-distributions \
+    perl-statistics-r \
+    cython \
     -y
 
-# Install Python packages
-pip install pysam pybedtools pyBigWig pandas numpy matplotlib seaborn scipy jupyter
+# Install Python packages and CLIPper from GitHub
+pip install pysam pybedtools pyBigWig pandas numpy matplotlib seaborn scipy
+pip install git+https://github.com/YeoLab/clipper.git@master
 ```
 
 ### Step 3: Verify Installation
@@ -47,80 +73,63 @@ which STAR
 which samtools
 which bedtools
 which umi_tools
+which clipper
+which perl
+
+# Test Python packages
+python -c "import pysam, pybedtools, pandas, numpy, matplotlib, seaborn, scipy; print('All packages installed')"
 ```
 
-### Step 4: Launch Jupyter Notebook
+### Step 4: Run the Pipeline
 
 ```bash
-# Navigate to your project directory
-cd "C:\Users\s3ayy\OneDrive\Documents\GitHub\IFIT1-IFIT2-secondary-analysis"
+# On local machine - run complete pipeline
+python scripts/run_pipeline.py
 
-# Launch Jupyter
-jupyter notebook
+# On HPC - submit SLURM jobs
+sbatch slurm/setup_reference.sbatch    # One-time setup
+sbatch slurm/process_sample.sbatch    # Process all samples
 ```
 
 ---
 
-## Option 2: Using WSL (Windows Subsystem for Linux)
+## Key Tools
 
-### Step 1: Install WSL
+### Yeo Lab eCLIP Pipeline
 
-Open PowerShell as Administrator and run:
+This pipeline uses the official Yeo lab eCLIP analysis tools:
 
-```powershell
-wsl --install -d Ubuntu
-```
+- **CLIPper** ([YeoLab/clipper](https://github.com/YeoLab/clipper)) - Peak caller using Poisson statistics
+- **Normalization scripts** - Perl scripts for IP vs input normalization using Fisher's exact test
 
-Restart your computer when prompted.
+These are the same tools used in published eCLIP studies and provide statistically rigorous peak identification.
 
-### Step 2: Set Up Ubuntu Environment
+### Required Perl Modules
 
-```bash
-# Update package list
-sudo apt update
-sudo apt upgrade -y
+The Yeo lab normalization scripts require:
+- `Statistics::Basic`
+- `Statistics::Distributions`
+- `Statistics::R`
 
-# Install basic dependencies
-sudo apt install -y wget curl git build-essential
-
-# Install Miniconda in WSL
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-bash Miniconda3-latest-Linux-x86_64.sh -b
-~/miniconda3/bin/conda init bash
-source ~/.bashrc
-```
-
-### Step 3: Create Analysis Environment (same as Option 1)
-
-```bash
-conda create -n eclip python=3.10 -y
-conda activate eclip
-
-conda install -c bioconda -c conda-forge \
-    sra-tools \
-    fastqc \
-    cutadapt \
-    star \
-    samtools \
-    bedtools \
-    umi_tools \
-    -y
-
-pip install pysam pybedtools pyBigWig pandas numpy matplotlib seaborn scipy jupyter
-```
-
-### Step 4: Access Windows Files from WSL
-
-Your Windows C: drive is mounted at `/mnt/c/` in WSL:
-
-```bash
-cd /mnt/c/Users/s3ayy/OneDrive/Documents/GitHub/IFIT1-IFIT2-secondary-analysis
-jupyter notebook --no-browser
-```
+These are automatically installed when using the provided `environment.yml` file.
 
 ---
 
-## Tool Versions and Compatibility
+## System Requirements
+
+### Memory
+
+- **Reference indexing**: 64 GB RAM (one-time)
+- **Sample processing**: 32 GB RAM per sample
+- **Analysis steps**: 8-16 GB RAM
+
+### Disk Space
+
+- **Reference genome**: ~30 GB
+- **Per sample**: ~2-3 GB
+- **Total recommended**: 100 GB free space
+
+### Software Versions
 
 Expected versions (as of January 2025):
 
@@ -132,40 +141,92 @@ Expected versions (as of January 2025):
 - **samtools**: 1.17+
 - **bedtools**: 2.30+
 - **umi_tools**: 1.1+
+- **clipper**: 2.0+
+- **perl**: 5.30+
 
 ---
 
-## Disk Space Requirements
+## HPC-Specific Setup
 
-Before starting the analysis, ensure you have adequate disk space:
+### CWRU HPC
 
-- **Reference genome (hg19)**: ~3 GB
-- **STAR index**: ~30 GB
-- **GENCODE annotation**: ~50 MB
-- **Raw FASTQ files** (per sample): ~400-800 MB
-- **Aligned BAM files** (per sample): ~200-400 MB
-- **Working space**: ~10 GB
+```bash
+# Load modules (if needed)
+module load python/3.10
+module load conda
 
-**Total recommended**: At least **100 GB free space**
+# Activate environment
+conda activate eclip
+
+# Set up reference genome (requires 64 GB RAM)
+sbatch slurm/setup_reference.sbatch
+
+# Process all samples in parallel
+sbatch slurm/process_sample.sbatch
+```
+
+### SLURM Job Arrays
+
+The pipeline supports parallel processing using SLURM array jobs:
+
+```bash
+# Process all 12 samples in parallel
+sbatch slurm/process_sample.sbatch
+
+# This creates jobs for array indices 0-11
+# Each sample runs independently
+```
 
 ---
 
-## Memory Requirements
+## Troubleshooting
 
-- **STAR genome indexing**: 30-35 GB RAM
-- **STAR alignment**: 30-35 GB RAM
-- **Peak calling and analysis**: 8-16 GB RAM
+### "STAR: command not found"
 
-If your system has less than 32 GB RAM, you may need to:
-1. Use a compute cluster or cloud instance
-2. Process samples one at a time
-3. Use STAR's `--limitGenomeGenerateRAM` parameter
+Make sure conda environment is activated:
+```bash
+conda activate eclip
+```
+
+### "Permission denied" when downloading from SRA
+
+Configure SRA Toolkit cache:
+```bash
+vdb-config --interactive
+# Set a cache directory with write permissions
+```
+
+### Out of memory during STAR indexing
+
+Use HPC or cloud instance with 64+ GB RAM. Alternatively:
+```bash
+# Reduce threads in script
+python scripts/01_setup_reference.py --threads 4
+```
+
+### Slow downloads from SRA
+
+Use prefetch before fasterq-dump:
+```bash
+prefetch SRR31773513
+fasterq-dump --outdir ./data/raw_fastq SRR31773513
+```
+
+### "Perl module not found"
+
+Ensure Perl modules are installed:
+```bash
+conda install -c conda-forge \
+    perl-statistics-basic \
+    perl-statistics-distributions \
+    perl-statistics-r
+```
 
 ---
 
-## Testing Your Installation
+## Testing Installation
 
-Create a test script to verify all tools:
+Run this test script to verify all tools:
 
 ```bash
 #!/bin/bash
@@ -195,72 +256,22 @@ bedtools --version
 echo -n "umi_tools: "
 umi_tools --version
 
+echo -n "clipper: "
+clipper --version 2>&1 | head -1
+
+echo -n "perl: "
+perl --version | head -2 | tail -1
+
 echo -n "Python packages: "
-python -c "import pysam, pybedtools, pyBigWig, pandas, numpy, matplotlib, seaborn, scipy; print('All packages installed')"
+python -c "import pysam, pybedtools, pandas, numpy, matplotlib, seaborn, scipy; print('All installed')"
 
 echo "=============================="
 echo "Installation test complete!"
 ```
 
 Run the test:
-
 ```bash
 bash test_installation.sh
-```
-
----
-
-## Troubleshooting
-
-### Issue: "STAR: command not found"
-
-**Solution**: Make sure conda environment is activated:
-```bash
-conda activate eclip
-```
-
-### Issue: "Permission denied" when downloading from SRA
-
-**Solution**: Configure SRA Toolkit:
-```bash
-vdb-config --interactive
-# Navigate to "cache" and set a cache directory with write permissions
-```
-
-### Issue: Out of memory during STAR indexing
-
-**Solution**: Use a smaller sjdbOverhang or process on a machine with more RAM:
-```bash
-# In the notebook, when building STAR index:
-star_index = build_star_index(
-    REFERENCE_DIR / 'hg19.fa.gz',
-    REFERENCE_DIR / 'gencode.v19.annotation.gtf.gz',
-    REFERENCE_DIR,
-    threads=4,  # Reduce threads
-    sjdb_overhang=74
-)
-```
-
-### Issue: Slow downloads from SRA
-
-**Solution**: Use prefetch to download first, then extract:
-```bash
-prefetch SRR31773513
-fasterq-dump --outdir ./data/raw_fastq SRR31773513
-```
-
----
-
-## Alternative: Using Docker (Advanced)
-
-If you're familiar with Docker, you can use a pre-built bioinformatics container:
-
-```bash
-# Pull a bioinformatics container
-docker pull biocontainers/samtools:v1.9-4-deb_cv1
-
-# Or use a complete environment like Jupyter + bioinformatics tools
-docker pull jupyter/datascience-notebook
 ```
 
 ---
@@ -269,10 +280,11 @@ docker pull jupyter/datascience-notebook
 
 If you encounter issues:
 
-1. **Check tool documentation**: Most bioinformatics tools have extensive docs
-2. **Bioconda issues**: https://github.com/bioconda/bioconda-recipes/issues
-3. **SRA Toolkit**: https://github.com/ncbi/sra-tools/wiki
-4. **STAR aligner**: https://github.com/alexdobin/STAR
+1. **Yeo lab eCLIP**: https://github.com/YeoLab/eclip
+2. **CLIPper documentation**: https://github.com/YeoLab/clipper
+3. **Bioconda issues**: https://github.com/bioconda/bioconda-recipes/issues
+4. **SRA Toolkit**: https://github.com/ncbi/sra-tools/wiki
+5. **STAR aligner**: https://github.com/alexdobin/STAR
 
 ---
 
@@ -280,8 +292,11 @@ If you encounter issues:
 
 Once all tools are installed:
 
-1. ✅ Open the Jupyter notebook
-2. ✅ Run Section 1 (Environment Setup)
-3. ✅ Run Section 2 (Sample Information) - verify the sample table displays
-4. ✅ Proceed to download reference genome (Section 4)
-5. ✅ Download and analyze eCLIP data
+1. Set up reference genome: `sbatch slurm/setup_reference.sbatch` (HPC) or `python scripts/01_setup_reference.py` (local)
+2. Download samples: `python scripts/02_download_data.py --all`
+3. Process samples: `sbatch slurm/process_sample.sbatch` (HPC) or `python scripts/03_process_samples.py --sample SAMPLE_NAME` (local)
+4. Call peaks: `python scripts/04_call_peaks.py`
+5. Analyze UTRs: `python scripts/05_analyze_utrs.py`
+6. Generate figures: `python scripts/06_visualize.py`
+
+See [scripts/README.md](scripts/README.md) for detailed usage instructions.

@@ -61,11 +61,14 @@ def main():
     # Analyze IFIT2+IFIT3 complex binding
     logger.info("\nStep 3: Analyzing complex binding...")
 
-    flag_peaks = PEAKS_DIR / 'IFIT2_IFIT3_FLAG_IP_peaks.bed'
-    ha_peaks = PEAKS_DIR / 'IFIT2_IFIT3_HA_IP_peaks.bed'
+    # Use normalized peaks from CLIPper
+    flag_peaks = PEAKS_DIR / 'IFIT2_IFIT3_FLAG_IP_normalized_peaks.bed'
+    ha_peaks = PEAKS_DIR / 'IFIT2_IFIT3_HA_IP_normalized_peaks.bed'
 
     if not flag_peaks.exists() or not ha_peaks.exists():
-        logger.error("Peak files not found. Run 04_call_peaks.py first")
+        logger.error("Normalized peak files not found. Run 04_call_peaks.py first")
+        logger.error(f"Looking for: {flag_peaks}")
+        logger.error(f"Looking for: {ha_peaks}")
         sys.exit(1)
 
     complex_results = identify_complex_bound_transcripts(
@@ -76,7 +79,7 @@ def main():
 
     # Analyze IFIT2 alone
     logger.info("\nStep 4: Analyzing IFIT2 alone binding...")
-    ifit2_alone_peaks = PEAKS_DIR / 'IFIT2_alone_FLAG_IP_peaks.bed'
+    ifit2_alone_peaks = PEAKS_DIR / 'IFIT2_alone_FLAG_IP_normalized_peaks.bed'
     ifit2_alone_bound = set()
 
     if ifit2_alone_peaks.exists():
@@ -88,7 +91,7 @@ def main():
 
     # Analyze IFIT3 alone
     logger.info("\nStep 5: Analyzing IFIT3 alone binding...")
-    ifit3_alone_peaks = PEAKS_DIR / 'IFIT3_alone_HA_IP_peaks.bed'
+    ifit3_alone_peaks = PEAKS_DIR / 'IFIT3_alone_HA_IP_normalized_peaks.bed'
     ifit3_alone_bound = set()
 
     if ifit3_alone_peaks.exists():

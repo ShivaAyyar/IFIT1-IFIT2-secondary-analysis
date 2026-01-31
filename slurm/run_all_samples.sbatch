@@ -5,6 +5,9 @@
 #SBATCH --mem=64G
 #SBATCH --cpus-per-task=8
 #SBATCH --time=24:00:00
+#SBATCH --mail-user=ssa163@case.edu
+#SBATCH --mail-type=end
+
 
 # SLURM batch script for running the complete pipeline sequentially
 # This processes all samples one after another

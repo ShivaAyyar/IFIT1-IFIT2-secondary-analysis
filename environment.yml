@@ -1,0 +1,39 @@
+name: eclip
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  # Python
+  - python=3.10
+
+  # eCLIP analysis tools
+  - sra-tools       # For downloading from SRA
+  - fastqc          # Quality control
+  - cutadapt        # Adapter trimming
+  - umi_tools       # UMI extraction and deduplication
+  - star            # RNA-seq alignment
+  - samtools        # BAM file processing
+  - bedtools        # Genomic interval operations
+
+  # Perl for Yeo lab normalization scripts
+  - perl            # Required for Yeo lab normalization scripts
+  - perl-statistics-basic          # Perl Statistics::Basic module
+  - perl-statistics-distributions  # Perl Statistics::Distributions module
+  - perl-statistics-r              # Perl Statistics::R module
+
+  # Python packages
+  - pip
+  - pandas
+  - numpy
+  - scipy
+  - matplotlib
+  - seaborn
+  - cython          # Required for CLIPper installation
+
+  # Install via pip
+  - pip:
+    - pysam
+    - pybedtools
+    - pyBigWig
+    - git+https://github.com/YeoLab/clipper.git@master  # Yeo lab CLIPper peak caller

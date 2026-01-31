@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 """
-04_call_peaks.py - Call peaks for all IP samples
+04_call_peaks.py - Call peaks for all IP samples using CLIPper
 
-This script calls peaks for all IP samples using their corresponding input controls.
+This script calls peaks for all IP samples using CLIPper (Yeo lab eCLIP),
+then normalizes peaks against size-matched input controls.
 
 Usage:
     python scripts/04_call_peaks.py
@@ -14,8 +15,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from config import SAMPLE_INFO, ALIGNED_DIR, PEAKS_DIR, PEAK_MIN_COVERAGE, PEAK_FOLD_ENRICHMENT
-from analysis import call_peaks_simple
+from config import (
+    SAMPLE_INFO, ALIGNED_DIR, PEAKS_DIR,
+    CLIPPER_SPECIES, CLIPPER_FDR,
+    PEAK_FOLD_ENRICHMENT, PEAK_PVALUE_THRESHOLD
+)
+from analysis import call_peaks_clipper, normalize_peaks_with_input
 
 logging.basicConfig(
     level=logging.INFO,
@@ -30,8 +35,13 @@ logger = logging.getLogger(__name__)
 
 def main():
     logger.info("="*70)
-    logger.info("IFIT2-IFIT3 eCLIP Analysis: Peak Calling")
+    logger.info("IFIT2-IFIT3 eCLIP Analysis: Peak Calling with CLIPper")
     logger.info("="*70)
+    logger.info("\nUsing Yeo lab CLIPper for peak calling")
+    logger.info(f"  Species: {CLIPPER_SPECIES}")
+    logger.info(f"  FDR: {CLIPPER_FDR}")
+    logger.info(f"  Fold-change threshold: {PEAK_FOLD_ENRICHMENT}")
+    logger.info(f"  P-value threshold: {PEAK_PVALUE_THRESHOLD}")
 
     # Define IP-input pairs
     peak_calls = []
@@ -62,31 +72,73 @@ def main():
 
     logger.info(f"\nCalling peaks for {len(peak_calls)} IP samples\n")
 
+    successful = 0
+    failed = 0
+
     for ip_sample, input_sample in peak_calls:
         ip_bam = ALIGNED_DIR / f"{ip_sample}_Aligned.sortedByCoord.dedup.bam"
         input_bam = ALIGNED_DIR / f"{input_sample}_Aligned.sortedByCoord.dedup.bam"
 
         if not ip_bam.exists():
             logger.warning(f"IP BAM not found: {ip_bam}")
+            failed += 1
             continue
 
         if not input_bam.exists():
             logger.warning(f"Input BAM not found: {input_bam}")
-            input_bam = None
+            failed += 1
+            continue
 
-        logger.info(f"[{ip_sample}]")
-        peaks_file = call_peaks_simple(
+        logger.info("\n" + "="*70)
+        logger.info(f"Processing: {ip_sample}")
+        logger.info("="*70)
+
+        # Step 1: Call peaks with CLIPper
+        peaks_file = call_peaks_clipper(
+            ip_bam,
+            PEAKS_DIR,
+            ip_sample,
+            species=CLIPPER_SPECIES,
+            fdr=CLIPPER_FDR
+        )
+
+        if not peaks_file:
+            logger.error(f"Peak calling failed for {ip_sample}")
+            failed += 1
+            continue
+
+        # Step 2: Normalize peaks against input
+        normalized_peaks = normalize_peaks_with_input(
+            peaks_file,
             ip_bam,
             input_bam,
             PEAKS_DIR,
             ip_sample,
-            min_reads=PEAK_MIN_COVERAGE,
-            fold_enrichment=PEAK_FOLD_ENRICHMENT
+            fold_change_threshold=PEAK_FOLD_ENRICHMENT,
+            pvalue_threshold=PEAK_PVALUE_THRESHOLD
         )
 
+        if normalized_peaks:
+            logger.info(f"✓ Peak calling complete for {ip_sample}")
+            successful += 1
+        else:
+            logger.error(f"✗ Normalization failed for {ip_sample}")
+            failed += 1
+
+    # Summary
+    logger.info("\n" + "="*70)
+    logger.info("Peak Calling Summary")
+    logger.info("="*70)
+    logger.info(f"Successful: {successful}/{len(peak_calls)}")
+    logger.info(f"Failed: {failed}/{len(peak_calls)}")
     logger.info("\n" + "="*70)
     logger.info("Peak calling complete!")
     logger.info("="*70)
+    logger.info("\nOutput files:")
+    logger.info(f"  {PEAKS_DIR}/*_clipper_peaks.bed (raw CLIPper peaks)")
+    logger.info(f"  {PEAKS_DIR}/*_normalized_peaks.bed (input-normalized peaks)")
+    logger.info("\nNext steps:")
+    logger.info("  python scripts/05_analyze_utrs.py")
 
 
 if __name__ == '__main__':

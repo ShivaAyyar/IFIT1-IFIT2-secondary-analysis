@@ -8,6 +8,7 @@ This pipeline analyzes eCLIP (enhanced CLIP-seq) data to identify human transcri
 
 **Key Features:**
 - Processes single-end 75nt eCLIP reads
+- Uses Yeo lab's official eCLIP analysis pipeline (CLIPper + normalization scripts)
 - Distinguishes IFIT2-only, IFIT3-only, and complex binding
 - Analyzes 5' UTR length distributions
 - Generates publication-quality figures
@@ -196,9 +197,18 @@ IFIT1-IFIT2-secondary-analysis/
 
 ### Software Dependencies
 
-All tools should be installed via conda:
+**Recommended:** Use the provided environment file:
 
 ```bash
+# From the project root directory
+conda env create -f environment.yml
+conda activate eclip
+```
+
+**Or install manually:**
+
+```bash
+# Install conda packages
 conda install -c bioconda -c conda-forge \
     sra-tools \
     fastqc \
@@ -207,10 +217,26 @@ conda install -c bioconda -c conda-forge \
     samtools \
     bedtools \
     umi_tools \
+    perl \
+    perl-statistics-basic \
+    perl-statistics-distributions \
+    perl-statistics-r \
+    cython \
     -y
 
+# Install Python packages and CLIPper from GitHub
 pip install pysam pybedtools pandas numpy matplotlib seaborn scipy
+pip install git+https://github.com/YeoLab/clipper.git@master
 ```
+
+**Key Tools:**
+
+This pipeline uses the official Yeo lab eCLIP analysis tools from https://github.com/yeolab/eclip:
+
+- **CLIPper** ([YeoLab/clipper](https://github.com/YeoLab/clipper)) - Peak caller using Poisson-based statistics
+- **Normalization scripts** - Perl scripts (`overlap_peakfi_with_bam.pl`) for IP vs input normalization using Fisher's exact test
+- **pybedtools** - Genomic overlap analysis
+- **scipy** - Statistical testing (Mann-Whitney U test for UTR analysis)
 
 ## Troubleshooting
 
@@ -244,8 +270,19 @@ If you use this pipeline, please cite:
 - **STAR aligner**: Dobin et al. (2013)
 - **GENCODE**: Frankish et al. (2019)
 
-## Contact
+## Peak Calling Method
 
-For questions or issues with this pipeline, please check:
-- [Installation Guide](../INSTALLATION_GUIDE.md)
-- Project README
+This pipeline uses the Yeo lab's standard eCLIP analysis approach:
+
+1. **Peak Calling**: CLIPper identifies enriched regions in IP samples using a Poisson-based statistical model
+2. **Normalization**: Yeo lab Perl scripts (`overlap_peakfi_with_bam.pl`) normalize IP peaks against size-matched input controls using Fisher's exact test or chi-square test
+3. **Filtering**: Peaks are filtered by fold-change (≥2.0) and p-value (≤0.001) thresholds
+4. **Output**: Normalized peaks with -log10(p-value) and log2(fold-change) values
+
+This approach matches the published eCLIP methods and provides statistically rigorous peak identification.
+
+## Additional Documentation
+
+For detailed installation and usage instructions, see:
+- [Installation Guide](INSTALLATION_GUIDE.md) - Complete setup instructions for HPC and local machines
+- [environment.yml](environment.yml) - Conda environment specification
