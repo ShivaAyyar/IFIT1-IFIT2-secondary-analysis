@@ -194,11 +194,12 @@ def call_peaks_clipper(ip_bam, output_dir, sample_name, species='hg19', fdr=0.05
     logger.info(f"  FDR threshold: {fdr}")
 
     # CLIPper command
+    # Correct usage from YeoLab: clipper -b BAM -o OUTPUT -s SPECIES
     cmd = [
         'clipper',
-        '--bam', str(ip_bam),
-        '--species', species,
-        '--outfile', str(peaks_file),
+        '-b', str(ip_bam),
+        '-s', species,
+        '-o', str(peaks_file),
         '--FDR', str(fdr)
     ]
 
