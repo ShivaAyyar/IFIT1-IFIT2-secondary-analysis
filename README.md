@@ -13,24 +13,140 @@ This pipeline analyzes eCLIP (enhanced CLIP-seq) data to identify human transcri
 - Analyzes 5' UTR length distributions
 - Generates publication-quality figures
 
+## Pipeline Workflow
+
+### Complete Analysis Steps
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 1: One-Time Setup (Run Once)                          │
+├─────────────────────────────────────────────────────────────┤
+│ sbatch slurm/setup_reference.sbatch                        │
+│   → Downloads hg19 genome                                   │
+│   → Downloads GENCODE v19 annotations                       │
+│   → Builds STAR index (~64 GB RAM, ~2 hours)               │
+└─────────────────────────────────────────────────────────────┘
+                           ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 2: Download FASTQ Data (Required)                     │
+├─────────────────────────────────────────────────────────────┤
+│ sbatch slurm/download_data.sbatch   (OR run on login node) │
+│   → Downloads all 12 samples from SRA                       │
+│   → Saves to data/raw_fastq/                               │
+└─────────────────────────────────────────────────────────────┘
+                           ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 3: Sample Processing (Choose A or B)                  │
+├─────────────────────────────────────────────────────────────┤
+│ Option A: Parallel (Recommended)                           │
+│   sbatch slurm/process_sample.sbatch                       │
+│     → Processes 12 samples simultaneously                   │
+│     → Each: QC → Trim → Align → Deduplicate               │
+│                                                             │
+│ Option B: Sequential (Simpler)                             │
+│   sbatch slurm/run_all_samples.sbatch                      │
+│     → Runs entire pipeline in one job                       │
+│     → Automatically proceeds to Steps 4-6                   │
+└─────────────────────────────────────────────────────────────┘
+                           ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 4: Peak Calling (After sample processing completes)   │
+├─────────────────────────────────────────────────────────────┤
+│ python scripts/04_call_peaks.py                            │
+│   → Calls peaks with CLIPper (Poisson statistics)          │
+│   → Normalizes IP vs input (Fisher's exact test)           │
+│   → Filters by fold-change and p-value                     │
+└─────────────────────────────────────────────────────────────┘
+                           ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 5: UTR Analysis                                       │
+├─────────────────────────────────────────────────────────────┤
+│ python scripts/05_analyze_utrs.py                          │
+│   → Parses GENCODE GTF for 5' UTRs                         │
+│   → Identifies IFIT2/IFIT3/complex bound transcripts       │
+│   → Analyzes UTR length distributions                      │
+└─────────────────────────────────────────────────────────────┘
+                           ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 6: Generate Figures                                   │
+├─────────────────────────────────────────────────────────────┤
+│ python scripts/06_visualize.py                             │
+│   → Creates comparison plots                                │
+│   → Generates UTR length histograms                         │
+│   → Publication-quality PDFs                                │
+└─────────────────────────────────────────────────────────────┘
+```
+
 ## Quick Start
 
 ### On CWRU HPC
 
+#### **Step 1: One-Time Setup (First Time Only)**
+
 ```bash
-# 1. Activate conda environment
+# Clone repository
+cd /home/ssa163
+git clone <repository_url> IFIT1-IFIT2-secondary-analysis
+cd IFIT1-IFIT2-secondary-analysis
+
+# Create conda environment
+conda env create -f environment.yml
 conda activate eclip
 
-# 2. Set up reference genome (one-time, submit as SLURM job)
+# Set up reference genome (requires 64 GB RAM)
 sbatch slurm/setup_reference.sbatch
 
-# 3. Process all samples in parallel
+# Monitor job completion
+squeue -u ssa163
+```
+
+#### **Step 2: Download FASTQ Data (Required)**
+
+**Option A: Submit as SLURM job (Recommended for HPC)**
+
+```bash
+# Submit download job
+sbatch slurm/download_data.sbatch
+
+# Monitor progress
+squeue -u ssa163
+```
+
+**Option B: Run on login node**
+
+```bash
+# Download all 12 samples from SRA
+python scripts/02_download_data.py --all
+
+# OR download specific samples
+python scripts/02_download_data.py --sample IFIT2_IFIT3_FLAG_IP
+```
+
+**Note:** This step is **required** before processing. The FASTQ files must be downloaded to `data/raw_fastq/` before running the SLURM jobs.
+
+#### **Step 3: Main Analysis (Choose Option A or B)**
+
+**Option A: Parallel Processing (Recommended - Fastest)**
+
+```bash
+# 1. Process all 12 samples in parallel
 sbatch slurm/process_sample.sbatch
 
-# 4. Run analysis and generate figures
+# 2. Wait for ALL jobs to complete (check with: squeue -u ssa163)
+
+# 3. After all samples finish, run analysis steps (Steps 4-6)
 python scripts/04_call_peaks.py
 python scripts/05_analyze_utrs.py
 python scripts/06_visualize.py
+```
+
+**Option B: Sequential Processing (Simpler - Slower)**
+
+```bash
+# Run entire pipeline as one job
+sbatch slurm/run_all_samples.sbatch
+
+# All analysis runs automatically in this job
 ```
 
 ### On Local Machine
@@ -224,9 +340,12 @@ conda install -c bioconda -c conda-forge \
     cython \
     -y
 
-# Install Python packages and CLIPper from GitHub
-pip install pysam pybedtools pandas numpy matplotlib seaborn scipy
-pip install git+https://github.com/YeoLab/clipper.git@master
+# Install Python packages
+pip install pysam pybedtools pandas matplotlib seaborn scipy
+
+# Install CLIPper from GitHub (specific commit used by eCLIP pipeline)
+# Note: --no-build-isolation allows CLIPper to use conda-installed numpy/cython
+pip install --no-build-isolation git+https://github.com/YeoLab/clipper.git@5d865bb17b2bc6787b4c382bc857119ae917ad59
 ```
 
 **Key Tools:**

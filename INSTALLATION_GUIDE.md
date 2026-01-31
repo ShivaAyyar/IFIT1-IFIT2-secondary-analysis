@@ -57,9 +57,12 @@ conda install -c bioconda -c conda-forge \
     cython \
     -y
 
-# Install Python packages and CLIPper from GitHub
-pip install pysam pybedtools pyBigWig pandas numpy matplotlib seaborn scipy
-pip install git+https://github.com/YeoLab/clipper.git@master
+# Install Python packages
+pip install pysam pybedtools pyBigWig pandas matplotlib seaborn scipy
+
+# Install CLIPper from GitHub (specific commit used by eCLIP pipeline)
+# Note: --no-build-isolation allows CLIPper to use conda-installed numpy/cython
+pip install --no-build-isolation git+https://github.com/YeoLab/clipper.git@5d865bb17b2bc6787b4c382bc857119ae917ad59
 ```
 
 ### Step 3: Verify Installation
@@ -221,6 +224,15 @@ conda install -c conda-forge \
     perl-statistics-distributions \
     perl-statistics-r
 ```
+
+### "ModuleNotFoundError: No module named 'numpy'" during CLIPper installation
+
+CLIPper's setup.py needs numpy during build. Use `--no-build-isolation`:
+```bash
+pip install --no-build-isolation git+https://github.com/YeoLab/clipper.git@5d865bb17b2bc6787b4c382bc857119ae917ad59
+```
+
+This flag allows CLIPper to use the numpy and cython already installed via conda.
 
 ---
 

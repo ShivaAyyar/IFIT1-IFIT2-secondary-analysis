@@ -36,4 +36,5 @@ dependencies:
     - pysam
     - pybedtools
     - pyBigWig
-    - git+https://github.com/YeoLab/clipper.git@master  # Yeo lab CLIPper peak caller
+    - --no-build-isolation
+    - git+https://github.com/YeoLab/clipper.git@5d865bb17b2bc6787b4c382bc857119ae917ad59  # Yeo lab CLIPper (specific commit from eCLIP)
