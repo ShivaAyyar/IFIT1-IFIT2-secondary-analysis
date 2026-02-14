@@ -156,7 +156,8 @@ def create_utr5_bed(utr_df, output_file):
     return output_file
 
 
-def call_peaks_clipper(ip_bam, output_dir, sample_name, species='hg19', fdr=0.05):
+def call_peaks_clipper(ip_bam, output_dir, sample_name, species='hg19', fdr=0.05,
+                        mode='local', container_path=None):
     """
     Call peaks using CLIPper (Yeo lab eCLIP peak caller).
 
@@ -175,6 +176,10 @@ def call_peaks_clipper(ip_bam, output_dir, sample_name, species='hg19', fdr=0.05
         Genome build (e.g., 'hg19', 'mm10')
     fdr : float
         False discovery rate threshold (default: 0.05)
+    mode : str
+        Execution mode: 'local', 'singularity', or 'docker' (default: 'local')
+    container_path : str or Path
+        Path to container image (required if mode is 'singularity' or 'docker')
 
     Returns:
     --------
@@ -183,6 +188,14 @@ def call_peaks_clipper(ip_bam, output_dir, sample_name, species='hg19', fdr=0.05
     References:
     -----------
     https://github.com/YeoLab/clipper
+    https://github.com/YeoLab/eCLIP
+
+    Notes:
+    ------
+    CLIPper has known compatibility issues with Python 3.9+ due to C extension
+    compilation failures. If you encounter the wrong help output or errors:
+    - Use mode='singularity' or 'docker' for guaranteed compatibility
+    - Or use Python 3.7-3.8 environment with local installation
     """
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -190,18 +203,83 @@ def call_peaks_clipper(ip_bam, output_dir, sample_name, species='hg19', fdr=0.05
     peaks_file = output_dir / f"{sample_name}_clipper_peaks.bed"
 
     logger.info(f"Calling peaks for {sample_name} using CLIPper...")
+    logger.info(f"  Execution mode: {mode}")
     logger.info(f"  Species: {species}")
     logger.info(f"  FDR threshold: {fdr}")
 
     # CLIPper command
-    # Correct usage from YeoLab: clipper -b BAM -o OUTPUT -s SPECIES
-    cmd = [
+    # Usage from YeoLab eCLIP pipeline (cwl/clipper.cwl)
+    # See: https://github.com/YeoLab/eCLIP/blob/master/cwl/clipper.cwl
+    #
+    # ENCODE-recommended flags:
+    # --bonferroni: Apply Bonferroni correction for multiple testing
+    # --superlocal: Calculate p-values against local context (±500 bp) instead of whole genes
+    peaks_file_raw = output_dir / f"{sample_name}_clipper_peaks_raw.bed"
+
+    # Resolve absolute paths for container mounting
+    ip_bam = Path(ip_bam).resolve()
+    output_dir = output_dir.resolve()
+
+    # Build base CLIPper arguments
+    clipper_args = [
         'clipper',
-        '-b', str(ip_bam),
-        '-s', species,
-        '-o', str(peaks_file),
-        '--FDR', str(fdr)
+        '--species', species,
+        '--bam', str(ip_bam),
+        '--outfile', str(peaks_file_raw),
+        '--bonferroni',     # Multiple testing correction (ENCODE standard)
+        '--superlocal'      # Local background calculation (ENCODE standard)
     ]
+
+    # Build command based on execution mode
+    if mode == 'local':
+        cmd = clipper_args
+        logger.info("Using locally installed CLIPper")
+
+    elif mode == 'singularity':
+        if not container_path:
+            logger.error("Singularity mode requires container_path")
+            return None
+
+        container_path = Path(container_path)
+        if not container_path.exists():
+            logger.error(f"Singularity container not found: {container_path}")
+            return None
+
+        # Singularity exec command
+        # Need to bind mount directories so container can access files
+        bind_mounts = [
+            f"{ip_bam.parent}:{ip_bam.parent}",  # BAM file directory
+            f"{output_dir}:{output_dir}"          # Output directory
+        ]
+
+        cmd = [
+            'singularity', 'exec',
+            '--bind', ','.join(bind_mounts),
+            str(container_path)
+        ] + clipper_args
+
+        logger.info(f"Using Singularity container: {container_path}")
+
+    elif mode == 'docker':
+        if not container_path:
+            container_path = 'yeolab/eclip:latest'
+
+        # Docker run command
+        # Mount directories as volumes
+        cmd = [
+            'docker', 'run', '--rm',
+            '-v', f"{ip_bam.parent}:{ip_bam.parent}",
+            '-v', f"{output_dir}:{output_dir}",
+            str(container_path)
+        ] + clipper_args
+
+        logger.info(f"Using Docker container: {container_path}")
+
+    else:
+        logger.error(f"Unknown CLIPper mode: {mode}")
+        return None
+
+    logger.info(f"Command: {' '.join(cmd)}")
 
     try:
         result = subprocess.run(
@@ -212,13 +290,45 @@ def call_peaks_clipper(ip_bam, output_dir, sample_name, species='hg19', fdr=0.05
             errors='replace'  # Handle non-UTF-8 characters in CLIPper output
         )
 
-        # Count peaks
-        if peaks_file.exists():
-            peak_count = sum(1 for _ in open(peaks_file))
-            logger.info(f"CLIPper found {peak_count:,} peaks")
-        else:
+        if not peaks_file_raw.exists():
             logger.warning("CLIPper did not produce output file")
             return None
+
+        # Convert BED8 (CLIPper output) to BED6 (standard format)
+        # CLIPper outputs: chr, start, end, name, pvalue, strand, peak_center_start, peak_center_end
+        # We need: chr, start, end, name, score, strand
+        # Column 5 contains raw p-values; we convert to -log10(pval)*10 for browser compatibility
+        logger.info("Converting CLIPper BED8 output to standard BED6 format...")
+
+        with open(peaks_file_raw) as f_in, open(peaks_file, 'w') as f_out:
+            for line in f_in:
+                fields = line.strip().split('\t')
+                if len(fields) < 6:
+                    continue
+
+                # Extract first 6 columns
+                chrom, start, end, name, pvalue_str, strand = fields[:6]
+
+                # Convert raw p-value to integer score for BED format
+                # Use -log10(pval) * 10, capped at 1000
+                try:
+                    pvalue = float(pvalue_str)
+                    if pvalue > 0:
+                        score = min(int(-np.log10(pvalue) * 10), 1000)
+                    else:
+                        score = 1000  # Very significant peak
+                except (ValueError, OverflowError):
+                    score = 0
+
+                # Write BED6 format
+                f_out.write(f"{chrom}\t{start}\t{end}\t{name}\t{score}\t{strand}\n")
+
+        # Count peaks
+        peak_count = sum(1 for _ in open(peaks_file))
+        logger.info(f"CLIPper found {peak_count:,} peaks")
+
+        # Clean up raw output (keep for debugging if needed)
+        # peaks_file_raw.unlink()  # Uncomment to remove raw file
 
         return peaks_file
 

@@ -1,11 +1,12 @@
-name: eclip
+name: eclip_py38
 channels:
   - conda-forge
   - bioconda
   - defaults
 dependencies:
-  # Python
-  - python=3.10
+  # Python 3.8 for better CLIPper compatibility
+  # CLIPper officially supports Python 3.7-3.8
+  - python=3.8
 
   # eCLIP analysis tools
   - sra-tools       # For downloading from SRA

@@ -18,6 +18,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from config import (
     SAMPLE_INFO, ALIGNED_DIR, PEAKS_DIR,
     CLIPPER_SPECIES, CLIPPER_FDR,
+    CLIPPER_MODE, CLIPPER_CONTAINER,
     PEAK_FOLD_ENRICHMENT, PEAK_PVALUE_THRESHOLD
 )
 from analysis import call_peaks_clipper, normalize_peaks_with_input
@@ -38,6 +39,9 @@ def main():
     logger.info("IFIT2-IFIT3 eCLIP Analysis: Peak Calling with CLIPper")
     logger.info("="*70)
     logger.info("\nUsing Yeo lab CLIPper for peak calling")
+    logger.info(f"  Execution mode: {CLIPPER_MODE}")
+    if CLIPPER_MODE in ['singularity', 'docker'] and CLIPPER_CONTAINER:
+        logger.info(f"  Container: {CLIPPER_CONTAINER}")
     logger.info(f"  Species: {CLIPPER_SPECIES}")
     logger.info(f"  FDR: {CLIPPER_FDR}")
     logger.info(f"  Fold-change threshold: {PEAK_FOLD_ENRICHMENT}")
@@ -99,7 +103,9 @@ def main():
             PEAKS_DIR,
             ip_sample,
             species=CLIPPER_SPECIES,
-            fdr=CLIPPER_FDR
+            fdr=CLIPPER_FDR,
+            mode=CLIPPER_MODE,
+            container_path=CLIPPER_CONTAINER
         )
 
         if not peaks_file:

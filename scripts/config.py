@@ -212,6 +212,18 @@ CLIPPER_FDR = 0.05  # False discovery rate threshold
 PEAK_FOLD_ENRICHMENT = 2.0  # Minimum fold enrichment over input for normalization
 PEAK_PVALUE_THRESHOLD = 0.001  # P-value threshold for significant peaks
 
+# CLIPper execution mode
+# Options: 'local', 'singularity', 'docker'
+# - 'local': Use locally installed CLIPper (default, but may have Python 3.10 compatibility issues)
+# - 'singularity': Use Singularity container (recommended for HPC, most reliable)
+# - 'docker': Use Docker container (for local machines with Docker)
+CLIPPER_MODE = 'local'
+
+# Container image path (only used if CLIPPER_MODE is 'singularity' or 'docker')
+# For Singularity: Path to .sif file (e.g., '/path/to/eclip.sif')
+# For Docker: Image name (e.g., 'yeolab/eclip:latest')
+CLIPPER_CONTAINER = None  # Set this if using containerized CLIPper
+
 # UTR analysis parameters
 UTR_SHORT_THRESHOLD = 50  # Threshold for defining "short" 5' UTRs (nt)
 
