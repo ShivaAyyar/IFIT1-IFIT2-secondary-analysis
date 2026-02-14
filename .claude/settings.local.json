@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(curl:*)",
-      "Bash(chmod:*)"
+      "Bash(chmod:*)",
+      "Bash(del \"c:\\\\Users\\\\s3ayy\\\\OneDrive\\\\Documents\\\\GitHub\\\\IFIT1-IFIT2-secondary-analysis\\\\environment_py38.yml\")"
     ]
   }
 }
