@@ -212,8 +212,7 @@ def call_peaks_clipper(ip_bam, output_dir, sample_name, species='hg19', fdr=0.05
     # See: https://github.com/YeoLab/eCLIP/blob/master/cwl/clipper.cwl
     #
     # ENCODE-recommended flags:
-    # --bonferroni: Apply Bonferroni correction for multiple testing
-    # --superlocal: Calculate p-values against local context (±500 bp) instead of whole genes
+    # CLIPper 2.0.0 basic usage: clipper -b BAM -o OUTPUT -s SPECIES
     peaks_file_raw = output_dir / f"{sample_name}_clipper_peaks_raw.bed"
 
     # Resolve absolute paths for container mounting
@@ -221,13 +220,12 @@ def call_peaks_clipper(ip_bam, output_dir, sample_name, species='hg19', fdr=0.05
     output_dir = output_dir.resolve()
 
     # Build base CLIPper arguments
+    # Note: CLIPper 2.0.0 uses short flags (-b, -s, -o)
     clipper_args = [
         'clipper',
-        '--species', species,
-        '--bam', str(ip_bam),
-        '--outfile', str(peaks_file_raw),
-        '--bonferroni',     # Multiple testing correction (ENCODE standard)
-        '--superlocal'      # Local background calculation (ENCODE standard)
+        '-s', species,
+        '-b', str(ip_bam),
+        '-o', str(peaks_file_raw)
     ]
 
     # Build command based on execution mode
