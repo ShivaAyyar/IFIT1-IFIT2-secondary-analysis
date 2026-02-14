@@ -46,19 +46,20 @@ We provide **three solutions** in priority order:
 module avail singularity
 module load singularity  # Or whatever command loads it on your HPC
 
-# 2. Pull the YeoLab eCLIP container
-singularity pull docker://yeolab/eclip:latest
+# 2. Pull the official CLIPper container (from eCLIP CWL pipeline)
+# The correct image is brianyee/clipper:5d865bb (specified in eCLIP CWL files)
+singularity pull docker://brianyee/clipper:5d865bb
 
-# This creates: eclip_latest.sif (approximately 1-2 GB)
+# This creates: clipper_5d865bb.sif (approximately 1-2 GB)
 
 # 3. Verify it works
-singularity exec eclip_latest.sif clipper --help
-# Should show correct CLIPper help
+singularity exec clipper_5d865bb.sif clipper --help
+# Should show correct CLIPper help with --bam, --species options
 
 # 4. Configure the pipeline
 # Edit scripts/config.py:
 CLIPPER_MODE = 'singularity'
-CLIPPER_CONTAINER = '/path/to/eclip_latest.sif'  # Use absolute path
+CLIPPER_CONTAINER = '/path/to/clipper_5d865bb.sif'  # Use absolute path
 ```
 
 **Usage:**
@@ -124,16 +125,16 @@ python scripts/04_call_peaks.py
 **Setup:**
 
 ```bash
-# 1. Pull Docker image
-docker pull yeolab/eclip:latest
+# 1. Pull Docker image (official CLIPper container from eCLIP CWL)
+docker pull brianyee/clipper:5d865bb
 
 # 2. Verify
-docker run --rm yeolab/eclip:latest clipper --help
-# Should show correct help
+docker run --rm brianyee/clipper:5d865bb clipper --help
+# Should show correct help with --bam, --species options
 
 # 3. Configure the pipeline (scripts/config.py)
 CLIPPER_MODE = 'docker'
-CLIPPER_CONTAINER = 'yeolab/eclip:latest'
+CLIPPER_CONTAINER = 'brianyee/clipper:5d865bb'
 ```
 
 **Usage:**

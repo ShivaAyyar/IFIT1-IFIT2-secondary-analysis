@@ -217,12 +217,13 @@ PEAK_PVALUE_THRESHOLD = 0.001  # P-value threshold for significant peaks
 # - 'local': Use locally installed CLIPper (default, but may have Python 3.10 compatibility issues)
 # - 'singularity': Use Singularity container (recommended for HPC, most reliable)
 # - 'docker': Use Docker container (for local machines with Docker)
-CLIPPER_MODE = 'local'
+CLIPPER_MODE = 'singularity'
 
 # Container image path (only used if CLIPPER_MODE is 'singularity' or 'docker')
-# For Singularity: Path to .sif file (e.g., '/path/to/eclip.sif')
-# For Docker: Image name (e.g., 'yeolab/eclip:latest')
-CLIPPER_CONTAINER = None  # Set this if using containerized CLIPper
+# For Singularity: Path to .sif file (e.g., '/path/to/clipper_5d865bb.sif')
+# For Docker: Image name (e.g., 'brianyee/clipper:5d865bb')
+# NOTE: Use 'brianyee/clipper:5d865bb' - this is the official image from eCLIP CWL pipeline
+CLIPPER_CONTAINER = 'clipper_5d865bb.sif'  # Update path if container is in different location
 
 # UTR analysis parameters
 UTR_SHORT_THRESHOLD = 50  # Threshold for defining "short" 5' UTRs (nt)
