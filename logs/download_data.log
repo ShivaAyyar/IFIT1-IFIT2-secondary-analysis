@@ -1,0 +1,121 @@
+2026-01-31 09:10:43,097 - __main__ - INFO - ======================================================================
+2026-01-31 09:10:43,097 - __main__ - INFO - IFIT2-IFIT3 eCLIP Analysis: Data Download
+2026-01-31 09:10:43,097 - __main__ - INFO - ======================================================================
+2026-01-31 09:10:43,118 - __main__ - INFO - 
+Downloading all 12 samples...
+2026-01-31 09:10:43,118 - __main__ - INFO - 
+2026-01-31 09:10:43,118 - __main__ - INFO - IMPORTANT: These are SINGLE-END 75nt reads
+2026-01-31 09:10:43,118 - __main__ - INFO - ======================================================================
+2026-01-31 09:10:43,118 - __main__ - INFO - 
+[IFIT2_IFIT3_FLAG_IP]
+2026-01-31 09:10:43,118 - __main__ - INFO -   SRR: SRR31773513
+2026-01-31 09:10:43,118 - __main__ - INFO -   Description: IFIT2+IFIT3 co-expression, FLAG IP (IFIT2 pulldown)
+2026-01-31 09:10:43,120 - utils - INFO - Downloading SRR31773513...
+2026-01-31 09:12:29,555 - utils - INFO - Successfully downloaded SRR31773513
+2026-01-31 09:12:29,559 - utils - INFO - Compressing SRR31773513.fastq...
+2026-01-31 09:18:46,437 - __main__ - INFO - ======================================================================
+2026-01-31 09:18:46,446 - __main__ - INFO - IFIT2-IFIT3 eCLIP Analysis: Data Download
+2026-01-31 09:18:46,446 - __main__ - INFO - ======================================================================
+2026-01-31 09:18:46,491 - __main__ - INFO - 
+Downloading all 12 samples...
+2026-01-31 09:18:46,491 - __main__ - INFO - 
+2026-01-31 09:18:46,491 - __main__ - INFO - IMPORTANT: These are SINGLE-END 75nt reads
+2026-01-31 09:18:46,491 - __main__ - INFO - ======================================================================
+2026-01-31 09:18:46,491 - __main__ - INFO - 
+[IFIT2_IFIT3_FLAG_IP]
+2026-01-31 09:18:46,491 - __main__ - INFO -   SRR: SRR31773513
+2026-01-31 09:18:46,491 - __main__ - INFO -   Description: IFIT2+IFIT3 co-expression, FLAG IP (IFIT2 pulldown)
+2026-01-31 09:18:46,535 - utils - INFO - Downloading SRR31773513...
+2026-01-31 09:21:45,823 - utils - INFO - Successfully downloaded SRR31773513
+2026-01-31 09:21:45,856 - utils - INFO - Compressing SRR31773513.fastq...
+2026-01-31 09:27:25,930 - __main__ - INFO - 
+[IFIT2_IFIT3_HA_IP]
+2026-01-31 09:27:25,941 - __main__ - INFO -   SRR: SRR31773515
+2026-01-31 09:27:25,941 - __main__ - INFO -   Description: IFIT2+IFIT3 co-expression, HA IP (IFIT3 pulldown)
+2026-01-31 09:27:25,942 - utils - INFO - Downloading SRR31773515...
+2026-01-31 09:30:24,877 - utils - INFO - Successfully downloaded SRR31773515
+2026-01-31 09:30:24,910 - utils - INFO - Compressing SRR31773515.fastq...
+2026-01-31 09:36:42,527 - __main__ - INFO - 
+[IFIT2_IFIT3_FLAG_SMInput]
+2026-01-31 09:36:42,549 - __main__ - INFO -   SRR: SRR31773512
+2026-01-31 09:36:42,549 - __main__ - INFO -   Description: IFIT2+IFIT3 co-expression, FLAG SMInput control
+2026-01-31 09:36:42,560 - utils - INFO - Downloading SRR31773512...
+2026-01-31 09:38:57,543 - utils - INFO - Successfully downloaded SRR31773512
+2026-01-31 09:38:57,576 - utils - INFO - Compressing SRR31773512.fastq...
+2026-01-31 09:43:24,958 - __main__ - INFO - 
+[IFIT2_IFIT3_HA_SMInput]
+2026-01-31 09:43:24,980 - __main__ - INFO -   SRR: SRR31773514
+2026-01-31 09:43:24,980 - __main__ - INFO -   Description: IFIT2+IFIT3 co-expression, HA SMInput control
+2026-01-31 09:43:25,002 - utils - INFO - Downloading SRR31773514...
+2026-01-31 09:45:25,746 - utils - INFO - Successfully downloaded SRR31773514
+2026-01-31 09:45:25,779 - utils - INFO - Compressing SRR31773514.fastq...
+2026-01-31 09:49:15,702 - __main__ - INFO - 
+[IFIT2_alone_FLAG_IP]
+2026-01-31 09:49:15,724 - __main__ - INFO -   SRR: SRR31773519
+2026-01-31 09:49:15,724 - __main__ - INFO -   Description: IFIT2 alone, FLAG IP
+2026-01-31 09:49:15,746 - utils - INFO - Downloading SRR31773519...
+2026-01-31 09:51:34,223 - utils - INFO - Successfully downloaded SRR31773519
+2026-01-31 09:51:34,256 - utils - INFO - Compressing SRR31773519.fastq...
+2026-01-31 09:55:53,147 - __main__ - INFO - 
+[IFIT2_alone_SMInput]
+2026-01-31 09:55:53,169 - __main__ - INFO -   SRR: SRR31773518
+2026-01-31 09:55:53,169 - __main__ - INFO -   Description: IFIT2 alone, SMInput control
+2026-01-31 09:55:53,191 - utils - INFO - Downloading SRR31773518...
+2026-01-31 09:58:12,287 - utils - INFO - Successfully downloaded SRR31773518
+2026-01-31 09:58:12,354 - utils - INFO - Compressing SRR31773518.fastq...
+2026-01-31 10:02:57,411 - __main__ - INFO - 
+[IFIT3_alone_HA_IP]
+2026-01-31 10:02:57,433 - __main__ - INFO -   SRR: SRR31773517
+2026-01-31 10:02:57,433 - __main__ - INFO -   Description: IFIT3 alone, HA IP
+2026-01-31 10:02:57,455 - utils - INFO - Downloading SRR31773517...
+2026-01-31 10:05:30,705 - utils - INFO - Successfully downloaded SRR31773517
+2026-01-31 10:05:30,738 - utils - INFO - Compressing SRR31773517.fastq...
+2026-01-31 10:10:51,185 - __main__ - INFO - 
+[IFIT3_alone_SMInput]
+2026-01-31 10:10:51,207 - __main__ - INFO -   SRR: SRR31773516
+2026-01-31 10:10:51,207 - __main__ - INFO -   Description: IFIT3 alone, SMInput control
+2026-01-31 10:10:51,229 - utils - INFO - Downloading SRR31773516...
+2026-01-31 10:12:47,090 - utils - INFO - Successfully downloaded SRR31773516
+2026-01-31 10:12:47,124 - utils - INFO - Compressing SRR31773516.fastq...
+2026-01-31 10:16:37,114 - __main__ - INFO - 
+[WT_FLAG_IP]
+2026-01-31 10:16:37,136 - __main__ - INFO -   SRR: SRR31773539
+2026-01-31 10:16:37,136 - __main__ - INFO -   Description: Wild-type, FLAG IP control
+2026-01-31 10:16:37,158 - utils - INFO - Downloading SRR31773539...
+2026-01-31 10:19:46,758 - utils - INFO - Successfully downloaded SRR31773539
+2026-01-31 10:19:46,791 - utils - INFO - Compressing SRR31773539.fastq...
+2026-01-31 10:26:00,375 - __main__ - INFO - 
+[WT_HA_IP]
+2026-01-31 10:26:00,397 - __main__ - INFO -   SRR: SRR31773541
+2026-01-31 10:26:00,397 - __main__ - INFO -   Description: Wild-type, HA IP control
+2026-01-31 10:26:00,416 - utils - INFO - Downloading SRR31773541...
+2026-01-31 10:29:41,568 - utils - INFO - Successfully downloaded SRR31773541
+2026-01-31 10:29:41,601 - utils - INFO - Compressing SRR31773541.fastq...
+2026-01-31 10:35:45,729 - __main__ - INFO - 
+[WT_FLAG_SMInput]
+2026-01-31 10:35:45,751 - __main__ - INFO -   SRR: SRR31773538
+2026-01-31 10:35:45,751 - __main__ - INFO -   Description: Wild-type, FLAG SMInput control
+2026-01-31 10:35:45,773 - utils - INFO - Downloading SRR31773538...
+2026-01-31 10:38:21,477 - utils - INFO - Successfully downloaded SRR31773538
+2026-01-31 10:38:21,510 - utils - INFO - Compressing SRR31773538.fastq...
+2026-01-31 10:43:37,614 - __main__ - INFO - 
+[WT_HA_SMInput]
+2026-01-31 10:43:37,636 - __main__ - INFO -   SRR: SRR31773540
+2026-01-31 10:43:37,636 - __main__ - INFO -   Description: Wild-type, HA SMInput control
+2026-01-31 10:43:37,658 - utils - INFO - Downloading SRR31773540...
+2026-01-31 10:45:24,369 - utils - INFO - Successfully downloaded SRR31773540
+2026-01-31 10:45:24,391 - utils - INFO - Compressing SRR31773540.fastq...
+2026-01-31 10:49:09,151 - __main__ - INFO - 
+======================================================================
+2026-01-31 10:49:09,173 - __main__ - INFO - Download Summary
+2026-01-31 10:49:09,173 - __main__ - INFO - ======================================================================
+2026-01-31 10:49:09,173 - __main__ - INFO - Successful: 12/12
+2026-01-31 10:49:09,173 - __main__ - INFO - Failed: 0/12
+2026-01-31 10:49:09,173 - __main__ - INFO - 
+======================================================================
+2026-01-31 10:49:09,173 - __main__ - INFO - Download complete!
+2026-01-31 10:49:09,173 - __main__ - INFO - ======================================================================
+2026-01-31 10:49:09,173 - __main__ - INFO - 
+Next steps:
+2026-01-31 10:49:09,173 - __main__ - INFO -   1. Process samples: python scripts/03_process_samples.py --sample <SAMPLE_NAME>
+2026-01-31 10:49:09,173 - __main__ - INFO - 

@@ -1,0 +1,51 @@
+2026-01-31 02:29:44,306 - __main__ - INFO - ======================================================================
+2026-01-31 02:29:44,307 - __main__ - INFO - IFIT2-IFIT3 eCLIP Analysis: Reference Genome Setup
+2026-01-31 02:29:44,307 - __main__ - INFO - ======================================================================
+2026-01-31 02:29:44,307 - __main__ - INFO - 
+Checking for required tools...
+2026-01-31 02:29:44,315 - __main__ - INFO -   wget: ✓ Found
+2026-01-31 02:29:44,323 - __main__ - INFO -   STAR: ✓ Found
+2026-01-31 02:29:44,327 - __main__ - INFO -   gunzip: ✓ Found
+2026-01-31 02:29:44,327 - __main__ - INFO - 
+======================================================================
+2026-01-31 02:29:44,327 - __main__ - INFO - Step 1: Downloading reference files
+2026-01-31 02:29:44,327 - __main__ - INFO - ======================================================================
+2026-01-31 02:29:44,327 - __main__ - INFO - This may take 10-30 minutes depending on your internet speed...
+2026-01-31 02:29:44,327 - __main__ - INFO - 
+2026-01-31 02:29:44,328 - utils - INFO - Downloading genome_fasta...
+2026-01-31 02:30:07,302 - utils - INFO - Downloaded to /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa.gz
+2026-01-31 02:30:07,303 - utils - INFO - Downloading gencode_gtf...
+2026-01-31 02:30:11,033 - utils - INFO - Downloaded to /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/gencode.v19.annotation.gtf.gz
+2026-01-31 02:30:11,034 - utils - INFO - Downloading chrom_sizes...
+2026-01-31 02:30:11,429 - utils - INFO - Downloaded to /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.chrom.sizes
+2026-01-31 02:30:11,430 - __main__ - INFO - ✓ Download complete!
+2026-01-31 02:30:11,430 - __main__ - INFO - 
+======================================================================
+2026-01-31 02:30:11,430 - __main__ - INFO - Step 2: Building STAR genome index
+2026-01-31 02:30:11,430 - __main__ - INFO - ======================================================================
+2026-01-31 02:30:11,430 - __main__ - INFO - ⚠️  This requires ~30-35 GB RAM and will take 30-60 minutes...
+2026-01-31 02:30:11,430 - __main__ - INFO - If you don't have enough RAM, this will fail.
+2026-01-31 02:30:11,430 - __main__ - INFO - Consider using HPC or cloud instance if needed.
+2026-01-31 02:30:11,430 - __main__ - INFO - 
+2026-01-31 02:30:11,432 - utils - INFO - Decompressing genome FASTA...
+2026-01-31 02:30:36,711 - utils - INFO - Decompressing GTF...
+2026-01-31 02:30:41,856 - utils - INFO - Building STAR index (this may take 30+ minutes)...
+2026-01-31 02:30:41,856 - utils - INFO - Using sjdbOverhang=74 for 75nt reads
+2026-01-31 02:52:14,049 - utils - INFO - STAR index built successfully at /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19
+2026-01-31 02:52:14,050 - __main__ - INFO - ✓ STAR index built successfully!
+2026-01-31 02:52:14,050 - __main__ - INFO - 
+======================================================================
+2026-01-31 02:52:14,050 - __main__ - INFO - Verification
+2026-01-31 02:52:14,050 - __main__ - INFO - ======================================================================
+2026-01-31 02:52:14,051 - __main__ - INFO - hg19.fa.gz:                      ✓ Found
+2026-01-31 02:52:14,051 - __main__ - INFO - gencode.v19.annotation.gtf.gz:   ✓ Found
+2026-01-31 02:52:14,051 - __main__ - INFO - STAR index:                      ✓ Found
+2026-01-31 02:52:14,052 - __main__ - INFO - 
+======================================================================
+2026-01-31 02:52:14,052 - __main__ - INFO - Reference genome setup complete!
+2026-01-31 02:52:14,052 - __main__ - INFO - ======================================================================
+2026-01-31 02:52:14,052 - __main__ - INFO - 
+Next steps:
+2026-01-31 02:52:14,052 - __main__ - INFO -   1. Download eCLIP data: python scripts/02_download_data.py
+2026-01-31 02:52:14,052 - __main__ - INFO -   2. Process samples: python scripts/03_process_samples.py
+2026-01-31 02:52:14,052 - __main__ - INFO - 

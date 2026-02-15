@@ -1,0 +1,93 @@
+==============================================
+Fix Empty Deduplicated BAM Files
+==============================================
+Job ID: 3140787
+Node: compt322
+Start time: Sat Feb 14 17:06:46 EST 2026
+
+==============================================
+Fixing Empty Deduplicated BAM Files
+==============================================
+
+Found 10 empty deduplicated BAM files to fix
+
+Processing: IFIT2_alone_FLAG_IP
+  Source: data/aligned/IFIT2_alone_FLAG_IP_Aligned.sortedByCoord.out.bam
+  Output: data/aligned/IFIT2_alone_FLAG_IP_Aligned.sortedByCoord.dedup.bam
+  Running umi_tools dedup...
+  Indexing output BAM...
+  SUCCESS: 18245229 reads
+
+Processing: IFIT2_alone_SMInput
+  Source: data/aligned/IFIT2_alone_SMInput_Aligned.sortedByCoord.out.bam
+  Output: data/aligned/IFIT2_alone_SMInput_Aligned.sortedByCoord.dedup.bam
+  Running umi_tools dedup...
+  Indexing output BAM...
+  SUCCESS: 23305200 reads
+
+Processing: IFIT2_IFIT3_FLAG_IP
+  Source: data/aligned/IFIT2_IFIT3_FLAG_IP_Aligned.sortedByCoord.out.bam
+  Output: data/aligned/IFIT2_IFIT3_FLAG_IP_Aligned.sortedByCoord.dedup.bam
+  Running umi_tools dedup...
+  Indexing output BAM...
+  SUCCESS: 20341513 reads
+
+Processing: IFIT2_IFIT3_FLAG_SMInput
+  Source: data/aligned/IFIT2_IFIT3_FLAG_SMInput_Aligned.sortedByCoord.out.bam
+  Output: data/aligned/IFIT2_IFIT3_FLAG_SMInput_Aligned.sortedByCoord.dedup.bam
+  Running umi_tools dedup...
+  Indexing output BAM...
+  SUCCESS: 21164397 reads
+
+SKIP: data/aligned/IFIT2_IFIT3_HA_IP_Aligned.sortedByCoord.dedup.bam (already has data)
+Processing: IFIT2_IFIT3_HA_SMInput
+  Source: data/aligned/IFIT2_IFIT3_HA_SMInput_Aligned.sortedByCoord.out.bam
+  Output: data/aligned/IFIT2_IFIT3_HA_SMInput_Aligned.sortedByCoord.dedup.bam
+  Running umi_tools dedup...
+  Indexing output BAM...
+  SUCCESS: 19675991 reads
+
+Processing: IFIT3_alone_HA_IP
+  Source: data/aligned/IFIT3_alone_HA_IP_Aligned.sortedByCoord.out.bam
+  Output: data/aligned/IFIT3_alone_HA_IP_Aligned.sortedByCoord.dedup.bam
+  Running umi_tools dedup...
+  Indexing output BAM...
+  SUCCESS: 10696791 reads
+
+Processing: IFIT3_alone_SMInput
+  Source: data/aligned/IFIT3_alone_SMInput_Aligned.sortedByCoord.out.bam
+  Output: data/aligned/IFIT3_alone_SMInput_Aligned.sortedByCoord.dedup.bam
+  Running umi_tools dedup...
+  Indexing output BAM...
+  SUCCESS: 18957628 reads
+
+Processing: WT_FLAG_IP
+  Source: data/aligned/WT_FLAG_IP_Aligned.sortedByCoord.out.bam
+  Output: data/aligned/WT_FLAG_IP_Aligned.sortedByCoord.dedup.bam
+  Running umi_tools dedup...
+  Indexing output BAM...
+  SUCCESS: 16701725 reads
+
+Processing: WT_FLAG_SMInput
+  Source: data/aligned/WT_FLAG_SMInput_Aligned.sortedByCoord.out.bam
+  Output: data/aligned/WT_FLAG_SMInput_Aligned.sortedByCoord.dedup.bam
+  Running umi_tools dedup...
+  Indexing output BAM...
+  SUCCESS: 25714912 reads
+
+SKIP: data/aligned/WT_HA_IP_Aligned.sortedByCoord.dedup.bam (already has data)
+Processing: WT_HA_SMInput
+  Source: data/aligned/WT_HA_SMInput_Aligned.sortedByCoord.out.bam
+  Output: data/aligned/WT_HA_SMInput_Aligned.sortedByCoord.dedup.bam
+  Running umi_tools dedup...
+  Indexing output BAM...
+  SUCCESS: 18048768 reads
+
+==============================================
+Summary
+==============================================
+Fixed: 10
+Failed: 0
+==============================================
+
+Job completed at: Sat Feb 14 18:38:37 EST 2026

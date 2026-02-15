@@ -1,0 +1,31 @@
+2026-01-31 13:42:47,204 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:47,204 - __main__ - INFO - Processing sample: WT_HA_IP
+2026-01-31 13:42:47,204 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:47,204 - __main__ - INFO - Description: Wild-type, HA IP control
+2026-01-31 13:42:47,205 - __main__ - INFO - SRR: SRR31773541
+2026-01-31 13:42:47,205 - __main__ - INFO - 
+2026-01-31 13:42:47,205 - __main__ - INFO - Input FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq/SRR31773541.fastq.gz
+2026-01-31 13:42:47,206 - __main__ - INFO - 
+[Step 1/4] Running FastQC...
+2026-01-31 13:42:47,207 - utils - INFO - Running FastQC on 1 files...
+2026-01-31 13:44:11,739 - utils - INFO - FastQC complete. Reports in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/qc
+2026-01-31 13:44:11,740 - __main__ - INFO - 
+[Step 2/4] Extracting UMI and trimming adapters...
+2026-01-31 13:44:11,740 - utils - INFO - Extracting UMI from SRR31773541...
+2026-01-31 13:51:53,948 - utils - INFO - Trimming adapters from SRR31773541...
+2026-01-31 13:52:26,370 - utils - INFO - Trimming complete: N/A reads passed
+2026-01-31 13:52:26,370 - __main__ - INFO - Trimmed FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/trimmed/SRR31773541_trimmed.fastq.gz
+2026-01-31 13:52:26,370 - __main__ - INFO - 
+[Step 3/4] Aligning with STAR...
+2026-01-31 13:52:26,489 - utils - INFO - Aligning WT_HA_IP with STAR (single-end mode)...
+2026-01-31 13:55:18,186 - utils - INFO - Alignment complete: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_HA_IP_Aligned.sortedByCoord.out.bam
+2026-01-31 13:55:18,191 - __main__ - INFO - Aligned BAM: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_HA_IP_Aligned.sortedByCoord.out.bam
+2026-01-31 13:55:18,191 - __main__ - INFO - 
+[Step 4/4] Removing PCR duplicates...
+2026-01-31 13:55:18,192 - utils - INFO - Deduplicating WT_HA_IP...
+2026-01-31 14:49:43,585 - utils - INFO - Deduplication complete: 5,107,965 reads (79.0% duplicates removed)
+2026-01-31 14:49:43,588 - __main__ - INFO - Deduplicated BAM: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_HA_IP_dedup.bam
+2026-01-31 14:49:43,588 - __main__ - INFO - 
+======================================================================
+2026-01-31 14:49:43,588 - __main__ - INFO - ✓ Sample processing complete: WT_HA_IP
+2026-01-31 14:49:43,588 - __main__ - INFO - ======================================================================

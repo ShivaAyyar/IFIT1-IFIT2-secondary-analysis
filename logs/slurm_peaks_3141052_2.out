@@ -1,0 +1,18 @@
+==============================================
+CLIPper Peak Calling - SLURM Array Job
+==============================================
+Job ID: 3141057
+Array Task ID: 2
+Node: compt370
+CPUs: 8
+Memory: 32768
+Start time: Sat Feb 14 20:27:46 EST 2026
+
+ERROR: Singularity not found. Loading module...
+Running peak calling for sample index: 2
+
+
+==============================================
+Job completed at: Sun Feb 15 00:05:39 EST 2026
+Exit code: 0
+==============================================

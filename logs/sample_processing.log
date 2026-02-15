@@ -1,0 +1,356 @@
+2026-01-31 08:42:20,663 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:20,664 - __main__ - INFO - Processing sample: IFIT2_alone_SMInput
+2026-01-31 08:42:20,664 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:20,664 - __main__ - INFO - Description: IFIT2 alone, SMInput control
+2026-01-31 08:42:20,664 - __main__ - INFO - SRR: SRR31773518
+2026-01-31 08:42:20,664 - __main__ - INFO - 
+2026-01-31 08:42:20,666 - __main__ - ERROR - FASTQ file not found for SRR31773518 in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq
+2026-01-31 08:42:20,666 - __main__ - ERROR - Run 02_download_data.py first
+2026-01-31 08:42:21,178 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:21,179 - __main__ - INFO - Processing sample: IFIT3_alone_HA_IP
+2026-01-31 08:42:21,179 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:21,179 - __main__ - INFO - Description: IFIT3 alone, HA IP
+2026-01-31 08:42:21,179 - __main__ - INFO - SRR: SRR31773517
+2026-01-31 08:42:21,179 - __main__ - INFO - 
+2026-01-31 08:42:21,181 - __main__ - ERROR - FASTQ file not found for SRR31773517 in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq
+2026-01-31 08:42:21,181 - __main__ - ERROR - Run 02_download_data.py first
+2026-01-31 08:42:22,221 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:22,221 - __main__ - INFO - Processing sample: IFIT2_IFIT3_FLAG_SMInput
+2026-01-31 08:42:22,221 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:22,221 - __main__ - INFO - Description: IFIT2+IFIT3 co-expression, FLAG SMInput control
+2026-01-31 08:42:22,221 - __main__ - INFO - SRR: SRR31773512
+2026-01-31 08:42:22,221 - __main__ - INFO - 
+2026-01-31 08:42:22,225 - __main__ - ERROR - FASTQ file not found for SRR31773512 in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq
+2026-01-31 08:42:22,225 - __main__ - ERROR - Run 02_download_data.py first
+2026-01-31 08:42:25,110 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:25,111 - __main__ - INFO - Processing sample: IFIT2_IFIT3_HA_SMInput
+2026-01-31 08:42:25,112 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:25,112 - __main__ - INFO - Description: IFIT2+IFIT3 co-expression, HA SMInput control
+2026-01-31 08:42:25,112 - __main__ - INFO - SRR: SRR31773514
+2026-01-31 08:42:25,112 - __main__ - INFO - 
+2026-01-31 08:42:25,114 - __main__ - ERROR - FASTQ file not found for SRR31773514 in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq
+2026-01-31 08:42:25,115 - __main__ - ERROR - Run 02_download_data.py first
+2026-01-31 08:42:27,511 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:27,513 - __main__ - INFO - Processing sample: WT_FLAG_IP
+2026-01-31 08:42:27,513 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:27,513 - __main__ - INFO - Description: Wild-type, FLAG IP control
+2026-01-31 08:42:27,513 - __main__ - INFO - SRR: SRR31773539
+2026-01-31 08:42:27,513 - __main__ - INFO - 
+2026-01-31 08:42:27,516 - __main__ - ERROR - FASTQ file not found for SRR31773539 in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq
+2026-01-31 08:42:27,517 - __main__ - ERROR - Run 02_download_data.py first
+2026-01-31 08:42:31,139 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:31,140 - __main__ - INFO - Processing sample: IFIT2_alone_FLAG_IP
+2026-01-31 08:42:31,140 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:31,140 - __main__ - INFO - Description: IFIT2 alone, FLAG IP
+2026-01-31 08:42:31,140 - __main__ - INFO - SRR: SRR31773519
+2026-01-31 08:42:31,140 - __main__ - INFO - 
+2026-01-31 08:42:31,144 - __main__ - ERROR - FASTQ file not found for SRR31773519 in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq
+2026-01-31 08:42:31,144 - __main__ - ERROR - Run 02_download_data.py first
+2026-01-31 08:42:34,567 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:34,569 - __main__ - INFO - Processing sample: WT_HA_IP
+2026-01-31 08:42:34,569 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:34,570 - __main__ - INFO - Description: Wild-type, HA IP control
+2026-01-31 08:42:34,570 - __main__ - INFO - SRR: SRR31773541
+2026-01-31 08:42:34,570 - __main__ - INFO - 
+2026-01-31 08:42:34,573 - __main__ - ERROR - FASTQ file not found for SRR31773541 in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq
+2026-01-31 08:42:34,573 - __main__ - ERROR - Run 02_download_data.py first
+2026-01-31 08:42:49,656 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:49,657 - __main__ - INFO - Processing sample: WT_FLAG_SMInput
+2026-01-31 08:42:49,657 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:49,657 - __main__ - INFO - Description: Wild-type, FLAG SMInput control
+2026-01-31 08:42:49,657 - __main__ - INFO - SRR: SRR31773538
+2026-01-31 08:42:49,657 - __main__ - INFO - 
+2026-01-31 08:42:49,660 - __main__ - ERROR - FASTQ file not found for SRR31773538 in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq
+2026-01-31 08:42:49,660 - __main__ - ERROR - Run 02_download_data.py first
+2026-01-31 08:42:50,226 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:50,227 - __main__ - INFO - Processing sample: WT_HA_SMInput
+2026-01-31 08:42:50,227 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:50,227 - __main__ - INFO - Description: Wild-type, HA SMInput control
+2026-01-31 08:42:50,227 - __main__ - INFO - SRR: SRR31773540
+2026-01-31 08:42:50,227 - __main__ - INFO - 
+2026-01-31 08:42:50,227 - __main__ - ERROR - FASTQ file not found for SRR31773540 in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq
+2026-01-31 08:42:50,227 - __main__ - ERROR - Run 02_download_data.py first
+2026-01-31 08:42:57,582 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:57,584 - __main__ - INFO - Processing sample: IFIT3_alone_SMInput
+2026-01-31 08:42:57,584 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:57,584 - __main__ - INFO - Description: IFIT3 alone, SMInput control
+2026-01-31 08:42:57,584 - __main__ - INFO - SRR: SRR31773516
+2026-01-31 08:42:57,584 - __main__ - INFO - 
+2026-01-31 08:42:57,587 - __main__ - ERROR - FASTQ file not found for SRR31773516 in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq
+2026-01-31 08:42:57,587 - __main__ - ERROR - Run 02_download_data.py first
+2026-01-31 08:42:59,192 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:59,197 - __main__ - INFO - Processing sample: IFIT2_IFIT3_FLAG_IP
+2026-01-31 08:42:59,197 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:59,197 - __main__ - INFO - Description: IFIT2+IFIT3 co-expression, FLAG IP (IFIT2 pulldown)
+2026-01-31 08:42:59,197 - __main__ - INFO - SRR: SRR31773513
+2026-01-31 08:42:59,197 - __main__ - INFO - 
+2026-01-31 08:42:59,214 - __main__ - ERROR - FASTQ file not found for SRR31773513 in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq
+2026-01-31 08:42:59,214 - __main__ - ERROR - Run 02_download_data.py first
+2026-01-31 08:43:19,605 - __main__ - INFO - ======================================================================
+2026-01-31 08:43:19,616 - __main__ - INFO - Processing sample: IFIT2_IFIT3_HA_IP
+2026-01-31 08:43:19,616 - __main__ - INFO - ======================================================================
+2026-01-31 08:43:19,616 - __main__ - INFO - Description: IFIT2+IFIT3 co-expression, HA IP (IFIT3 pulldown)
+2026-01-31 08:43:19,616 - __main__ - INFO - SRR: SRR31773515
+2026-01-31 08:43:19,616 - __main__ - INFO - 
+2026-01-31 08:43:19,637 - __main__ - ERROR - FASTQ file not found for SRR31773515 in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq
+2026-01-31 08:43:19,638 - __main__ - ERROR - Run 02_download_data.py first
+2026-01-31 13:42:36,525 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:36,526 - __main__ - INFO - Processing sample: WT_HA_SMInput
+2026-01-31 13:42:36,526 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:36,526 - __main__ - INFO - Description: Wild-type, HA SMInput control
+2026-01-31 13:42:36,526 - __main__ - INFO - SRR: SRR31773540
+2026-01-31 13:42:36,526 - __main__ - INFO - 
+2026-01-31 13:42:36,533 - __main__ - INFO - Input FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq/SRR31773540.fastq.gz
+2026-01-31 13:42:36,533 - __main__ - INFO - 
+[Step 1/4] Running FastQC...
+2026-01-31 13:42:36,534 - utils - INFO - Running FastQC on 1 files...
+Running FastQC on 1 files...
+2026-01-31 13:42:36,662 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:36,662 - __main__ - INFO - Processing sample: IFIT2_IFIT3_HA_SMInput
+2026-01-31 13:42:36,662 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:36,662 - __main__ - INFO - Description: IFIT2+IFIT3 co-expression, HA SMInput control
+2026-01-31 13:42:36,662 - __main__ - INFO - SRR: SRR31773514
+2026-01-31 13:42:36,662 - __main__ - INFO - 
+2026-01-31 13:42:36,665 - __main__ - INFO - Input FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq/SRR31773514.fastq.gz
+2026-01-31 13:42:36,665 - __main__ - INFO - 
+[Step 1/4] Running FastQC...
+2026-01-31 13:42:36,666 - utils - INFO - Running FastQC on 1 files...
+2026-01-31 13:42:39,761 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:39,763 - __main__ - INFO - Processing sample: IFIT3_alone_HA_IP
+2026-01-31 13:42:39,763 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:39,763 - __main__ - INFO - Description: IFIT3 alone, HA IP
+2026-01-31 13:42:39,763 - __main__ - INFO - SRR: SRR31773517
+2026-01-31 13:42:39,763 - __main__ - INFO - 
+2026-01-31 13:42:39,766 - __main__ - INFO - Input FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq/SRR31773517.fastq.gz
+2026-01-31 13:42:39,766 - __main__ - INFO - 
+[Step 1/4] Running FastQC...
+2026-01-31 13:42:39,767 - utils - INFO - Running FastQC on 1 files...
+2026-01-31 13:42:39,921 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:39,924 - __main__ - INFO - Processing sample: IFIT3_alone_SMInput
+2026-01-31 13:42:39,924 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:39,924 - __main__ - INFO - Description: IFIT3 alone, SMInput control
+2026-01-31 13:42:39,924 - __main__ - INFO - SRR: SRR31773516
+2026-01-31 13:42:39,925 - __main__ - INFO - 
+2026-01-31 13:42:39,929 - __main__ - INFO - Input FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq/SRR31773516.fastq.gz
+2026-01-31 13:42:39,929 - __main__ - INFO - 
+[Step 1/4] Running FastQC...
+2026-01-31 13:42:39,930 - utils - INFO - Running FastQC on 1 files...
+2026-01-31 13:42:41,999 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:42,001 - __main__ - INFO - Processing sample: IFIT2_IFIT3_FLAG_IP
+2026-01-31 13:42:42,001 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:42,001 - __main__ - INFO - Description: IFIT2+IFIT3 co-expression, FLAG IP (IFIT2 pulldown)
+2026-01-31 13:42:42,001 - __main__ - INFO - SRR: SRR31773513
+2026-01-31 13:42:42,001 - __main__ - INFO - 
+2026-01-31 13:42:42,005 - __main__ - INFO - Input FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq/SRR31773513.fastq.gz
+2026-01-31 13:42:42,005 - __main__ - INFO - 
+[Step 1/4] Running FastQC...
+2026-01-31 13:42:42,006 - utils - INFO - Running FastQC on 1 files...
+2026-01-31 13:42:44,715 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:44,719 - __main__ - INFO - Processing sample: IFIT2_alone_FLAG_IP
+2026-01-31 13:42:44,719 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:44,719 - __main__ - INFO - Description: IFIT2 alone, FLAG IP
+2026-01-31 13:42:44,719 - __main__ - INFO - SRR: SRR31773519
+2026-01-31 13:42:44,719 - __main__ - INFO - 
+2026-01-31 13:42:44,723 - __main__ - INFO - Input FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq/SRR31773519.fastq.gz
+2026-01-31 13:42:44,723 - __main__ - INFO - 
+[Step 1/4] Running FastQC...
+2026-01-31 13:42:44,723 - utils - INFO - Running FastQC on 1 files...
+2026-01-31 13:42:46,623 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:46,625 - __main__ - INFO - Processing sample: WT_FLAG_IP
+2026-01-31 13:42:46,625 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:46,625 - __main__ - INFO - Description: Wild-type, FLAG IP control
+2026-01-31 13:42:46,625 - __main__ - INFO - SRR: SRR31773539
+2026-01-31 13:42:46,625 - __main__ - INFO - 
+2026-01-31 13:42:46,628 - __main__ - INFO - Input FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq/SRR31773539.fastq.gz
+2026-01-31 13:42:46,628 - __main__ - INFO - 
+[Step 1/4] Running FastQC...
+2026-01-31 13:42:46,629 - utils - INFO - Running FastQC on 1 files...
+2026-01-31 13:42:47,059 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:47,059 - __main__ - INFO - Processing sample: WT_FLAG_SMInput
+2026-01-31 13:42:47,059 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:47,059 - __main__ - INFO - Description: Wild-type, FLAG SMInput control
+2026-01-31 13:42:47,059 - __main__ - INFO - SRR: SRR31773538
+2026-01-31 13:42:47,059 - __main__ - INFO - 
+2026-01-31 13:42:47,059 - __main__ - INFO - Input FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq/SRR31773538.fastq.gz
+2026-01-31 13:42:47,059 - __main__ - INFO - 
+[Step 1/4] Running FastQC...
+2026-01-31 13:42:47,060 - utils - INFO - Running FastQC on 1 files...
+2026-01-31 13:42:47,204 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:47,204 - __main__ - INFO - Processing sample: WT_HA_IP
+2026-01-31 13:42:47,204 - __main__ - INFO - ======================================================================
+2026-01-31 13:42:47,204 - __main__ - INFO - Description: Wild-type, HA IP control
+2026-01-31 13:42:47,205 - __main__ - INFO - SRR: SRR31773541
+2026-01-31 13:42:47,205 - __main__ - INFO - 
+2026-01-31 13:42:47,205 - __main__ - INFO - Input FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq/SRR31773541.fastq.gz
+2026-01-31 13:42:47,206 - __main__ - INFO - 
+[Step 1/4] Running FastQC...
+2026-01-31 13:42:47,207 - utils - INFO - Running FastQC on 1 files...
+2026-01-31 13:43:29,697 - __main__ - INFO - ======================================================================
+2026-01-31 13:43:29,697 - __main__ - INFO - Processing sample: IFIT2_IFIT3_HA_IP
+2026-01-31 13:43:29,697 - __main__ - INFO - ======================================================================
+2026-01-31 13:43:29,697 - __main__ - INFO - Description: IFIT2+IFIT3 co-expression, HA IP (IFIT3 pulldown)
+2026-01-31 13:43:29,697 - __main__ - INFO - SRR: SRR31773515
+2026-01-31 13:43:29,697 - __main__ - INFO - 
+2026-01-31 13:43:29,730 - __main__ - INFO - Input FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq/SRR31773515.fastq.gz
+2026-01-31 13:43:29,730 - __main__ - INFO - 
+[Step 1/4] Running FastQC...
+2026-01-31 13:43:29,731 - utils - INFO - Running FastQC on 1 files...
+2026-01-31 13:43:35,949 - utils - INFO - FastQC complete. Reports in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/qc
+2026-01-31 13:43:35,950 - __main__ - INFO - 
+[Step 2/4] Extracting UMI and trimming adapters...
+2026-01-31 13:43:35,951 - utils - INFO - Extracting UMI from SRR31773514...
+2026-01-31 13:43:39,161 - utils - INFO - FastQC complete. Reports in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/qc
+2026-01-31 13:43:39,162 - __main__ - INFO - 
+[Step 2/4] Extracting UMI and trimming adapters...
+2026-01-31 13:43:39,163 - utils - INFO - Extracting UMI from SRR31773516...
+2026-01-31 13:43:43,197 - utils - INFO - FastQC complete. Reports in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/qc
+2026-01-31 13:43:43,202 - __main__ - INFO - 
+[Step 2/4] Extracting UMI and trimming adapters...
+2026-01-31 13:43:43,206 - utils - INFO - Extracting UMI from SRR31773540...
+2026-01-31 13:43:43,761 - utils - INFO - FastQC complete. Reports in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/qc
+2026-01-31 13:43:43,763 - __main__ - INFO - 
+[Step 2/4] Extracting UMI and trimming adapters...
+2026-01-31 13:43:43,764 - utils - INFO - Extracting UMI from SRR31773512...
+2026-01-31 13:43:47,399 - utils - INFO - FastQC complete. Reports in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/qc
+2026-01-31 13:43:47,401 - __main__ - INFO - 
+[Step 2/4] Extracting UMI and trimming adapters...
+2026-01-31 13:43:47,403 - utils - INFO - Extracting UMI from SRR31773518...
+2026-01-31 13:43:52,151 - utils - INFO - FastQC complete. Reports in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/qc
+2026-01-31 13:43:52,152 - __main__ - INFO - 
+[Step 2/4] Extracting UMI and trimming adapters...
+2026-01-31 13:43:52,153 - utils - INFO - Extracting UMI from SRR31773519...
+2026-01-31 13:43:55,048 - utils - INFO - FastQC complete. Reports in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/qc
+2026-01-31 13:43:55,049 - __main__ - INFO - 
+[Step 2/4] Extracting UMI and trimming adapters...
+2026-01-31 13:43:55,049 - utils - INFO - Extracting UMI from SRR31773517...
+2026-01-31 13:44:01,577 - utils - INFO - FastQC complete. Reports in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/qc
+2026-01-31 13:44:01,578 - __main__ - INFO - 
+[Step 2/4] Extracting UMI and trimming adapters...
+2026-01-31 13:44:01,579 - utils - INFO - Extracting UMI from SRR31773538...
+2026-01-31 13:44:03,460 - utils - INFO - FastQC complete. Reports in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/qc
+2026-01-31 13:44:03,461 - __main__ - INFO - 
+[Step 2/4] Extracting UMI and trimming adapters...
+2026-01-31 13:44:03,462 - utils - INFO - Extracting UMI from SRR31773513...
+2026-01-31 13:44:11,459 - utils - INFO - FastQC complete. Reports in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/qc
+2026-01-31 13:44:11,460 - __main__ - INFO - 
+[Step 2/4] Extracting UMI and trimming adapters...
+2026-01-31 13:44:11,460 - utils - INFO - Extracting UMI from SRR31773539...
+2026-01-31 13:44:11,739 - utils - INFO - FastQC complete. Reports in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/qc
+2026-01-31 13:44:11,740 - __main__ - INFO - 
+[Step 2/4] Extracting UMI and trimming adapters...
+2026-01-31 13:44:11,740 - utils - INFO - Extracting UMI from SRR31773541...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    2026-01-31 13:50:41,913 - utils - INFO - Trimming adapters from SRR31773538...
+                                                                                                                                                              2026-01-31 13:51:07,683 - utils - INFO - Trimming complete: N/A reads passed
+2026-01-31 13:51:07,683 - __main__ - INFO - Trimmed FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/trimmed/SRR31773538_trimmed.fastq.gz
+2026-01-31 13:51:07,683 - __main__ - INFO - 
+[Step 3/4] Aligning with STAR...
+2026-01-31 13:51:07,687 - utils - INFO - Aligning WT_FLAG_SMInput with STAR (single-end mode)...
+2026-01-31 13:51:50,165 - utils - INFO - Trimming adapters from SRR31773539...
+26-01-31 13:51:08,712 - __main__ - INFO - Trimmed FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/trimmed/SRR31773517_trimmed.fastq.gz
+2026-01-31 13:51:08,712 - __main__ - INFO - 
+[Step 3/4] Aligning with STAR...
+2026-01-31 13:51:08,714 - utils - INFO - Aligning IFIT3_alone_HA_IP with STAR (single-end mode)...
+2026-01-31 13:51:13,309 - utils - INFO - Alignment complete: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_HA_SMInput_Aligned.sortedByCoord.out.bam
+2026-01-31 13:51:13,317 - __main__ - INFO - Aligned BAM: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_HA_SMInput_Aligned.sortedByCoord.out.bam
+2026-01-31 13:51:13,317 - __main__ - INFO - 
+[Step 4/4] Removing PCR duplicates...
+2026-01-31 13:51:13,319 - utils - INFO - Deduplicating WT_HA_SMInput...
+2026-01-31 13:51:16,248 - utils - INFO - Alignment complete: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput_Aligned.sortedByCoord.out.bam
+2026-01-31 13:51:16,253 - __main__ - INFO - Aligned BAM: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput_Aligned.sortedByCoord.out.bam
+2026-01-31 13:51:16,253 - __main__ - INFO - 
+[Step 4/4] Removing PCR duplicates...
+2026-01-31 13:51:16,255 - utils - INFO - Deduplicating IFIT2_IFIT3_HA_SMInput...
+2026-01-31 13:51:17,022 - utils - INFO - Alignment complete: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT3_alone_SMInput_Aligned.sortedByCoord.out.bam
+2026-01-31 13:51:17,027 - __main__ - INFO - Aligned BAM: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT3_alone_SMInput_Aligned.sortedByCoord.out.bam
+2026-01-31 13:51:17,027 - __main__ - INFO - 
+[Step 4/4] Removing PCR duplicates...
+2026-01-31 13:51:17,028 - utils - INFO - Deduplicating IFIT3_alone_SMInput...
+2026-01-31 13:51:24,986 - utils - INFO - Trimming complete: N/A reads passed
+2026-01-31 13:51:24,988 - __main__ - INFO - Trimmed FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/trimmed/SRR31773513_trimmed.fastq.gz
+2026-01-31 13:51:24,988 - __main__ - INFO - 
+[Step 3/4] Aligning with STAR...
+2026-01-31 13:51:24,997 - utils - INFO - Aligning IFIT2_IFIT3_FLAG_IP with STAR (single-end mode)...
+2026-01-31 13:51:53,948 - utils - INFO - Trimming adapters from SRR31773541...
+2026-01-31 13:52:19,770 - utils - INFO - Trimming complete: N/A reads passed
+2026-01-31 13:52:19,770 - __main__ - INFO - Trimmed FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/trimmed/SRR31773539_trimmed.fastq.gz
+2026-01-31 13:52:19,770 - __main__ - INFO - 
+[Step 3/4] Aligning with STAR...
+2026-01-31 13:52:19,771 - utils - INFO - Aligning WT_FLAG_IP with STAR (single-end mode)...
+O - 
+[Step 4/4] Removing PCR duplicates...
+2026-01-31 13:52:07,562 - utils - INFO - Deduplicating IFIT2_alone_FLAG_IP...
+2026-01-31 13:52:26,370 - utils - INFO - Trimming complete: N/A reads passed
+2026-01-31 13:52:26,370 - __main__ - INFO - Trimmed FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/trimmed/SRR31773541_trimmed.fastq.gz
+2026-01-31 13:52:26,370 - __main__ - INFO - 
+[Step 3/4] Aligning with STAR...
+2026-01-31 13:52:26,489 - utils - INFO - Aligning WT_HA_IP with STAR (single-end mode)...
+2026-01-31 13:52:28,816 - utils - INFO - Alignment complete: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_FLAG_SMInput_Aligned.sortedByCoord.out.bam
+2026-01-31 13:52:28,822 - __main__ - INFO - Aligned BAM: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_FLAG_SMInput_Aligned.sortedByCoord.out.bam
+2026-01-31 13:52:28,823 - __main__ - INFO - 
+[Step 4/4] Removing PCR duplicates...
+2026-01-31 13:52:28,823 - utils - INFO - Deduplicating IFIT2_IFIT3_FLAG_SMInput...
+2026-01-31 13:52:56,563 - utils - INFO - Alignment complete: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_alone_SMInput_Aligned.sortedByCoord.out.bam
+2026-01-31 13:52:56,567 - __main__ - INFO - Aligned BAM: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_alone_SMInput_Aligned.sortedByCoord.out.bam
+2026-01-31 13:52:56,567 - __main__ - INFO - 
+[Step 4/4] Removing PCR duplicates...
+2026-01-31 13:52:56,568 - utils - INFO - Deduplicating IFIT2_alone_SMInput...
+2026-01-31 13:53:39,277 - utils - INFO - Alignment complete: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT3_alone_HA_IP_Aligned.sortedByCoord.out.bam
+2026-01-31 13:53:39,279 - __main__ - INFO - Aligned BAM: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT3_alone_HA_IP_Aligned.sortedByCoord.out.bam
+2026-01-31 13:53:39,279 - __main__ - INFO - 
+[Step 4/4] Removing PCR duplicates...
+2026-01-31 13:53:39,280 - utils - INFO - Deduplicating IFIT3_alone_HA_IP...
+2026-01-31 13:53:46,013 - utils - INFO - Trimming adapters from SRR31773515...
+2026-01-31 13:53:54,194 - utils - INFO - Alignment complete: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_FLAG_IP_Aligned.sortedByCoord.out.bam
+2026-01-31 13:53:54,197 - __main__ - INFO - Aligned BAM: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_FLAG_IP_Aligned.sortedByCoord.out.bam
+2026-01-31 13:53:54,197 - __main__ - INFO - 
+[Step 4/4] Removing PCR duplicates...
+2026-01-31 13:53:54,198 - utils - INFO - Deduplicating IFIT2_IFIT3_FLAG_IP...
+2026-01-31 13:54:06,988 - utils - INFO - Alignment complete: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_FLAG_SMInput_Aligned.sortedByCoord.out.bam
+2026-01-31 13:54:06,991 - __main__ - INFO - Aligned BAM: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_FLAG_SMInput_Aligned.sortedByCoord.out.bam
+2026-01-31 13:54:06,991 - __main__ - INFO - 
+[Step 4/4] Removing PCR duplicates...
+2026-01-31 13:54:06,992 - utils - INFO - Deduplicating WT_FLAG_SMInput...
+2026-01-31 13:54:12,570 - utils - INFO - Trimming complete: N/A reads passed
+2026-01-31 13:54:12,571 - __main__ - INFO - Trimmed FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/trimmed/SRR31773515_trimmed.fastq.gz
+2026-01-31 13:54:12,571 - __main__ - INFO - 
+[Step 3/4] Aligning with STAR...
+2026-01-31 13:54:12,617 - utils - INFO - Aligning IFIT2_IFIT3_HA_IP with STAR (single-end mode)...
+2026-01-31 13:55:18,186 - utils - INFO - Alignment complete: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_HA_IP_Aligned.sortedByCoord.out.bam
+2026-01-31 13:55:18,191 - __main__ - INFO - Aligned BAM: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_HA_IP_Aligned.sortedByCoord.out.bam
+2026-01-31 13:55:18,191 - __main__ - INFO - 
+[Step 4/4] Removing PCR duplicates...
+2026-01-31 13:55:18,192 - utils - INFO - Deduplicating WT_HA_IP...
+2026-01-31 13:55:34,999 - utils - INFO - Alignment complete: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_FLAG_IP_Aligned.sortedByCoord.out.bam
+2026-01-31 13:55:35,002 - __main__ - INFO - Aligned BAM: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_FLAG_IP_Aligned.sortedByCoord.out.bam
+2026-01-31 13:55:35,002 - __main__ - INFO - 
+[Step 4/4] Removing PCR duplicates...
+2026-01-31 13:55:35,002 - utils - INFO - Deduplicating WT_FLAG_IP...
+2026-01-31 13:59:03,104 - utils - INFO - Alignment complete: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_IP_Aligned.sortedByCoord.out.bam
+2026-01-31 13:59:03,126 - __main__ - INFO - Aligned BAM: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_IP_Aligned.sortedByCoord.out.bam
+2026-01-31 13:59:03,126 - __main__ - INFO - 
+[Step 4/4] Removing PCR duplicates...
+2026-01-31 13:59:03,134 - utils - INFO - Deduplicating IFIT2_IFIT3_HA_IP...
+2026-01-31 14:11:20,558 - utils - ERROR - ERROR in deduplication: Command '['umi_tools', 'dedup', '--stdin', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_alone_SMInput_Aligned.sortedByCoord.out.bam', '--stdout', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_alone_SMInput_dedup.bam', '--log', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_alone_SMInput_dedup.log', '--output-stats', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_alone_SMInput_dedup_stats']' died with <Signals.SIGKILL: 9>.
+2026-01-31 14:11:20,560 - __main__ - ERROR - Deduplication failed
+2026-01-31 14:35:02,955 - utils - INFO - Deduplication complete: 5,254,013 reads (85.5% duplicates removed)
+2026-01-31 14:35:02,956 - __main__ - INFO - Deduplicated BAM: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_IP_dedup.bam
+2026-01-31 14:35:02,956 - __main__ - INFO - 
+======================================================================
+2026-01-31 14:35:02,956 - __main__ - INFO - ✓ Sample processing complete: IFIT2_IFIT3_HA_IP
+2026-01-31 14:35:02,956 - __main__ - INFO - ======================================================================
+2026-01-31 14:48:32,928 - utils - ERROR - ERROR in deduplication: Command '['umi_tools', 'dedup', '--stdin', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT3_alone_HA_IP_Aligned.sortedByCoord.out.bam', '--stdout', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT3_alone_HA_IP_dedup.bam', '--log', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT3_alone_HA_IP_dedup.log', '--output-stats', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT3_alone_HA_IP_dedup_stats']' died with <Signals.SIGKILL: 9>.
+2026-01-31 14:48:32,932 - __main__ - ERROR - Deduplication failed
+2026-01-31 14:49:43,585 - utils - INFO - Deduplication complete: 5,107,965 reads (79.0% duplicates removed)
+2026-01-31 14:49:43,588 - __main__ - INFO - Deduplicated BAM: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_HA_IP_dedup.bam
+2026-01-31 14:49:43,588 - __main__ - INFO - 
+======================================================================
+2026-01-31 14:49:43,588 - __main__ - INFO - ✓ Sample processing complete: WT_HA_IP
+2026-01-31 14:49:43,588 - __main__ - INFO - ======================================================================
+2026-01-31 15:16:00,704 - utils - ERROR - ERROR in deduplication: Command '['umi_tools', 'dedup', '--stdin', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_FLAG_IP_Aligned.sortedByCoord.out.bam', '--stdout', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_FLAG_IP_dedup.bam', '--log', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_FLAG_IP_dedup.log', '--output-stats', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_FLAG_IP_dedup_stats']' died with <Signals.SIGKILL: 9>.
+2026-01-31 15:16:00,712 - __main__ - ERROR - Deduplication failed
+2026-01-31 15:24:08,435 - utils - ERROR - ERROR in deduplication: Command '['umi_tools', 'dedup', '--stdin', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_FLAG_IP_Aligned.sortedByCoord.out.bam', '--stdout', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_FLAG_IP_dedup.bam', '--log', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_FLAG_IP_dedup.log', '--output-stats', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_FLAG_IP_dedup_stats']' died with <Signals.SIGKILL: 9>.
+2026-01-31 15:24:08,439 - __main__ - ERROR - Deduplication failed
+2026-01-31 16:18:33,877 - utils - ERROR - ERROR in deduplication: Command '['umi_tools', 'dedup', '--stdin', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_alone_FLAG_IP_Aligned.sortedByCoord.out.bam', '--stdout', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_alone_FLAG_IP_dedup.bam', '--log', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_alone_FLAG_IP_dedup.log', '--output-stats', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_alone_FLAG_IP_dedup_stats']' died with <Signals.SIGKILL: 9>.
+2026-01-31 16:18:33,880 - __main__ - ERROR - Deduplication failed
+2026-01-31 17:40:07,869 - utils - ERROR - ERROR in deduplication: Command '['umi_tools', 'dedup', '--stdin', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_FLAG_SMInput_Aligned.sortedByCoord.out.bam', '--stdout', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_FLAG_SMInput_dedup.bam', '--log', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_FLAG_SMInput_dedup.log', '--output-stats', '/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_FLAG_SMInput_dedup_stats']' died with <Signals.SIGKILL: 9>.
+2026-01-31 17:40:07,871 - __main__ - ERROR - Deduplication failed

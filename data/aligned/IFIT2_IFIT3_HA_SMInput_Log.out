@@ -1,0 +1,322 @@
+STAR version=2.7.11b
+STAR compilation time,server,dir=2025-07-24T03:06:21+0000 :/opt/conda/conda-bld/star_1753326220084/work/source
+##### Command Line:
+/home/ssa163/miniconda3/envs/eclip/bin/STAR-avx2 --runThreadN 8 --genomeDir /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19 --readFilesIn /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/trimmed/SRR31773514_trimmed.fastq.gz --readFilesCommand zcat --outFileNamePrefix /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput_ --outSAMtype BAM SortedByCoordinate --outSAMunmapped Within --outSAMattributes All --outFilterMultimapNmax 10 --outFilterMismatchNmax 10 --outFilterMismatchNoverLmax 0.04 --alignIntronMin 20 --alignIntronMax 1000000 --alignSJoverhangMin 8 --alignSJDBoverhangMin 1 --outFilterType BySJout --chimSegmentMin 20 --limitBAMsortRAM 30000000000
+##### Initial USER parameters from Command Line:
+outFileNamePrefix                 /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput_
+###### All USER parameters from Command Line:
+runThreadN                    8     ~RE-DEFINED
+genomeDir                     /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19     ~RE-DEFINED
+readFilesIn                   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/trimmed/SRR31773514_trimmed.fastq.gz        ~RE-DEFINED
+readFilesCommand              zcat        ~RE-DEFINED
+outFileNamePrefix             /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput_     ~RE-DEFINED
+outSAMtype                    BAM   SortedByCoordinate        ~RE-DEFINED
+outSAMunmapped                Within        ~RE-DEFINED
+outSAMattributes              All        ~RE-DEFINED
+outFilterMultimapNmax         10     ~RE-DEFINED
+outFilterMismatchNmax         10     ~RE-DEFINED
+outFilterMismatchNoverLmax    0.04     ~RE-DEFINED
+alignIntronMin                20     ~RE-DEFINED
+alignIntronMax                1000000     ~RE-DEFINED
+alignSJoverhangMin            8     ~RE-DEFINED
+alignSJDBoverhangMin          1     ~RE-DEFINED
+outFilterType                 BySJout     ~RE-DEFINED
+chimSegmentMin                20     ~RE-DEFINED
+limitBAMsortRAM               30000000000     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runThreadN                        8
+genomeDir                         /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19
+readFilesIn                       /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/trimmed/SRR31773514_trimmed.fastq.gz   
+readFilesCommand                  zcat   
+limitBAMsortRAM                   30000000000
+outFileNamePrefix                 /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput_
+outSAMtype                        BAM   SortedByCoordinate   
+outSAMattributes                  All   
+outSAMunmapped                    Within   
+outFilterType                     BySJout
+outFilterMultimapNmax             10
+outFilterMismatchNmax             10
+outFilterMismatchNoverLmax        0.04
+alignIntronMin                    20
+alignIntronMax                    1000000
+alignSJoverhangMin                8
+alignSJDBoverhangMin              1
+chimSegmentMin                    20
+
+-------------------------------
+##### Final effective command line:
+/home/ssa163/miniconda3/envs/eclip/bin/STAR-avx2   --runThreadN 8   --genomeDir /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19   --readFilesIn /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/trimmed/SRR31773514_trimmed.fastq.gz      --readFilesCommand zcat      --limitBAMsortRAM 30000000000   --outFileNamePrefix /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput_   --outSAMtype BAM   SortedByCoordinate      --outSAMattributes All      --outSAMunmapped Within      --outFilterType BySJout   --outFilterMultimapNmax 10   --outFilterMismatchNmax 10   --outFilterMismatchNoverLmax 0.04   --alignIntronMin 20   --alignIntronMax 1000000   --alignSJoverhangMin 8   --alignSJDBoverhangMin 1   --chimSegmentMin 20
+----------------------------------------
+
+Number of fastq files for each mate = 1
+
+   Input read files for mate 1 :
+-rw-r--r-- 1 ssa163 jgs25 650427748 Jan 31 13:48 /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/trimmed/SRR31773514_trimmed.fastq.gz
+
+   readsCommandsFile:
+exec > "/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput__STARtmp/tmp.fifo.read1"
+echo FILE 0
+zcat      "/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/trimmed/SRR31773514_trimmed.fastq.gz"
+
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
+Finished loading and checking parameters
+Reading genome generation parameters:
+### /home/ssa163/miniconda3/envs/eclip/bin/STAR-avx2   --runMode genomeGenerate      --runThreadN 11   --genomeDir /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19   --genomeFastaFiles /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa      --sjdbGTFfile /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/gencode.v19.annotation.gtf   --sjdbOverhang 74
+### GstrandBit=32
+versionGenome                 2.7.4a     ~RE-DEFINED
+genomeType                    Full     ~RE-DEFINED
+genomeFastaFiles              /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa        ~RE-DEFINED
+genomeSAindexNbases           14     ~RE-DEFINED
+genomeChrBinNbits             18     ~RE-DEFINED
+genomeSAsparseD               1     ~RE-DEFINED
+genomeTransformType           None     ~RE-DEFINED
+genomeTransformVCF            -     ~RE-DEFINED
+sjdbOverhang                  74     ~RE-DEFINED
+sjdbFileChrStartEnd           -        ~RE-DEFINED
+sjdbGTFfile                   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/gencode.v19.annotation.gtf     ~RE-DEFINED
+sjdbGTFchrPrefix              -     ~RE-DEFINED
+sjdbGTFfeatureExon            exon     ~RE-DEFINED
+sjdbGTFtagExonParentTranscripttranscript_id     ~RE-DEFINED
+sjdbGTFtagExonParentGene      gene_id     ~RE-DEFINED
+sjdbInsertSave                Basic     ~RE-DEFINED
+genomeFileSizes               3203099732   24323543297        ~RE-DEFINED
+Genome version is compatible with current STAR
+Number of real (reference) chromosomes= 93
+1	chr1	249250621	0
+2	chr2	243199373	249298944
+3	chr3	198022430	492568576
+4	chr4	191154276	690749440
+5	chr5	180915260	882114560
+6	chr6	171115067	1063256064
+7	chr7	159138663	1234436096
+8	chrX	155270560	1393819648
+9	chr8	146364022	1549271040
+10	chr9	141213431	1695809536
+11	chr10	135534747	1837105152
+12	chr11	135006516	1972895744
+13	chr12	133851895	2108162048
+14	chr13	115169878	2242117632
+15	chr14	107349540	2357460992
+16	chr15	102531392	2464940032
+17	chr16	90354753	2567700480
+18	chr17	81195210	2658140160
+19	chr18	78077248	2739404800
+20	chr20	63025520	2817523712
+21	chrY	59373566	2880700416
+22	chr19	59128983	2940207104
+23	chr22	51304566	2999451648
+24	chr21	48129895	3050831872
+25	chr6_ssto_hap7	4928567	3099066368
+26	chr6_mcf_hap5	4833398	3104047104
+27	chr6_cox_hap2	4795371	3109027840
+28	chr6_mann_hap4	4683263	3114008576
+29	chr6_apd_hap1	4622290	3118727168
+30	chr6_qbl_hap6	4611984	3123445760
+31	chr6_dbb_hap3	4610396	3128164352
+32	chr17_ctg5_hap1	1680828	3132882944
+33	chr4_ctg9_hap1	590426	3134717952
+34	chr1_gl000192_random	547496	3135504384
+35	chrUn_gl000225	211173	3136290816
+36	chr4_gl000194_random	191469	3136552960
+37	chr4_gl000193_random	189789	3136815104
+38	chr9_gl000200_random	187035	3137077248
+39	chrUn_gl000222	186861	3137339392
+40	chrUn_gl000212	186858	3137601536
+41	chr7_gl000195_random	182896	3137863680
+42	chrUn_gl000223	180455	3138125824
+43	chrUn_gl000224	179693	3138387968
+44	chrUn_gl000219	179198	3138650112
+45	chr17_gl000205_random	174588	3138912256
+46	chrUn_gl000215	172545	3139174400
+47	chrUn_gl000216	172294	3139436544
+48	chrUn_gl000217	172149	3139698688
+49	chr9_gl000199_random	169874	3139960832
+50	chrUn_gl000211	166566	3140222976
+51	chrUn_gl000213	164239	3140485120
+52	chrUn_gl000220	161802	3140747264
+53	chrUn_gl000218	161147	3141009408
+54	chr19_gl000209_random	159169	3141271552
+55	chrUn_gl000221	155397	3141533696
+56	chrUn_gl000214	137718	3141795840
+57	chrUn_gl000228	129120	3142057984
+58	chrUn_gl000227	128374	3142320128
+59	chr1_gl000191_random	106433	3142582272
+60	chr19_gl000208_random	92689	3142844416
+61	chr9_gl000198_random	90085	3143106560
+62	chr17_gl000204_random	81310	3143368704
+63	chrUn_gl000233	45941	3143630848
+64	chrUn_gl000237	45867	3143892992
+65	chrUn_gl000230	43691	3144155136
+66	chrUn_gl000242	43523	3144417280
+67	chrUn_gl000243	43341	3144679424
+68	chrUn_gl000241	42152	3144941568
+69	chrUn_gl000236	41934	3145203712
+70	chrUn_gl000240	41933	3145465856
+71	chr17_gl000206_random	41001	3145728000
+72	chrUn_gl000232	40652	3145990144
+73	chrUn_gl000234	40531	3146252288
+74	chr11_gl000202_random	40103	3146514432
+75	chrUn_gl000238	39939	3146776576
+76	chrUn_gl000244	39929	3147038720
+77	chrUn_gl000248	39786	3147300864
+78	chr8_gl000196_random	38914	3147563008
+79	chrUn_gl000249	38502	3147825152
+80	chrUn_gl000246	38154	3148087296
+81	chr17_gl000203_random	37498	3148349440
+82	chr8_gl000197_random	37175	3148611584
+83	chrUn_gl000245	36651	3148873728
+84	chrUn_gl000247	36422	3149135872
+85	chr9_gl000201_random	36148	3149398016
+86	chrUn_gl000235	34474	3149660160
+87	chrUn_gl000239	33824	3149922304
+88	chr21_gl000210_random	27682	3150184448
+89	chrUn_gl000231	27386	3150446592
+90	chrUn_gl000229	19913	3150708736
+91	chrM	16571	3150970880
+92	chrUn_gl000226	15008	3151233024
+93	chr18_gl000207_random	4262	3151495168
+--sjdbOverhang = 74 taken from the generated genome
+Started loading the genome: Sat Jan 31 13:48:59 2026
+
+Genome: size given as a parameter = 3203099732
+SA: size given as a parameter = 24323543297
+SAindex: size given as a parameter = 1
+Read from SAindex: pGe.gSAindexNbases=14  nSAi=357913940
+nGenome=3203099732;  nSAbyte=24323543297
+GstrandBit=32   SA number of indices=5896616556
+Shared memory is not used for genomes. Allocated a private copy of the genome.
+Genome file size: 3203099732 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading Genome ... done! state: good=1 eof=0 fail=0 bad=0; loaded 3203099732 bytes
+SA file size: 24323543297 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading SA ... done! state: good=1 eof=0 fail=0 bad=0; loaded 24323543297 bytes
+Loading SAindex ... done: 1565873619 bytes
+Finished loading the genome: Sat Jan 31 13:49:31 2026
+
+Processing splice junctions database sjdbN=344580,   pGe.sjdbOverhang=74 
+To accommodate alignIntronMax=1000000 redefined winBinNbits=18
+To accommodate alignIntronMax=1000000 and alignMatesGapMax=0, redefined winFlankNbins=4 and winAnchorDistNbins=8
+Opening the file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput__STARtmp//Chimeric.out.junction.thread0 ... ok
+Opening the file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput__STARtmp//FilterBySJoutFiles.mate1.thread0 ... ok
+Opening the file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput__STARtmp//Chimeric.out.junction.thread1 ... ok
+Opening the file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput__STARtmp//FilterBySJoutFiles.mate1.thread1 ... ok
+Opening the file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput__STARtmp//Chimeric.out.junction.thread2 ... ok
+Opening the file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput__STARtmp//FilterBySJoutFiles.mate1.thread2 ... ok
+Opening the file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput__STARtmp//Chimeric.out.junction.thread3 ... ok
+Opening the file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput__STARtmp//FilterBySJoutFiles.mate1.thread3 ... ok
+Opening the file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput__STARtmp//Chimeric.out.junction.thread4 ... ok
+Opening the file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput__STARtmp//FilterBySJoutFiles.mate1.thread4 ... ok
+Opening the file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput__STARtmp//Chimeric.out.junction.thread5 ... ok
+Opening the file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput__STARtmp//FilterBySJoutFiles.mate1.thread5 ... ok
+Opening the file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput__STARtmp//Chimeric.out.junction.thread6 ... ok
+Opening the file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput__STARtmp//FilterBySJoutFiles.mate1.thread6 ... ok
+Opening the file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput__STARtmp//Chimeric.out.junction.thread7 ... ok
+Opening the file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_SMInput__STARtmp//FilterBySJoutFiles.mate1.thread7 ... ok
+Created thread # 1
+Starting to map file # 0
+mate 1:   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/trimmed/SRR31773514_trimmed.fastq.gz
+Created thread # 2
+Created thread # 3
+Created thread # 4
+Created thread # 5
+Created thread # 6
+Created thread # 7
+BAM sorting: 228179 mapped reads
+BAM sorting bins genomic start loci:
+1	0	16840687
+2	0	16993349
+3	0	17067014
+4	0	17067054
+5	0	17222503
+6	0	145969295
+7	0	145969342
+8	0	147511074
+9	0	149224127
+10	0	149224156
+11	3	72528229
+12	6	35670284
+13	7	108297723
+14	10	47225786
+15	14	35015919
+16	14	35015948
+17	14	35025501
+18	15	34659024
+19	18	76907895
+20	23	9826890
+21	51	107106
+22	51	110189
+23	51	112311
+24	51	114001
+25	51	114427
+26	51	115264
+27	51	115921
+28	51	116449
+29	51	117376
+30	51	117382
+31	51	117430
+32	51	117441
+33	51	117467
+34	51	117471
+35	51	150210
+36	51	153290
+37	51	155393
+38	51	157090
+39	51	158289
+40	51	158735
+41	51	159845
+42	51	160060
+43	51	161240
+44	51	161351
+45	51	161389
+46	51	161406
+47	51	161437
+48	51	161439
+Thread #1 end of input stream, nextChar=-1
+Completed: thread #2
+Completed: thread #7
+Completed: thread #6
+Completed: thread #3
+Completed: thread #4
+Completed: thread #1
+Completed: thread #0
+Joined thread # 1
+Joined thread # 2
+Joined thread # 3
+Joined thread # 4
+Completed: thread #5
+Joined thread # 5
+Joined thread # 6
+Joined thread # 7
+Completed stage 1 mapping of outFilterBySJout mapping
+Detected 7707 novel junctions that passed filtering, will proceed to filter reads that contained unannotated junctions
+Created thread # 1
+Created thread # 2
+Created thread # 3
+Created thread # 4
+Created thread # 5
+Created thread # 6
+Created thread # 7
+Completed: thread #7
+Completed: thread #6
+Completed: thread #0
+Completed: thread #4
+Completed: thread #2
+Completed: thread #3
+Completed: thread #5
+Completed: thread #1
+Joined thread # 1
+Joined thread # 2
+Joined thread # 3
+Joined thread # 4
+Joined thread # 5
+Joined thread # 6
+Joined thread # 7
+Jan 31 13:50:47 ..... finished mapping
+RAM after mapping:
+VmPeak:	30445724 kB; VmSize:	30357988 kB; VmHWM:	29896444 kB; VmRSS:	29844032 kB; 
+RAM after freeing genome index memory:
+VmPeak:	30445724 kB; VmSize:	 1947320 kB; VmHWM:	29896444 kB; VmRSS:	 1433364 kB; 
+Jan 31 13:50:48 ..... started sorting BAM
+Max memory needed for sorting = 261840073
+ALL DONE!

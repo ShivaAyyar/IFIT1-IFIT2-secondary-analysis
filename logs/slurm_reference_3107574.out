@@ -1,0 +1,23 @@
+Starting reference genome setup...
+Job ID: 3107574
+Node: compt368
+Start time: Sat Jan 31 02:29:27 EST 2026
+
+	/home/ssa163/miniconda3/envs/eclip/bin/STAR-avx2 --runMode genomeGenerate --runThreadN 11 --genomeDir /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19 --genomeFastaFiles /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa --sjdbGTFfile /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/gencode.v19.annotation.gtf --sjdbOverhang 74
+	STAR version: 2.7.11b   compiled: 2025-07-24T03:06:21+0000 :/opt/conda/conda-bld/star_1753326220084/work/source
+Jan 31 02:30:42 ..... started STAR run
+Jan 31 02:30:42 ... starting to generate Genome files
+Jan 31 02:31:27 ..... processing annotations GTF
+Jan 31 02:31:56 ... starting to sort Suffix Array. This may take a long time...
+Jan 31 02:32:08 ... sorting Suffix Array chunks and saving them to disk...
+Jan 31 02:44:44 ... loading chunks from disk, packing SA...
+Jan 31 02:46:27 ... finished generating suffix array
+Jan 31 02:46:27 ... generating Suffix Array index
+Jan 31 02:49:01 ... completed Suffix Array index
+Jan 31 02:49:02 ..... inserting junctions into the genome indices
+Jan 31 02:51:31 ... writing Genome to disk ...
+Jan 31 02:51:35 ... writing Suffix Array to disk ...
+Jan 31 02:52:10 ... writing SAindex to disk
+Jan 31 02:52:13 ..... finished successfully
+
+Job completed at: Sat Jan 31 02:52:14 EST 2026

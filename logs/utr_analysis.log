@@ -1,0 +1,76 @@
+2026-01-31 09:03:13,622 - INFO - ======================================================================
+2026-01-31 09:03:13,623 - INFO - IFIT2-IFIT3 eCLIP Analysis: 5' UTR Analysis
+2026-01-31 09:03:13,623 - INFO - ======================================================================
+2026-01-31 09:03:13,623 - INFO - 
+Step 1: Parsing GENCODE GTF for 5' UTRs...
+2026-01-31 09:03:13,624 - INFO - Parsing GTF file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/gencode.v19.annotation.gtf.gz
+2026-01-31 09:03:36,400 - INFO - Parsed 92,720 transcripts with 5' UTR annotations
+2026-01-31 09:03:36,478 - INFO - 
+Step 2: Creating 5' UTR BED file...
+2026-01-31 09:03:36,785 - INFO - Created 5' UTR BED file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/5utr_regions.bed
+2026-01-31 09:03:36,787 - INFO - 
+Step 3: Analyzing complex binding...
+2026-01-31 09:03:36,789 - ERROR - Normalized peak files not found. Run 04_call_peaks.py first
+2026-01-31 09:03:36,789 - ERROR - Looking for: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/IFIT2_IFIT3_FLAG_IP_normalized_peaks.bed
+2026-01-31 09:03:36,789 - ERROR - Looking for: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/IFIT2_IFIT3_HA_IP_normalized_peaks.bed
+2026-02-15 13:40:07,128 - INFO - ======================================================================
+2026-02-15 13:40:07,128 - INFO - IFIT2-IFIT3 eCLIP Analysis: 5' UTR Analysis
+2026-02-15 13:40:07,128 - INFO - ======================================================================
+2026-02-15 13:40:07,128 - INFO - 
+Step 1: Parsing GENCODE GTF for 5' UTRs...
+2026-02-15 13:40:07,130 - INFO - Parsing GTF file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/gencode.v19.annotation.gtf.gz
+2026-02-15 13:40:35,877 - INFO - Parsed 92,720 transcripts with 5' UTR annotations
+2026-02-15 13:40:35,970 - INFO - 
+Step 2: Creating 5' UTR BED file...
+2026-02-15 13:40:36,619 - INFO - Created 5' UTR BED file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/5utr_regions.bed
+2026-02-15 13:40:36,622 - INFO - 
+Step 3: Analyzing complex binding...
+2026-02-15 13:40:36,959 - INFO - 
+============================================================
+2026-02-15 13:40:36,959 - INFO - IFIT2-IFIT3 Complex Binding Analysis
+2026-02-15 13:40:36,959 - INFO - ============================================================
+2026-02-15 13:40:36,959 - INFO - IFIT2 binding (FLAG IP):        4,138 transcripts
+2026-02-15 13:40:36,959 - INFO - IFIT3 binding (HA IP):          5,732 transcripts
+2026-02-15 13:40:36,959 - INFO - IFIT2 only (no IFIT3):          1,509 transcripts
+2026-02-15 13:40:36,959 - INFO - IFIT3 only (no IFIT2):          3,103 transcripts
+2026-02-15 13:40:36,959 - INFO - Complex (both IFIT2 + IFIT3):   2,629 transcripts
+2026-02-15 13:40:36,959 - INFO - Union (IFIT2 or IFIT3):         7,241 transcripts
+2026-02-15 13:40:36,960 - INFO - ============================================================
+2026-02-15 13:40:36,960 - INFO - 
+Complex binding represents 36.3% of all bound transcripts
+2026-02-15 13:40:36,960 - INFO - 
+Step 4: Analyzing IFIT2 alone binding...
+2026-02-15 13:40:37,138 - INFO - Found 4,237 transcripts with 5' UTR binding
+2026-02-15 13:40:37,138 - INFO - 
+Step 5: Analyzing IFIT3 alone binding...
+2026-02-15 13:40:37,319 - INFO - Found 398 transcripts with 5' UTR binding
+2026-02-15 13:40:37,319 - INFO - 
+Step 6: Saving bound transcript lists...
+2026-02-15 13:40:37,380 - INFO - 
+Step 7: Analyzing UTR length distributions...
+2026-02-15 13:40:37,513 - INFO - 
+5' UTR Length Analysis Summary:
+2026-02-15 13:40:37,513 - INFO - ==================================================
+2026-02-15 13:40:37,513 - INFO - Bound transcripts: 2,629
+2026-02-15 13:40:37,513 - INFO - Unbound transcripts: 89,777
+2026-02-15 13:40:37,513 - INFO - 
+Median 5' UTR length:
+2026-02-15 13:40:37,513 - INFO -   Bound: 538.0 nt
+2026-02-15 13:40:37,513 - INFO -   Unbound: 501.0 nt
+2026-02-15 13:40:37,513 - INFO - 
+Fraction with short (<50 nt) 5' UTR:
+2026-02-15 13:40:37,513 - INFO -   Bound: 1.6%
+2026-02-15 13:40:37,513 - INFO -   Unbound: 4.1%
+2026-02-15 13:40:37,513 - INFO - 
+Mann-Whitney U test (bound < unbound):
+2026-02-15 13:40:37,514 - INFO -   p-value: 1.00e+00
+2026-02-15 13:40:37,971 - INFO - 
+======================================================================
+2026-02-15 13:40:37,971 - INFO - UTR analysis complete!
+2026-02-15 13:40:37,972 - INFO - ======================================================================
+2026-02-15 13:40:37,972 - INFO - 
+Results saved to:
+2026-02-15 13:40:37,972 - INFO -   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/results/ifit2_alone_bound_transcripts.txt
+2026-02-15 13:40:37,972 - INFO -   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/results/ifit3_alone_bound_transcripts.txt
+2026-02-15 13:40:37,972 - INFO -   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/results/complex_bound_transcripts.txt
+2026-02-15 13:40:37,972 - INFO -   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/results/utr_length_distribution.csv

@@ -1,0 +1,297 @@
+STAR version=2.7.11b
+STAR compilation time,server,dir=2025-07-24T03:06:21+0000 :/opt/conda/conda-bld/star_1753326220084/work/source
+##### Command Line:
+/home/ssa163/miniconda3/envs/eclip/bin/STAR-avx2 --runMode genomeGenerate --runThreadN 11 --genomeDir /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19 --genomeFastaFiles /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa --sjdbGTFfile /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/gencode.v19.annotation.gtf --sjdbOverhang 74
+##### Initial USER parameters from Command Line:
+###### All USER parameters from Command Line:
+runMode                       genomeGenerate        ~RE-DEFINED
+runThreadN                    11     ~RE-DEFINED
+genomeDir                     /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19     ~RE-DEFINED
+genomeFastaFiles              /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa        ~RE-DEFINED
+sjdbGTFfile                   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/gencode.v19.annotation.gtf     ~RE-DEFINED
+sjdbOverhang                  74     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runMode                           genomeGenerate   
+runThreadN                        11
+genomeDir                         /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19
+genomeFastaFiles                  /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa   
+sjdbGTFfile                       /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/gencode.v19.annotation.gtf
+sjdbOverhang                      74
+
+-------------------------------
+##### Final effective command line:
+/home/ssa163/miniconda3/envs/eclip/bin/STAR-avx2   --runMode genomeGenerate      --runThreadN 11   --genomeDir /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19   --genomeFastaFiles /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa      --sjdbGTFfile /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/gencode.v19.annotation.gtf   --sjdbOverhang 74
+----------------------------------------
+
+Number of fastq files for each mate = 1
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
+Finished loading and checking parameters
+--genomeDir directory exists and will be overwritten: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19/
+Jan 31 02:30:42 ... starting to generate Genome files
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 0  "chr1" chrStart: 0
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 1  "chr2" chrStart: 249298944
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 2  "chr3" chrStart: 492568576
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 3  "chr4" chrStart: 690749440
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 4  "chr5" chrStart: 882114560
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 5  "chr6" chrStart: 1063256064
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 6  "chr7" chrStart: 1234436096
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 7  "chrX" chrStart: 1393819648
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 8  "chr8" chrStart: 1549271040
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 9  "chr9" chrStart: 1695809536
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 10  "chr10" chrStart: 1837105152
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 11  "chr11" chrStart: 1972895744
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 12  "chr12" chrStart: 2108162048
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 13  "chr13" chrStart: 2242117632
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 14  "chr14" chrStart: 2357460992
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 15  "chr15" chrStart: 2464940032
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 16  "chr16" chrStart: 2567700480
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 17  "chr17" chrStart: 2658140160
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 18  "chr18" chrStart: 2739404800
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 19  "chr20" chrStart: 2817523712
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 20  "chrY" chrStart: 2880700416
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 21  "chr19" chrStart: 2940207104
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 22  "chr22" chrStart: 2999451648
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 23  "chr21" chrStart: 3050831872
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 24  "chr6_ssto_hap7" chrStart: 3099066368
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 25  "chr6_mcf_hap5" chrStart: 3104047104
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 26  "chr6_cox_hap2" chrStart: 3109027840
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 27  "chr6_mann_hap4" chrStart: 3114008576
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 28  "chr6_apd_hap1" chrStart: 3118727168
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 29  "chr6_qbl_hap6" chrStart: 3123445760
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 30  "chr6_dbb_hap3" chrStart: 3128164352
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 31  "chr17_ctg5_hap1" chrStart: 3132882944
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 32  "chr4_ctg9_hap1" chrStart: 3134717952
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 33  "chr1_gl000192_random" chrStart: 3135504384
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 34  "chrUn_gl000225" chrStart: 3136290816
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 35  "chr4_gl000194_random" chrStart: 3136552960
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 36  "chr4_gl000193_random" chrStart: 3136815104
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 37  "chr9_gl000200_random" chrStart: 3137077248
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 38  "chrUn_gl000222" chrStart: 3137339392
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 39  "chrUn_gl000212" chrStart: 3137601536
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 40  "chr7_gl000195_random" chrStart: 3137863680
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 41  "chrUn_gl000223" chrStart: 3138125824
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 42  "chrUn_gl000224" chrStart: 3138387968
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 43  "chrUn_gl000219" chrStart: 3138650112
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 44  "chr17_gl000205_random" chrStart: 3138912256
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 45  "chrUn_gl000215" chrStart: 3139174400
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 46  "chrUn_gl000216" chrStart: 3139436544
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 47  "chrUn_gl000217" chrStart: 3139698688
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 48  "chr9_gl000199_random" chrStart: 3139960832
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 49  "chrUn_gl000211" chrStart: 3140222976
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 50  "chrUn_gl000213" chrStart: 3140485120
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 51  "chrUn_gl000220" chrStart: 3140747264
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 52  "chrUn_gl000218" chrStart: 3141009408
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 53  "chr19_gl000209_random" chrStart: 3141271552
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 54  "chrUn_gl000221" chrStart: 3141533696
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 55  "chrUn_gl000214" chrStart: 3141795840
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 56  "chrUn_gl000228" chrStart: 3142057984
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 57  "chrUn_gl000227" chrStart: 3142320128
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 58  "chr1_gl000191_random" chrStart: 3142582272
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 59  "chr19_gl000208_random" chrStart: 3142844416
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 60  "chr9_gl000198_random" chrStart: 3143106560
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 61  "chr17_gl000204_random" chrStart: 3143368704
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 62  "chrUn_gl000233" chrStart: 3143630848
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 63  "chrUn_gl000237" chrStart: 3143892992
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 64  "chrUn_gl000230" chrStart: 3144155136
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 65  "chrUn_gl000242" chrStart: 3144417280
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 66  "chrUn_gl000243" chrStart: 3144679424
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 67  "chrUn_gl000241" chrStart: 3144941568
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 68  "chrUn_gl000236" chrStart: 3145203712
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 69  "chrUn_gl000240" chrStart: 3145465856
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 70  "chr17_gl000206_random" chrStart: 3145728000
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 71  "chrUn_gl000232" chrStart: 3145990144
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 72  "chrUn_gl000234" chrStart: 3146252288
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 73  "chr11_gl000202_random" chrStart: 3146514432
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 74  "chrUn_gl000238" chrStart: 3146776576
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 75  "chrUn_gl000244" chrStart: 3147038720
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 76  "chrUn_gl000248" chrStart: 3147300864
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 77  "chr8_gl000196_random" chrStart: 3147563008
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 78  "chrUn_gl000249" chrStart: 3147825152
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 79  "chrUn_gl000246" chrStart: 3148087296
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 80  "chr17_gl000203_random" chrStart: 3148349440
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 81  "chr8_gl000197_random" chrStart: 3148611584
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 82  "chrUn_gl000245" chrStart: 3148873728
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 83  "chrUn_gl000247" chrStart: 3149135872
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 84  "chr9_gl000201_random" chrStart: 3149398016
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 85  "chrUn_gl000235" chrStart: 3149660160
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 86  "chrUn_gl000239" chrStart: 3149922304
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 87  "chr21_gl000210_random" chrStart: 3150184448
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 88  "chrUn_gl000231" chrStart: 3150446592
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 89  "chrUn_gl000229" chrStart: 3150708736
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 90  "chrM" chrStart: 3150970880
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 91  "chrUn_gl000226" chrStart: 3151233024
+/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/hg19.fa : chr # 92  "chr18_gl000207_random" chrStart: 3151495168
+Chromosome sequence lengths: 
+chr1	249250621
+chr2	243199373
+chr3	198022430
+chr4	191154276
+chr5	180915260
+chr6	171115067
+chr7	159138663
+chrX	155270560
+chr8	146364022
+chr9	141213431
+chr10	135534747
+chr11	135006516
+chr12	133851895
+chr13	115169878
+chr14	107349540
+chr15	102531392
+chr16	90354753
+chr17	81195210
+chr18	78077248
+chr20	63025520
+chrY	59373566
+chr19	59128983
+chr22	51304566
+chr21	48129895
+chr6_ssto_hap7	4928567
+chr6_mcf_hap5	4833398
+chr6_cox_hap2	4795371
+chr6_mann_hap4	4683263
+chr6_apd_hap1	4622290
+chr6_qbl_hap6	4611984
+chr6_dbb_hap3	4610396
+chr17_ctg5_hap1	1680828
+chr4_ctg9_hap1	590426
+chr1_gl000192_random	547496
+chrUn_gl000225	211173
+chr4_gl000194_random	191469
+chr4_gl000193_random	189789
+chr9_gl000200_random	187035
+chrUn_gl000222	186861
+chrUn_gl000212	186858
+chr7_gl000195_random	182896
+chrUn_gl000223	180455
+chrUn_gl000224	179693
+chrUn_gl000219	179198
+chr17_gl000205_random	174588
+chrUn_gl000215	172545
+chrUn_gl000216	172294
+chrUn_gl000217	172149
+chr9_gl000199_random	169874
+chrUn_gl000211	166566
+chrUn_gl000213	164239
+chrUn_gl000220	161802
+chrUn_gl000218	161147
+chr19_gl000209_random	159169
+chrUn_gl000221	155397
+chrUn_gl000214	137718
+chrUn_gl000228	129120
+chrUn_gl000227	128374
+chr1_gl000191_random	106433
+chr19_gl000208_random	92689
+chr9_gl000198_random	90085
+chr17_gl000204_random	81310
+chrUn_gl000233	45941
+chrUn_gl000237	45867
+chrUn_gl000230	43691
+chrUn_gl000242	43523
+chrUn_gl000243	43341
+chrUn_gl000241	42152
+chrUn_gl000236	41934
+chrUn_gl000240	41933
+chr17_gl000206_random	41001
+chrUn_gl000232	40652
+chrUn_gl000234	40531
+chr11_gl000202_random	40103
+chrUn_gl000238	39939
+chrUn_gl000244	39929
+chrUn_gl000248	39786
+chr8_gl000196_random	38914
+chrUn_gl000249	38502
+chrUn_gl000246	38154
+chr17_gl000203_random	37498
+chr8_gl000197_random	37175
+chrUn_gl000245	36651
+chrUn_gl000247	36422
+chr9_gl000201_random	36148
+chrUn_gl000235	34474
+chrUn_gl000239	33824
+chr21_gl000210_random	27682
+chrUn_gl000231	27386
+chrUn_gl000229	19913
+chrM	16571
+chrUn_gl000226	15008
+chr18_gl000207_random	4262
+Genome sequence total length = 3137161264
+Genome size with padding = 3151757312
+Jan 31 02:31:27 ..... processing annotations GTF
+Processing pGe.sjdbGTFfile=/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/gencode.v19.annotation.gtf, found:
+		196520 transcripts
+		1196293 exons (non-collapsed)
+		344653 collapsed junctions
+Total junctions: 344653
+Jan 31 02:31:39 ..... finished GTF processing
+
+Estimated genome size with padding and SJs: total=genome+SJ=3300757312 = 3151757312 + 149000000
+GstrandBit=32
+Number of SA indices: 5794620924
+Jan 31 02:31:56 ... starting to sort Suffix Array. This may take a long time...
+Number of chunks: 38;   chunks size limit: 1347081008 bytes
+Jan 31 02:32:08 ... sorting Suffix Array chunks and saving them to disk...
+Writing 1064174936 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_8 ; empty space on disk = 2412115448037376 bytes ... done
+Writing 1130198720 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_5 ; empty space on disk = 2412115448037376 bytes ... done
+Writing 1269226712 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_2 ; empty space on disk = 2412109056966656 bytes ... done
+Writing 1312094768 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_0 ; empty space on disk = 2412109056966656 bytes ... done
+Writing 1136748464 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_6 ; empty space on disk = 2412109056966656 bytes ... done
+Writing 1142024912 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_1 ; empty space on disk = 2412119146364928 bytes ... done
+Writing 1138664768 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_7 ; empty space on disk = 2412119146364928 bytes ... done
+Writing 1300092336 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_4 ; empty space on disk = 2412130959622144 bytes ... done
+Writing 1251601824 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_3 ; empty space on disk = 2412130959622144 bytes ... done
+Writing 1139001072 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_10 ; empty space on disk = 2412130959622144 bytes ... done
+Writing 1337572464 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_9 ; empty space on disk = 2412128152584192 bytes ... done
+Writing 1175668144 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_12 ; empty space on disk = 2412098470543360 bytes ... done
+Writing 1344245672 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_11 ; empty space on disk = 2412109697646592 bytes ... done
+Writing 1212880264 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_19 ; empty space on disk = 2412106662019072 bytes ... done
+Writing 1312865800 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_13 ; empty space on disk = 2412106662019072 bytes ...Writing 1168085224 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_18 ; empty space on disk = 2412106662019072 bytes ... done
+ done
+Writing 1126118200 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_16 ; empty space on disk = 2412103808843776 bytes ... done
+Writing 1287421264 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_14 ; empty space on disk = 2412103808843776 bytes ... done
+Writing 1223807360 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_17 ; empty space on disk = 2412106008756224 bytes ... done
+Writing 1183237360 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_20 ; empty space on disk = 2412096027361280 bytes ... done
+Writing 1318871056 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_15 ; empty space on disk = 2412092590129152 bytes ... done
+Writing 1340527856 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_21 ; empty space on disk = 2412107252367360 bytes ... done
+Writing 1266278144 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_23 ; empty space on disk = 2412208962142208 bytes ... done
+Writing 1331869432 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_22 ; empty space on disk = 2412208962142208 bytes ... done
+Writing 1129412896 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_29 ; empty space on disk = 2412204736380928 bytes ... done
+Writing 1227404784 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_26 ; empty space on disk = 2412204736380928 bytes ... done
+Writing 1344395728 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_24 ; empty space on disk = 2412204736380928 bytes ... done
+Writing 1072268592 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_30 ; empty space on disk = 2412189036052480 bytes ... done
+Writing 1343055120 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_28 ; empty space on disk = 2412189036052480 bytes ... done
+Writing 1270852624 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_25 ; empty space on disk = 2412178509398016 bytes ... done
+Writing 1221112160 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_31 ; empty space on disk = 2412178509398016 bytes ... done
+Writing 1244972344 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_27 ; empty space on disk = 2412169934143488 bytes ... done
+Writing 1326174280 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_32 ; empty space on disk = 2412169934143488 bytes ... done
+Writing 716913224 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_37 ; empty space on disk = 2412121488883712 bytes ... done
+Writing 1132194688 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_33 ; empty space on disk = 2412118882123776 bytes ... done
+Writing 1254063336 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_34 ; empty space on disk = 2412118882123776 bytes ... done
+Writing 1240716160 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_35 ; empty space on disk = 2412123684601856 bytes ... done
+Writing 1320154704 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA_36 ; empty space on disk = 2412137747054592 bytes ... done
+Jan 31 02:44:44 ... loading chunks from disk, packing SA...
+Jan 31 02:46:27 ... finished generating suffix array
+Jan 31 02:46:27 ... generating Suffix Array index
+Jan 31 02:49:01 ... completed Suffix Array index
+Jan 31 02:49:02   Finished preparing junctions
+Jan 31 02:49:02 ..... inserting junctions into the genome indices
+Jan 31 02:49:39   Finished SA search: number of new junctions=344580, old junctions=0
+Jan 31 02:50:07   Finished sorting SA indicesL nInd=101995632
+Genome size with junctions=3203099732  3151757312   51342420
+GstrandBit1=32   GstrandBit=32
+Jan 31 02:51:13   Finished inserting junction indices
+Jan 31 02:51:30   Finished SAi
+Jan 31 02:51:30 ..... finished inserting junctions into genome
+Jan 31 02:51:31 ... writing Genome to disk ...
+Writing 3203099732 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//Genome ; empty space on disk = 2412305763532800 bytes ... done
+SA size in bytes: 24323543297
+Jan 31 02:51:35 ... writing Suffix Array to disk ...
+Writing 24323543297 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SA ; empty space on disk = 2412305763532800 bytes ... done
+Jan 31 02:52:10 ... writing SAindex to disk
+Writing 8 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SAindex ; empty space on disk = 2412298182328320 bytes ... done
+Writing 120 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SAindex ; empty space on disk = 2412298182328320 bytes ... done
+Writing 1565873491 bytes into /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/reference/STAR_index_hg19//SAindex ; empty space on disk = 2412298182328320 bytes ... done
+Jan 31 02:52:13 ..... finished successfully
+DONE: Genome generation, EXITING

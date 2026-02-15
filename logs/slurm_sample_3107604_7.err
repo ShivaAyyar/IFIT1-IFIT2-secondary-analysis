@@ -1,0 +1,8 @@
+2026-01-31 08:42:57,582 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:57,584 - __main__ - INFO - Processing sample: IFIT3_alone_SMInput
+2026-01-31 08:42:57,584 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:57,584 - __main__ - INFO - Description: IFIT3 alone, SMInput control
+2026-01-31 08:42:57,584 - __main__ - INFO - SRR: SRR31773516
+2026-01-31 08:42:57,584 - __main__ - INFO - 
+2026-01-31 08:42:57,587 - __main__ - ERROR - FASTQ file not found for SRR31773516 in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq
+2026-01-31 08:42:57,587 - __main__ - ERROR - Run 02_download_data.py first

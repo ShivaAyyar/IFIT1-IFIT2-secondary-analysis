@@ -1,0 +1,8 @@
+2026-01-31 08:42:34,567 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:34,569 - __main__ - INFO - Processing sample: WT_HA_IP
+2026-01-31 08:42:34,569 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:34,570 - __main__ - INFO - Description: Wild-type, HA IP control
+2026-01-31 08:42:34,570 - __main__ - INFO - SRR: SRR31773541
+2026-01-31 08:42:34,570 - __main__ - INFO - 
+2026-01-31 08:42:34,573 - __main__ - ERROR - FASTQ file not found for SRR31773541 in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq
+2026-01-31 08:42:34,573 - __main__ - ERROR - Run 02_download_data.py first

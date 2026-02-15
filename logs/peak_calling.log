@@ -1,0 +1,604 @@
+2026-01-31 09:02:52,009 - INFO - ======================================================================
+2026-01-31 09:02:52,009 - INFO - IFIT2-IFIT3 eCLIP Analysis: Peak Calling with CLIPper
+2026-01-31 09:02:52,009 - INFO - ======================================================================
+2026-01-31 09:02:52,009 - INFO - 
+Using Yeo lab CLIPper for peak calling
+2026-01-31 09:02:52,009 - INFO -   Species: hg19
+2026-01-31 09:02:52,009 - INFO -   FDR: 0.05
+2026-01-31 09:02:52,009 - INFO -   Fold-change threshold: 2.0
+2026-01-31 09:02:52,009 - INFO -   P-value threshold: 0.001
+2026-01-31 09:02:52,009 - INFO - 
+Calling peaks for 6 IP samples
+
+2026-01-31 09:02:52,011 - WARNING - IP BAM not found: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_FLAG_IP_Aligned.sortedByCoord.dedup.bam
+2026-01-31 09:02:52,011 - WARNING - IP BAM not found: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_IP_Aligned.sortedByCoord.dedup.bam
+2026-01-31 09:02:52,011 - WARNING - IP BAM not found: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_alone_FLAG_IP_Aligned.sortedByCoord.dedup.bam
+2026-01-31 09:02:52,012 - WARNING - IP BAM not found: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT3_alone_HA_IP_Aligned.sortedByCoord.dedup.bam
+2026-01-31 09:02:52,013 - WARNING - IP BAM not found: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_FLAG_IP_Aligned.sortedByCoord.dedup.bam
+2026-01-31 09:02:52,013 - WARNING - IP BAM not found: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_HA_IP_Aligned.sortedByCoord.dedup.bam
+2026-01-31 09:02:52,013 - INFO - 
+======================================================================
+2026-01-31 09:02:52,013 - INFO - Peak Calling Summary
+2026-01-31 09:02:52,013 - INFO - ======================================================================
+2026-01-31 09:02:52,013 - INFO - Successful: 0/6
+2026-01-31 09:02:52,013 - INFO - Failed: 6/6
+2026-01-31 09:02:52,013 - INFO - 
+======================================================================
+2026-01-31 09:02:52,013 - INFO - Peak calling complete!
+2026-01-31 09:02:52,013 - INFO - ======================================================================
+2026-01-31 09:02:52,013 - INFO - 
+Output files:
+2026-01-31 09:02:52,013 - INFO -   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/*_clipper_peaks.bed (raw CLIPper peaks)
+2026-01-31 09:02:52,013 - INFO -   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/*_normalized_peaks.bed (input-normalized peaks)
+2026-01-31 09:02:52,013 - INFO - 
+Next steps:
+2026-01-31 09:02:52,013 - INFO -   python scripts/05_analyze_utrs.py
+2026-01-31 09:05:22,701 - INFO - ======================================================================
+2026-01-31 09:05:22,701 - INFO - IFIT2-IFIT3 eCLIP Analysis: Peak Calling with CLIPper
+2026-01-31 09:05:22,701 - INFO - ======================================================================
+2026-01-31 09:05:22,701 - INFO - 
+Using Yeo lab CLIPper for peak calling
+2026-01-31 09:05:22,701 - INFO -   Species: hg19
+2026-01-31 09:05:22,701 - INFO -   FDR: 0.05
+2026-01-31 09:05:22,701 - INFO -   Fold-change threshold: 2.0
+2026-01-31 09:05:22,701 - INFO -   P-value threshold: 0.001
+2026-01-31 09:05:22,701 - INFO - 
+Calling peaks for 6 IP samples
+
+2026-01-31 09:05:22,701 - WARNING - IP BAM not found: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_FLAG_IP_Aligned.sortedByCoord.dedup.bam
+2026-01-31 09:05:22,702 - WARNING - IP BAM not found: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_IP_Aligned.sortedByCoord.dedup.bam
+2026-01-31 09:05:22,702 - WARNING - IP BAM not found: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_alone_FLAG_IP_Aligned.sortedByCoord.dedup.bam
+2026-01-31 09:05:22,702 - WARNING - IP BAM not found: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT3_alone_HA_IP_Aligned.sortedByCoord.dedup.bam
+2026-01-31 09:05:22,702 - WARNING - IP BAM not found: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_FLAG_IP_Aligned.sortedByCoord.dedup.bam
+2026-01-31 09:05:22,702 - WARNING - IP BAM not found: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_HA_IP_Aligned.sortedByCoord.dedup.bam
+2026-01-31 09:05:22,702 - INFO - 
+======================================================================
+2026-01-31 09:05:22,702 - INFO - Peak Calling Summary
+2026-01-31 09:05:22,702 - INFO - ======================================================================
+2026-01-31 09:05:22,702 - INFO - Successful: 0/6
+2026-01-31 09:05:22,702 - INFO - Failed: 6/6
+2026-01-31 09:05:22,702 - INFO - 
+======================================================================
+2026-01-31 09:05:22,702 - INFO - Peak calling complete!
+2026-01-31 09:05:22,702 - INFO - ======================================================================
+2026-01-31 09:05:22,702 - INFO - 
+Output files:
+2026-01-31 09:05:22,702 - INFO -   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/*_clipper_peaks.bed (raw CLIPper peaks)
+2026-01-31 09:05:22,702 - INFO -   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/*_normalized_peaks.bed (input-normalized peaks)
+2026-01-31 09:05:22,702 - INFO - 
+Next steps:
+2026-01-31 09:05:22,702 - INFO -   python scripts/05_analyze_utrs.py
+2026-01-31 17:44:59,532 - INFO - ======================================================================
+2026-01-31 17:44:59,532 - INFO - IFIT2-IFIT3 eCLIP Analysis: Peak Calling with CLIPper
+2026-01-31 17:44:59,532 - INFO - ======================================================================
+2026-01-31 17:44:59,532 - INFO - 
+Using Yeo lab CLIPper for peak calling
+2026-01-31 17:44:59,532 - INFO -   Species: hg19
+2026-01-31 17:44:59,532 - INFO -   FDR: 0.05
+2026-01-31 17:44:59,532 - INFO -   Fold-change threshold: 2.0
+2026-01-31 17:44:59,532 - INFO -   P-value threshold: 0.001
+2026-01-31 17:44:59,532 - INFO - 
+Calling peaks for 6 IP samples
+
+2026-01-31 17:44:59,533 - WARNING - IP BAM not found: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_FLAG_IP_Aligned.sortedByCoord.dedup.bam
+2026-01-31 17:44:59,534 - WARNING - IP BAM not found: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_IP_Aligned.sortedByCoord.dedup.bam
+2026-01-31 17:44:59,535 - WARNING - IP BAM not found: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_alone_FLAG_IP_Aligned.sortedByCoord.dedup.bam
+2026-01-31 17:44:59,535 - WARNING - IP BAM not found: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT3_alone_HA_IP_Aligned.sortedByCoord.dedup.bam
+2026-01-31 17:44:59,536 - WARNING - IP BAM not found: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_FLAG_IP_Aligned.sortedByCoord.dedup.bam
+2026-01-31 17:44:59,536 - WARNING - IP BAM not found: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_HA_IP_Aligned.sortedByCoord.dedup.bam
+2026-01-31 17:44:59,536 - INFO - 
+======================================================================
+2026-01-31 17:44:59,536 - INFO - Peak Calling Summary
+2026-01-31 17:44:59,536 - INFO - ======================================================================
+2026-01-31 17:44:59,536 - INFO - Successful: 0/6
+2026-01-31 17:44:59,536 - INFO - Failed: 6/6
+2026-01-31 17:44:59,537 - INFO - 
+======================================================================
+2026-01-31 17:44:59,537 - INFO - Peak calling complete!
+2026-01-31 17:44:59,537 - INFO - ======================================================================
+2026-01-31 17:44:59,537 - INFO - 
+Output files:
+2026-01-31 17:44:59,537 - INFO -   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/*_clipper_peaks.bed (raw CLIPper peaks)
+2026-01-31 17:44:59,537 - INFO -   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/*_normalized_peaks.bed (input-normalized peaks)
+2026-01-31 17:44:59,537 - INFO - 
+Next steps:
+2026-01-31 17:44:59,537 - INFO -   python scripts/05_analyze_utrs.py
+2026-01-31 18:23:38,800 - INFO - ======================================================================
+2026-01-31 18:23:38,800 - INFO - IFIT2-IFIT3 eCLIP Analysis: Peak Calling with CLIPper
+2026-01-31 18:23:38,800 - INFO - ======================================================================
+2026-01-31 18:23:38,800 - INFO - 
+Using Yeo lab CLIPper for peak calling
+2026-01-31 18:23:38,801 - INFO -   Species: hg19
+2026-01-31 18:23:38,801 - INFO -   FDR: 0.05
+2026-01-31 18:23:38,801 - INFO -   Fold-change threshold: 2.0
+2026-01-31 18:23:38,801 - INFO -   P-value threshold: 0.001
+2026-01-31 18:23:38,801 - INFO - 
+Calling peaks for 6 IP samples
+
+2026-01-31 18:23:38,802 - INFO - 
+======================================================================
+2026-01-31 18:23:38,802 - INFO - Processing: IFIT2_IFIT3_FLAG_IP
+2026-01-31 18:23:38,802 - INFO - ======================================================================
+2026-01-31 18:23:38,803 - INFO - Calling peaks for IFIT2_IFIT3_FLAG_IP using CLIPper...
+2026-01-31 18:23:38,803 - INFO -   Species: hg19
+2026-01-31 18:23:38,803 - INFO -   FDR threshold: 0.05
+2026-01-31 18:25:25,322 - INFO - ======================================================================
+2026-01-31 18:25:25,322 - INFO - IFIT2-IFIT3 eCLIP Analysis: Peak Calling with CLIPper
+2026-01-31 18:25:25,322 - INFO - ======================================================================
+2026-01-31 18:25:25,322 - INFO - 
+Using Yeo lab CLIPper for peak calling
+2026-01-31 18:25:25,322 - INFO -   Species: hg19
+2026-01-31 18:25:25,322 - INFO -   FDR: 0.05
+2026-01-31 18:25:25,322 - INFO -   Fold-change threshold: 2.0
+2026-01-31 18:25:25,322 - INFO -   P-value threshold: 0.001
+2026-01-31 18:25:25,322 - INFO - 
+Calling peaks for 6 IP samples
+
+2026-01-31 18:25:25,324 - INFO - 
+======================================================================
+2026-01-31 18:25:25,324 - INFO - Processing: IFIT2_IFIT3_FLAG_IP
+2026-01-31 18:25:25,324 - INFO - ======================================================================
+2026-01-31 18:25:25,325 - INFO - Calling peaks for IFIT2_IFIT3_FLAG_IP using CLIPper...
+2026-01-31 18:25:25,325 - INFO -   Species: hg19
+2026-01-31 18:25:25,325 - INFO -   FDR threshold: 0.05
+2026-01-31 18:25:34,543 - ERROR - CLIPper failed: Usage is � [options] 
+file_in is a file with a list of the length of aligned reads (only the part that aligns) 
+Options
+ -L <int>   Effective Gene Length
+ -r <int>   # of iterations 
+ -f <int>   input file containing read lengths 
+ -a <float>   B-H FDR cutoff, default(.05) ... gets very slow as alpha gets smaller
+ -T 1/0 default(0) print running time statistics 
+Output:
+Significance Threshold [tab] Iterations with this observed threshold
+
+2026-01-31 18:25:34,543 - ERROR - Peak calling failed for IFIT2_IFIT3_FLAG_IP
+2026-01-31 18:25:34,545 - INFO - 
+======================================================================
+2026-01-31 18:25:34,545 - INFO - Processing: IFIT2_IFIT3_HA_IP
+2026-01-31 18:25:34,545 - INFO - ======================================================================
+2026-01-31 18:25:34,547 - INFO - Calling peaks for IFIT2_IFIT3_HA_IP using CLIPper...
+2026-01-31 18:25:34,547 - INFO -   Species: hg19
+2026-01-31 18:25:34,547 - INFO -   FDR threshold: 0.05
+2026-01-31 18:25:43,813 - ERROR - CLIPper failed: Usage is � [options] 
+file_in is a file with a list of the length of aligned reads (only the part that aligns) 
+Options
+ -L <int>   Effective Gene Length
+ -r <int>   # of iterations 
+ -f <int>   input file containing read lengths 
+ -a <float>   B-H FDR cutoff, default(.05) ... gets very slow as alpha gets smaller
+ -T 1/0 default(0) print running time statistics 
+Output:
+Significance Threshold [tab] Iterations with this observed threshold
+
+2026-01-31 18:25:43,814 - ERROR - Peak calling failed for IFIT2_IFIT3_HA_IP
+2026-01-31 18:25:43,815 - INFO - 
+======================================================================
+2026-01-31 18:25:43,815 - INFO - Processing: IFIT2_alone_FLAG_IP
+2026-01-31 18:25:43,815 - INFO - ======================================================================
+2026-01-31 18:25:43,816 - INFO - Calling peaks for IFIT2_alone_FLAG_IP using CLIPper...
+2026-01-31 18:25:43,816 - INFO -   Species: hg19
+2026-01-31 18:25:43,816 - INFO -   FDR threshold: 0.05
+2026-01-31 18:25:52,832 - ERROR - CLIPper failed: Usage is � [options] 
+file_in is a file with a list of the length of aligned reads (only the part that aligns) 
+Options
+ -L <int>   Effective Gene Length
+ -r <int>   # of iterations 
+ -f <int>   input file containing read lengths 
+ -a <float>   B-H FDR cutoff, default(.05) ... gets very slow as alpha gets smaller
+ -T 1/0 default(0) print running time statistics 
+Output:
+Significance Threshold [tab] Iterations with this observed threshold
+
+2026-01-31 18:25:52,832 - ERROR - Peak calling failed for IFIT2_alone_FLAG_IP
+2026-01-31 18:25:52,833 - INFO - 
+======================================================================
+2026-01-31 18:25:52,833 - INFO - Processing: IFIT3_alone_HA_IP
+2026-01-31 18:25:52,833 - INFO - ======================================================================
+2026-01-31 18:25:52,834 - INFO - Calling peaks for IFIT3_alone_HA_IP using CLIPper...
+2026-01-31 18:25:52,834 - INFO -   Species: hg19
+2026-01-31 18:25:52,834 - INFO -   FDR threshold: 0.05
+2026-01-31 18:26:00,015 - ERROR - CLIPper failed: Usage is � [options] 
+file_in is a file with a list of the length of aligned reads (only the part that aligns) 
+Options
+ -L <int>   Effective Gene Length
+ -r <int>   # of iterations 
+ -f <int>   input file containing read lengths 
+ -a <float>   B-H FDR cutoff, default(.05) ... gets very slow as alpha gets smaller
+ -T 1/0 default(0) print running time statistics 
+Output:
+Significance Threshold [tab] Iterations with this observed threshold
+
+2026-01-31 18:26:00,015 - ERROR - Peak calling failed for IFIT3_alone_HA_IP
+2026-01-31 18:26:00,017 - INFO - 
+======================================================================
+2026-01-31 18:26:00,017 - INFO - Processing: WT_FLAG_IP
+2026-01-31 18:26:00,017 - INFO - ======================================================================
+2026-01-31 18:26:00,018 - INFO - Calling peaks for WT_FLAG_IP using CLIPper...
+2026-01-31 18:26:00,018 - INFO -   Species: hg19
+2026-01-31 18:26:00,018 - INFO -   FDR threshold: 0.05
+2026-01-31 18:26:07,637 - ERROR - CLIPper failed: Usage is � [options] 
+file_in is a file with a list of the length of aligned reads (only the part that aligns) 
+Options
+ -L <int>   Effective Gene Length
+ -r <int>   # of iterations 
+ -f <int>   input file containing read lengths 
+ -a <float>   B-H FDR cutoff, default(.05) ... gets very slow as alpha gets smaller
+ -T 1/0 default(0) print running time statistics 
+Output:
+Significance Threshold [tab] Iterations with this observed threshold
+
+2026-01-31 18:26:07,637 - ERROR - Peak calling failed for WT_FLAG_IP
+2026-01-31 18:26:07,638 - INFO - 
+======================================================================
+2026-01-31 18:26:07,638 - INFO - Processing: WT_HA_IP
+2026-01-31 18:26:07,638 - INFO - ======================================================================
+2026-01-31 18:26:07,639 - INFO - Calling peaks for WT_HA_IP using CLIPper...
+2026-01-31 18:26:07,639 - INFO -   Species: hg19
+2026-01-31 18:26:07,639 - INFO -   FDR threshold: 0.05
+2026-01-31 18:26:14,722 - ERROR - CLIPper failed: Usage is � [options] 
+file_in is a file with a list of the length of aligned reads (only the part that aligns) 
+Options
+ -L <int>   Effective Gene Length
+ -r <int>   # of iterations 
+ -f <int>   input file containing read lengths 
+ -a <float>   B-H FDR cutoff, default(.05) ... gets very slow as alpha gets smaller
+ -T 1/0 default(0) print running time statistics 
+Output:
+Significance Threshold [tab] Iterations with this observed threshold
+
+2026-01-31 18:26:14,723 - ERROR - Peak calling failed for WT_HA_IP
+2026-01-31 18:26:14,723 - INFO - 
+======================================================================
+2026-01-31 18:26:14,723 - INFO - Peak Calling Summary
+2026-01-31 18:26:14,723 - INFO - ======================================================================
+2026-01-31 18:26:14,723 - INFO - Successful: 0/6
+2026-01-31 18:26:14,723 - INFO - Failed: 6/6
+2026-01-31 18:26:14,723 - INFO - 
+======================================================================
+2026-01-31 18:26:14,723 - INFO - Peak calling complete!
+2026-01-31 18:26:14,723 - INFO - ======================================================================
+2026-01-31 18:26:14,723 - INFO - 
+Output files:
+2026-01-31 18:26:14,723 - INFO -   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/*_clipper_peaks.bed (raw CLIPper peaks)
+2026-01-31 18:26:14,723 - INFO -   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/*_normalized_peaks.bed (input-normalized peaks)
+2026-01-31 18:26:14,723 - INFO - 
+Next steps:
+2026-01-31 18:26:14,723 - INFO -   python scripts/05_analyze_utrs.py
+2026-01-31 18:31:57,884 - INFO - ======================================================================
+2026-01-31 18:31:57,884 - INFO - IFIT2-IFIT3 eCLIP Analysis: Peak Calling with CLIPper
+2026-01-31 18:31:57,885 - INFO - ======================================================================
+2026-01-31 18:31:57,885 - INFO - 
+Using Yeo lab CLIPper for peak calling
+2026-01-31 18:31:57,885 - INFO -   Species: hg19
+2026-01-31 18:31:57,885 - INFO -   FDR: 0.05
+2026-01-31 18:31:57,885 - INFO -   Fold-change threshold: 2.0
+2026-01-31 18:31:57,885 - INFO -   P-value threshold: 0.001
+2026-01-31 18:31:57,885 - INFO - 
+Calling peaks for 6 IP samples
+
+2026-01-31 18:31:57,886 - INFO - 
+======================================================================
+2026-01-31 18:31:57,886 - INFO - Processing: IFIT2_IFIT3_FLAG_IP
+2026-01-31 18:31:57,887 - INFO - ======================================================================
+2026-01-31 18:31:57,887 - INFO - Calling peaks for IFIT2_IFIT3_FLAG_IP using CLIPper...
+2026-01-31 18:31:57,887 - INFO -   Species: hg19
+2026-01-31 18:31:57,888 - INFO -   FDR threshold: 0.05
+2026-01-31 18:32:05,295 - ERROR - CLIPper failed: Usage is � [options] 
+file_in is a file with a list of the length of aligned reads (only the part that aligns) 
+Options
+ -L <int>   Effective Gene Length
+ -r <int>   # of iterations 
+ -f <int>   input file containing read lengths 
+ -a <float>   B-H FDR cutoff, default(.05) ... gets very slow as alpha gets smaller
+ -T 1/0 default(0) print running time statistics 
+Output:
+Significance Threshold [tab] Iterations with this observed threshold
+
+2026-01-31 18:32:05,295 - ERROR - Peak calling failed for IFIT2_IFIT3_FLAG_IP
+2026-01-31 18:32:05,296 - INFO - 
+======================================================================
+2026-01-31 18:32:05,296 - INFO - Processing: IFIT2_IFIT3_HA_IP
+2026-01-31 18:32:05,296 - INFO - ======================================================================
+2026-01-31 18:32:05,298 - INFO - Calling peaks for IFIT2_IFIT3_HA_IP using CLIPper...
+2026-01-31 18:32:05,298 - INFO -   Species: hg19
+2026-01-31 18:32:05,298 - INFO -   FDR threshold: 0.05
+2026-01-31 18:32:13,469 - ERROR - CLIPper failed: Usage is � [options] 
+file_in is a file with a list of the length of aligned reads (only the part that aligns) 
+Options
+ -L <int>   Effective Gene Length
+ -r <int>   # of iterations 
+ -f <int>   input file containing read lengths 
+ -a <float>   B-H FDR cutoff, default(.05) ... gets very slow as alpha gets smaller
+ -T 1/0 default(0) print running time statistics 
+Output:
+Significance Threshold [tab] Iterations with this observed threshold
+
+2026-01-31 18:32:13,470 - ERROR - Peak calling failed for IFIT2_IFIT3_HA_IP
+2026-01-31 18:32:13,471 - INFO - 
+======================================================================
+2026-01-31 18:32:13,471 - INFO - Processing: IFIT2_alone_FLAG_IP
+2026-01-31 18:32:13,471 - INFO - ======================================================================
+2026-01-31 18:32:13,472 - INFO - Calling peaks for IFIT2_alone_FLAG_IP using CLIPper...
+2026-01-31 18:32:13,472 - INFO -   Species: hg19
+2026-01-31 18:32:13,473 - INFO -   FDR threshold: 0.05
+2026-01-31 18:32:20,549 - ERROR - CLIPper failed: Usage is � [options] 
+file_in is a file with a list of the length of aligned reads (only the part that aligns) 
+Options
+ -L <int>   Effective Gene Length
+ -r <int>   # of iterations 
+ -f <int>   input file containing read lengths 
+ -a <float>   B-H FDR cutoff, default(.05) ... gets very slow as alpha gets smaller
+ -T 1/0 default(0) print running time statistics 
+Output:
+Significance Threshold [tab] Iterations with this observed threshold
+
+2026-01-31 18:32:20,549 - ERROR - Peak calling failed for IFIT2_alone_FLAG_IP
+2026-01-31 18:32:20,551 - INFO - 
+======================================================================
+2026-01-31 18:32:20,551 - INFO - Processing: IFIT3_alone_HA_IP
+2026-01-31 18:32:20,551 - INFO - ======================================================================
+2026-01-31 18:32:20,553 - INFO - Calling peaks for IFIT3_alone_HA_IP using CLIPper...
+2026-01-31 18:32:20,553 - INFO -   Species: hg19
+2026-01-31 18:32:20,553 - INFO -   FDR threshold: 0.05
+2026-01-31 18:32:27,375 - ERROR - CLIPper failed: Usage is � [options] 
+file_in is a file with a list of the length of aligned reads (only the part that aligns) 
+Options
+ -L <int>   Effective Gene Length
+ -r <int>   # of iterations 
+ -f <int>   input file containing read lengths 
+ -a <float>   B-H FDR cutoff, default(.05) ... gets very slow as alpha gets smaller
+ -T 1/0 default(0) print running time statistics 
+Output:
+Significance Threshold [tab] Iterations with this observed threshold
+
+2026-01-31 18:32:27,375 - ERROR - Peak calling failed for IFIT3_alone_HA_IP
+2026-01-31 18:32:27,376 - INFO - 
+======================================================================
+2026-01-31 18:32:27,376 - INFO - Processing: WT_FLAG_IP
+2026-01-31 18:32:27,376 - INFO - ======================================================================
+2026-01-31 18:32:27,377 - INFO - Calling peaks for WT_FLAG_IP using CLIPper...
+2026-01-31 18:32:27,377 - INFO -   Species: hg19
+2026-01-31 18:32:27,377 - INFO -   FDR threshold: 0.05
+2026-01-31 18:32:34,575 - ERROR - CLIPper failed: Usage is � [options] 
+file_in is a file with a list of the length of aligned reads (only the part that aligns) 
+Options
+ -L <int>   Effective Gene Length
+ -r <int>   # of iterations 
+ -f <int>   input file containing read lengths 
+ -a <float>   B-H FDR cutoff, default(.05) ... gets very slow as alpha gets smaller
+ -T 1/0 default(0) print running time statistics 
+Output:
+Significance Threshold [tab] Iterations with this observed threshold
+
+2026-01-31 18:32:34,575 - ERROR - Peak calling failed for WT_FLAG_IP
+2026-01-31 18:32:34,576 - INFO - 
+======================================================================
+2026-01-31 18:32:34,576 - INFO - Processing: WT_HA_IP
+2026-01-31 18:32:34,577 - INFO - ======================================================================
+2026-01-31 18:32:34,577 - INFO - Calling peaks for WT_HA_IP using CLIPper...
+2026-01-31 18:32:34,577 - INFO -   Species: hg19
+2026-01-31 18:32:34,577 - INFO -   FDR threshold: 0.05
+2026-01-31 18:32:41,645 - ERROR - CLIPper failed: Usage is � [options] 
+file_in is a file with a list of the length of aligned reads (only the part that aligns) 
+Options
+ -L <int>   Effective Gene Length
+ -r <int>   # of iterations 
+ -f <int>   input file containing read lengths 
+ -a <float>   B-H FDR cutoff, default(.05) ... gets very slow as alpha gets smaller
+ -T 1/0 default(0) print running time statistics 
+Output:
+Significance Threshold [tab] Iterations with this observed threshold
+
+2026-01-31 18:32:41,645 - ERROR - Peak calling failed for WT_HA_IP
+2026-01-31 18:32:41,645 - INFO - 
+======================================================================
+2026-01-31 18:32:41,645 - INFO - Peak Calling Summary
+2026-01-31 18:32:41,645 - INFO - ======================================================================
+2026-01-31 18:32:41,645 - INFO - Successful: 0/6
+2026-01-31 18:32:41,645 - INFO - Failed: 6/6
+2026-01-31 18:32:41,646 - INFO - 
+======================================================================
+2026-01-31 18:32:41,646 - INFO - Peak calling complete!
+2026-01-31 18:32:41,646 - INFO - ======================================================================
+2026-01-31 18:32:41,646 - INFO - 
+Output files:
+2026-01-31 18:32:41,646 - INFO -   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/*_clipper_peaks.bed (raw CLIPper peaks)
+2026-01-31 18:32:41,646 - INFO -   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/*_normalized_peaks.bed (input-normalized peaks)
+2026-01-31 18:32:41,646 - INFO - 
+Next steps:
+2026-01-31 18:32:41,646 - INFO -   python scripts/05_analyze_utrs.py
+2026-02-14 16:17:38,574 - INFO - ======================================================================
+2026-02-14 16:17:38,574 - INFO - IFIT2-IFIT3 eCLIP Analysis: Peak Calling with CLIPper
+2026-02-14 16:17:38,574 - INFO - ======================================================================
+2026-02-14 16:17:38,574 - INFO - 
+Using Yeo lab CLIPper for peak calling
+2026-02-14 16:17:38,574 - INFO -   Execution mode: singularity
+2026-02-14 16:17:38,574 - INFO -   Container: clipper_5d865bb.sif
+2026-02-14 16:17:38,575 - INFO -   Species: hg19
+2026-02-14 16:17:38,575 - INFO -   FDR: 0.05
+2026-02-14 16:17:38,575 - INFO -   Fold-change threshold: 2.0
+2026-02-14 16:17:38,575 - INFO -   P-value threshold: 0.001
+2026-02-14 16:17:38,575 - INFO - 
+Calling peaks for 6 IP samples
+
+2026-02-14 16:17:38,577 - INFO - 
+======================================================================
+2026-02-14 16:17:38,577 - INFO - Processing: IFIT2_IFIT3_FLAG_IP
+2026-02-14 16:17:38,577 - INFO - ======================================================================
+2026-02-14 16:17:38,578 - INFO - Calling peaks for IFIT2_IFIT3_FLAG_IP using CLIPper...
+2026-02-14 16:17:38,578 - INFO -   Execution mode: singularity
+2026-02-14 16:17:38,578 - INFO -   Species: hg19
+2026-02-14 16:17:38,578 - INFO -   FDR threshold: 0.05
+2026-02-14 16:17:38,578 - INFO - Using Singularity container: clipper_5d865bb.sif
+2026-02-14 16:17:38,579 - INFO - Command: singularity exec --bind /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned,/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks clipper_5d865bb.sif clipper --species hg19 --bam /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_FLAG_IP_Aligned.sortedByCoord.dedup.bam --outfile /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/IFIT2_IFIT3_FLAG_IP_clipper_peaks_raw.bed --bonferroni --superlocal
+2026-02-14 16:17:41,003 - ERROR - CLIPper failed: Usage: 
+        THIS IS CLIPPER FOR ECLIP VERSION 2.0.0
+        clipper -b YOUR_BAM_FILE.bam -o YOUR_OUT_FILE.bed -s hg19 
+
+clipper: error: no such option: --bonferroni
+
+2026-02-14 16:17:41,003 - ERROR - Peak calling failed for IFIT2_IFIT3_FLAG_IP
+2026-02-14 16:17:41,006 - INFO - 
+======================================================================
+2026-02-14 16:17:41,006 - INFO - Processing: IFIT2_IFIT3_HA_IP
+2026-02-14 16:17:41,006 - INFO - ======================================================================
+2026-02-14 16:17:41,007 - INFO - Calling peaks for IFIT2_IFIT3_HA_IP using CLIPper...
+2026-02-14 16:17:41,007 - INFO -   Execution mode: singularity
+2026-02-14 16:17:41,007 - INFO -   Species: hg19
+2026-02-14 16:17:41,007 - INFO -   FDR threshold: 0.05
+2026-02-14 16:17:41,007 - INFO - Using Singularity container: clipper_5d865bb.sif
+2026-02-14 16:17:41,007 - INFO - Command: singularity exec --bind /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned,/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks clipper_5d865bb.sif clipper --species hg19 --bam /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_IP_Aligned.sortedByCoord.dedup.bam --outfile /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/IFIT2_IFIT3_HA_IP_clipper_peaks_raw.bed --bonferroni --superlocal
+2026-02-14 16:17:43,391 - ERROR - CLIPper failed: Usage: 
+        THIS IS CLIPPER FOR ECLIP VERSION 2.0.0
+        clipper -b YOUR_BAM_FILE.bam -o YOUR_OUT_FILE.bed -s hg19 
+
+clipper: error: no such option: --bonferroni
+
+2026-02-14 16:17:43,391 - ERROR - Peak calling failed for IFIT2_IFIT3_HA_IP
+2026-02-14 16:17:43,395 - INFO - 
+======================================================================
+2026-02-14 16:17:43,395 - INFO - Processing: IFIT2_alone_FLAG_IP
+2026-02-14 16:17:43,395 - INFO - ======================================================================
+2026-02-14 16:17:43,397 - INFO - Calling peaks for IFIT2_alone_FLAG_IP using CLIPper...
+2026-02-14 16:17:43,397 - INFO -   Execution mode: singularity
+2026-02-14 16:17:43,397 - INFO -   Species: hg19
+2026-02-14 16:17:43,397 - INFO -   FDR threshold: 0.05
+2026-02-14 16:17:43,397 - INFO - Using Singularity container: clipper_5d865bb.sif
+2026-02-14 16:17:43,397 - INFO - Command: singularity exec --bind /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned,/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks clipper_5d865bb.sif clipper --species hg19 --bam /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_alone_FLAG_IP_Aligned.sortedByCoord.dedup.bam --outfile /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/IFIT2_alone_FLAG_IP_clipper_peaks_raw.bed --bonferroni --superlocal
+2026-02-14 16:17:45,838 - ERROR - CLIPper failed: Usage: 
+        THIS IS CLIPPER FOR ECLIP VERSION 2.0.0
+        clipper -b YOUR_BAM_FILE.bam -o YOUR_OUT_FILE.bed -s hg19 
+
+clipper: error: no such option: --bonferroni
+
+2026-02-14 16:17:45,838 - ERROR - Peak calling failed for IFIT2_alone_FLAG_IP
+2026-02-14 16:17:45,854 - INFO - 
+======================================================================
+2026-02-14 16:17:45,854 - INFO - Processing: IFIT3_alone_HA_IP
+2026-02-14 16:17:45,854 - INFO - ======================================================================
+2026-02-14 16:17:45,859 - INFO - Calling peaks for IFIT3_alone_HA_IP using CLIPper...
+2026-02-14 16:17:45,859 - INFO -   Execution mode: singularity
+2026-02-14 16:17:45,859 - INFO -   Species: hg19
+2026-02-14 16:17:45,859 - INFO -   FDR threshold: 0.05
+2026-02-14 16:17:45,860 - INFO - Using Singularity container: clipper_5d865bb.sif
+2026-02-14 16:17:45,860 - INFO - Command: singularity exec --bind /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned,/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks clipper_5d865bb.sif clipper --species hg19 --bam /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT3_alone_HA_IP_Aligned.sortedByCoord.dedup.bam --outfile /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/IFIT3_alone_HA_IP_clipper_peaks_raw.bed --bonferroni --superlocal
+2026-02-14 16:17:48,346 - ERROR - CLIPper failed: Usage: 
+        THIS IS CLIPPER FOR ECLIP VERSION 2.0.0
+        clipper -b YOUR_BAM_FILE.bam -o YOUR_OUT_FILE.bed -s hg19 
+
+clipper: error: no such option: --bonferroni
+
+2026-02-14 16:17:48,346 - ERROR - Peak calling failed for IFIT3_alone_HA_IP
+2026-02-14 16:17:48,352 - INFO - 
+======================================================================
+2026-02-14 16:17:48,352 - INFO - Processing: WT_FLAG_IP
+2026-02-14 16:17:48,352 - INFO - ======================================================================
+2026-02-14 16:17:48,355 - INFO - Calling peaks for WT_FLAG_IP using CLIPper...
+2026-02-14 16:17:48,355 - INFO -   Execution mode: singularity
+2026-02-14 16:17:48,355 - INFO -   Species: hg19
+2026-02-14 16:17:48,355 - INFO -   FDR threshold: 0.05
+2026-02-14 16:17:48,355 - INFO - Using Singularity container: clipper_5d865bb.sif
+2026-02-14 16:17:48,355 - INFO - Command: singularity exec --bind /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned,/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks clipper_5d865bb.sif clipper --species hg19 --bam /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_FLAG_IP_Aligned.sortedByCoord.dedup.bam --outfile /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/WT_FLAG_IP_clipper_peaks_raw.bed --bonferroni --superlocal
+2026-02-14 16:17:50,805 - ERROR - CLIPper failed: Usage: 
+        THIS IS CLIPPER FOR ECLIP VERSION 2.0.0
+        clipper -b YOUR_BAM_FILE.bam -o YOUR_OUT_FILE.bed -s hg19 
+
+clipper: error: no such option: --bonferroni
+
+2026-02-14 16:17:50,805 - ERROR - Peak calling failed for WT_FLAG_IP
+2026-02-14 16:17:50,817 - INFO - 
+======================================================================
+2026-02-14 16:17:50,817 - INFO - Processing: WT_HA_IP
+2026-02-14 16:17:50,817 - INFO - ======================================================================
+2026-02-14 16:17:50,823 - INFO - Calling peaks for WT_HA_IP using CLIPper...
+2026-02-14 16:17:50,823 - INFO -   Execution mode: singularity
+2026-02-14 16:17:50,823 - INFO -   Species: hg19
+2026-02-14 16:17:50,823 - INFO -   FDR threshold: 0.05
+2026-02-14 16:17:50,823 - INFO - Using Singularity container: clipper_5d865bb.sif
+2026-02-14 16:17:50,823 - INFO - Command: singularity exec --bind /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned,/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks clipper_5d865bb.sif clipper --species hg19 --bam /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_HA_IP_Aligned.sortedByCoord.dedup.bam --outfile /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/WT_HA_IP_clipper_peaks_raw.bed --bonferroni --superlocal
+2026-02-14 16:17:53,290 - ERROR - CLIPper failed: Usage: 
+        THIS IS CLIPPER FOR ECLIP VERSION 2.0.0
+        clipper -b YOUR_BAM_FILE.bam -o YOUR_OUT_FILE.bed -s hg19 
+
+clipper: error: no such option: --bonferroni
+
+2026-02-14 16:17:53,290 - ERROR - Peak calling failed for WT_HA_IP
+2026-02-14 16:17:53,290 - INFO - 
+======================================================================
+2026-02-14 16:17:53,291 - INFO - Peak Calling Summary
+2026-02-14 16:17:53,291 - INFO - ======================================================================
+2026-02-14 16:17:53,291 - INFO - Successful: 0/6
+2026-02-14 16:17:53,291 - INFO - Failed: 6/6
+2026-02-14 16:17:53,291 - INFO - 
+======================================================================
+2026-02-14 16:17:53,291 - INFO - Peak calling complete!
+2026-02-14 16:17:53,291 - INFO - ======================================================================
+2026-02-14 16:17:53,291 - INFO - 
+Output files:
+2026-02-14 16:17:53,291 - INFO -   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/*_clipper_peaks.bed (raw CLIPper peaks)
+2026-02-14 16:17:53,291 - INFO -   /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/*_normalized_peaks.bed (input-normalized peaks)
+2026-02-14 16:17:53,291 - INFO - 
+Next steps:
+2026-02-14 16:17:53,291 - INFO -   python scripts/05_analyze_utrs.py
+2026-02-14 16:21:25,064 - INFO - ======================================================================
+2026-02-14 16:21:25,065 - INFO - IFIT2-IFIT3 eCLIP Analysis: Peak Calling with CLIPper
+2026-02-14 16:21:25,065 - INFO - ======================================================================
+2026-02-14 16:21:25,065 - INFO - 
+Using Yeo lab CLIPper for peak calling
+2026-02-14 16:21:25,065 - INFO -   Execution mode: singularity
+2026-02-14 16:21:25,065 - INFO -   Container: clipper_5d865bb.sif
+2026-02-14 16:21:25,065 - INFO -   Species: hg19
+2026-02-14 16:21:25,065 - INFO -   FDR: 0.05
+2026-02-14 16:21:25,065 - INFO -   Fold-change threshold: 2.0
+2026-02-14 16:21:25,065 - INFO -   P-value threshold: 0.001
+2026-02-14 16:21:25,065 - INFO - 
+Calling peaks for 6 IP samples
+
+2026-02-14 16:21:25,066 - INFO - 
+======================================================================
+2026-02-14 16:21:25,066 - INFO - Processing: IFIT2_IFIT3_FLAG_IP
+2026-02-14 16:21:25,066 - INFO - ======================================================================
+2026-02-14 16:21:25,067 - INFO - Calling peaks for IFIT2_IFIT3_FLAG_IP using CLIPper...
+2026-02-14 16:21:25,067 - INFO -   Execution mode: singularity
+2026-02-14 16:21:25,067 - INFO -   Species: hg19
+2026-02-14 16:21:25,067 - INFO -   FDR threshold: 0.05
+2026-02-14 16:21:25,067 - INFO - Using Singularity container: clipper_5d865bb.sif
+2026-02-14 16:21:25,067 - INFO - Command: singularity exec --bind /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned,/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks clipper_5d865bb.sif clipper -s hg19 -b /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_FLAG_IP_Aligned.sortedByCoord.dedup.bam -o /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/IFIT2_IFIT3_FLAG_IP_clipper_peaks_raw.bed
+2026-02-14 16:21:32,431 - ERROR - CLIPper failed: samtools index: "/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_FLAG_IP_Aligned.sortedByCoord.dedup.bam" is in a format that cannot be usefully indexed
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/opt/conda/envs/clipper3/lib/python3.7/multiprocessing/pool.py", line 121, in worker
+    result = (True, func(*args, **kwds))
+  File "/opt/conda/envs/clipper3/lib/python3.7/site-packages/clipper-2.0.0-py3.7-linux-x86_64.egg/clipper/src/call_peak.py", line 924, in call_peaks
+    bam_fileobj = pysam.Samfile(bam_file, 'rb')
+  File "pysam/libcalignmentfile.pyx", line 741, in pysam.libcalignmentfile.AlignmentFile.__cinit__
+  File "pysam/libcalignmentfile.pyx", line 990, in pysam.libcalignmentfile.AlignmentFile._open
+ValueError: file has no sequences defined (mode='rb') - is it SAM/BAM format? Consider opening with check_sq=False
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/conda/envs/clipper3/bin/clipper", line 33, in <module>
+    sys.exit(load_entry_point('clipper==2.0.0', 'console_scripts', 'clipper')())
+  File "/opt/conda/envs/clipper3/lib/python3.7/site-packages/clipper-2.0.0-py3.7-linux-x86_64.egg/clipper/src/main.py", line 266, in call_main
+    main(options)
+  File "/opt/conda/envs/clipper3/lib/python3.7/site-packages/clipper-2.0.0-py3.7-linux-x86_64.egg/clipper/src/main.py", line 105, in main
+    peaks_dicts.append(job.get(timeout=options.timeout))
+  File "/opt/conda/envs/clipper3/lib/python3.7/multiprocessing/pool.py", line 657, in get
+    raise self._value
+ValueError: file has no sequences defined (mode='rb') - is it SAM/BAM format? Consider opening with check_sq=False
+
+2026-02-14 16:21:32,431 - ERROR - Peak calling failed for IFIT2_IFIT3_FLAG_IP
+2026-02-14 16:21:32,433 - INFO - 
+======================================================================
+2026-02-14 16:21:32,433 - INFO - Processing: IFIT2_IFIT3_HA_IP
+2026-02-14 16:21:32,433 - INFO - ======================================================================
+2026-02-14 16:21:32,435 - INFO - Calling peaks for IFIT2_IFIT3_HA_IP using CLIPper...
+2026-02-14 16:21:32,435 - INFO -   Execution mode: singularity
+2026-02-14 16:21:32,435 - INFO -   Species: hg19
+2026-02-14 16:21:32,435 - INFO -   FDR threshold: 0.05
+2026-02-14 16:21:32,435 - INFO - Using Singularity container: clipper_5d865bb.sif
+2026-02-14 16:21:32,435 - INFO - Command: singularity exec --bind /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned,/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks clipper_5d865bb.sif clipper -s hg19 -b /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_IP_Aligned.sortedByCoord.dedup.bam -o /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/IFIT2_IFIT3_HA_IP_clipper_peaks_raw.bed

@@ -1,0 +1,8 @@
+2026-01-31 08:43:19,605 - __main__ - INFO - ======================================================================
+2026-01-31 08:43:19,616 - __main__ - INFO - Processing sample: IFIT2_IFIT3_HA_IP
+2026-01-31 08:43:19,616 - __main__ - INFO - ======================================================================
+2026-01-31 08:43:19,616 - __main__ - INFO - Description: IFIT2+IFIT3 co-expression, HA IP (IFIT3 pulldown)
+2026-01-31 08:43:19,616 - __main__ - INFO - SRR: SRR31773515
+2026-01-31 08:43:19,616 - __main__ - INFO - 
+2026-01-31 08:43:19,637 - __main__ - ERROR - FASTQ file not found for SRR31773515 in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq
+2026-01-31 08:43:19,638 - __main__ - ERROR - Run 02_download_data.py first

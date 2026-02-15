@@ -1,0 +1,8 @@
+2026-01-31 08:42:27,511 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:27,513 - __main__ - INFO - Processing sample: WT_FLAG_IP
+2026-01-31 08:42:27,513 - __main__ - INFO - ======================================================================
+2026-01-31 08:42:27,513 - __main__ - INFO - Description: Wild-type, FLAG IP control
+2026-01-31 08:42:27,513 - __main__ - INFO - SRR: SRR31773539
+2026-01-31 08:42:27,513 - __main__ - INFO - 
+2026-01-31 08:42:27,516 - __main__ - ERROR - FASTQ file not found for SRR31773539 in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq
+2026-01-31 08:42:27,517 - __main__ - ERROR - Run 02_download_data.py first

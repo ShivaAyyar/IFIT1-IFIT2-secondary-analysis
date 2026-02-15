@@ -1,0 +1,35 @@
+2026-02-14 20:28:30,347 - INFO - ======================================================================
+2026-02-14 20:28:30,348 - INFO - IFIT2-IFIT3 eCLIP Analysis: Peak Calling with CLIPper
+2026-02-14 20:28:30,348 - INFO - ======================================================================
+2026-02-14 20:28:30,348 - INFO - 
+Using Yeo lab CLIPper for peak calling
+2026-02-14 20:28:30,348 - INFO -   Execution mode: singularity
+2026-02-14 20:28:30,348 - INFO -   Container: clipper_5d865bb.sif
+2026-02-14 20:28:30,348 - INFO -   Species: hg19
+2026-02-14 20:28:30,348 - INFO -   FDR: 0.05
+2026-02-14 20:28:30,348 - INFO -   Fold-change threshold: 2.0
+2026-02-14 20:28:30,348 - INFO -   P-value threshold: 0.001
+2026-02-14 20:28:30,348 - INFO - 
+Processing single sample (index 4): WT_FLAG_IP
+2026-02-14 20:28:30,351 - INFO - Validating BAM file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_FLAG_IP_Aligned.sortedByCoord.dedup.bam
+2026-02-14 20:28:35,256 - INFO -   Read count: 16,701,725
+2026-02-14 20:28:35,256 - INFO - 
+======================================================================
+2026-02-14 20:28:35,257 - INFO - Processing: WT_FLAG_IP
+2026-02-14 20:28:35,257 - INFO - ======================================================================
+2026-02-14 20:28:35,257 - INFO - Calling peaks for WT_FLAG_IP using CLIPper...
+2026-02-14 20:28:35,257 - INFO -   Execution mode: singularity
+2026-02-14 20:28:35,258 - INFO -   Species: hg19
+2026-02-14 20:28:35,258 - INFO -   FDR threshold: 0.05
+2026-02-14 20:28:35,258 - INFO - Using Singularity container: clipper_5d865bb.sif
+2026-02-14 20:28:35,258 - INFO - Command: singularity exec --bind /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned,/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks clipper_5d865bb.sif clipper -s hg19 -b /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/WT_FLAG_IP_Aligned.sortedByCoord.dedup.bam -o /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/WT_FLAG_IP_clipper_peaks_raw.bed
+2026-02-15 01:37:22,221 - INFO - Converting CLIPper BED8 output to standard BED6 format...
+2026-02-15 01:37:22,434 - INFO - CLIPper found 48,981 peaks
+2026-02-15 01:37:38,214 - INFO - Normalizing peaks against input for WT_FLAG_IP...
+2026-02-15 01:37:38,215 - INFO -   IP reads: 16,701,725
+2026-02-15 01:37:38,215 - INFO -   Input reads: 25,714,912
+2026-02-15 01:46:57,364 - INFO - Normalized peaks: 528 pass thresholds
+2026-02-15 01:46:57,365 - INFO -   (FC >= 2.0, -log10(p) >= 3.00)
+2026-02-15 01:46:57,436 - INFO - Peak calling complete for WT_FLAG_IP
+2026-02-15 01:46:57,436 - INFO - 
+Sample WT_FLAG_IP completed successfully!

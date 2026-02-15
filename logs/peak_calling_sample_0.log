@@ -1,0 +1,35 @@
+2026-02-14 20:28:35,260 - INFO - ======================================================================
+2026-02-14 20:28:35,261 - INFO - IFIT2-IFIT3 eCLIP Analysis: Peak Calling with CLIPper
+2026-02-14 20:28:35,261 - INFO - ======================================================================
+2026-02-14 20:28:35,261 - INFO - 
+Using Yeo lab CLIPper for peak calling
+2026-02-14 20:28:35,261 - INFO -   Execution mode: singularity
+2026-02-14 20:28:35,262 - INFO -   Container: clipper_5d865bb.sif
+2026-02-14 20:28:35,262 - INFO -   Species: hg19
+2026-02-14 20:28:35,262 - INFO -   FDR: 0.05
+2026-02-14 20:28:35,262 - INFO -   Fold-change threshold: 2.0
+2026-02-14 20:28:35,262 - INFO -   P-value threshold: 0.001
+2026-02-14 20:28:35,262 - INFO - 
+Processing single sample (index 0): IFIT2_IFIT3_FLAG_IP
+2026-02-14 20:28:35,265 - INFO - Validating BAM file: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_FLAG_IP_Aligned.sortedByCoord.dedup.bam
+2026-02-14 20:28:40,165 - INFO -   Read count: 20,341,513
+2026-02-14 20:28:40,166 - INFO - 
+======================================================================
+2026-02-14 20:28:40,166 - INFO - Processing: IFIT2_IFIT3_FLAG_IP
+2026-02-14 20:28:40,166 - INFO - ======================================================================
+2026-02-14 20:28:40,167 - INFO - Calling peaks for IFIT2_IFIT3_FLAG_IP using CLIPper...
+2026-02-14 20:28:40,167 - INFO -   Execution mode: singularity
+2026-02-14 20:28:40,168 - INFO -   Species: hg19
+2026-02-14 20:28:40,168 - INFO -   FDR threshold: 0.05
+2026-02-14 20:28:40,169 - INFO - Using Singularity container: clipper_5d865bb.sif
+2026-02-14 20:28:40,169 - INFO - Command: singularity exec --bind /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned,/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks:/mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks clipper_5d865bb.sif clipper -s hg19 -b /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_FLAG_IP_Aligned.sortedByCoord.dedup.bam -o /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/peaks/IFIT2_IFIT3_FLAG_IP_clipper_peaks_raw.bed
+2026-02-15 00:42:47,722 - INFO - Converting CLIPper BED8 output to standard BED6 format...
+2026-02-15 00:42:47,915 - INFO - CLIPper found 60,123 peaks
+2026-02-15 00:42:57,168 - INFO - Normalizing peaks against input for IFIT2_IFIT3_FLAG_IP...
+2026-02-15 00:42:57,169 - INFO -   IP reads: 20,341,513
+2026-02-15 00:42:57,169 - INFO -   Input reads: 21,164,397
+2026-02-15 00:49:18,755 - INFO - Normalized peaks: 1,812 pass thresholds
+2026-02-15 00:49:18,757 - INFO -   (FC >= 2.0, -log10(p) >= 3.00)
+2026-02-15 00:49:18,943 - INFO - Peak calling complete for IFIT2_IFIT3_FLAG_IP
+2026-02-15 00:49:18,944 - INFO - 
+Sample IFIT2_IFIT3_FLAG_IP completed successfully!

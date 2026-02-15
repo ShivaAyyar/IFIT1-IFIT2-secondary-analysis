@@ -1,0 +1,31 @@
+2026-01-31 13:43:29,697 - __main__ - INFO - ======================================================================
+2026-01-31 13:43:29,697 - __main__ - INFO - Processing sample: IFIT2_IFIT3_HA_IP
+2026-01-31 13:43:29,697 - __main__ - INFO - ======================================================================
+2026-01-31 13:43:29,697 - __main__ - INFO - Description: IFIT2+IFIT3 co-expression, HA IP (IFIT3 pulldown)
+2026-01-31 13:43:29,697 - __main__ - INFO - SRR: SRR31773515
+2026-01-31 13:43:29,697 - __main__ - INFO - 
+2026-01-31 13:43:29,730 - __main__ - INFO - Input FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/raw_fastq/SRR31773515.fastq.gz
+2026-01-31 13:43:29,730 - __main__ - INFO - 
+[Step 1/4] Running FastQC...
+2026-01-31 13:43:29,731 - utils - INFO - Running FastQC on 1 files...
+2026-01-31 13:45:16,796 - utils - INFO - FastQC complete. Reports in /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/qc
+2026-01-31 13:45:16,807 - __main__ - INFO - 
+[Step 2/4] Extracting UMI and trimming adapters...
+2026-01-31 13:45:16,813 - utils - INFO - Extracting UMI from SRR31773515...
+2026-01-31 13:53:46,013 - utils - INFO - Trimming adapters from SRR31773515...
+2026-01-31 13:54:12,570 - utils - INFO - Trimming complete: N/A reads passed
+2026-01-31 13:54:12,571 - __main__ - INFO - Trimmed FASTQ: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/trimmed/SRR31773515_trimmed.fastq.gz
+2026-01-31 13:54:12,571 - __main__ - INFO - 
+[Step 3/4] Aligning with STAR...
+2026-01-31 13:54:12,617 - utils - INFO - Aligning IFIT2_IFIT3_HA_IP with STAR (single-end mode)...
+2026-01-31 13:59:03,104 - utils - INFO - Alignment complete: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_IP_Aligned.sortedByCoord.out.bam
+2026-01-31 13:59:03,126 - __main__ - INFO - Aligned BAM: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_IP_Aligned.sortedByCoord.out.bam
+2026-01-31 13:59:03,126 - __main__ - INFO - 
+[Step 4/4] Removing PCR duplicates...
+2026-01-31 13:59:03,134 - utils - INFO - Deduplicating IFIT2_IFIT3_HA_IP...
+2026-01-31 14:35:02,955 - utils - INFO - Deduplication complete: 5,254,013 reads (85.5% duplicates removed)
+2026-01-31 14:35:02,956 - __main__ - INFO - Deduplicated BAM: /mnt/vstor/SOM_CCCC_JGS25/sayyar/IFIT1-IFIT2-secondary-analysis/data/aligned/IFIT2_IFIT3_HA_IP_dedup.bam
+2026-01-31 14:35:02,956 - __main__ - INFO - 
+======================================================================
+2026-01-31 14:35:02,956 - __main__ - INFO - ✓ Sample processing complete: IFIT2_IFIT3_HA_IP
+2026-01-31 14:35:02,956 - __main__ - INFO - ======================================================================
