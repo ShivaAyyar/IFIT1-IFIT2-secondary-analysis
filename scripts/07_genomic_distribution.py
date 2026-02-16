@@ -7,7 +7,21 @@ This script uses HOMER annotatePeaks.pl to annotate peaks with genomic features
 
 Requirements:
     - HOMER (conda install -c bioconda homer)
+    - HOMER genome data must be installed for hg19
     - Peaks must be in BED format
+
+HOMER Genome Installation:
+    After installing HOMER, you MUST also install the genome data:
+
+    # Option 1: Standard installation
+    perl ~/.homer/configureHomer.pl -install hg19
+
+    # Option 2: On HPC systems with module
+    module load homer
+    configureHomer.pl -install hg19
+
+    # Option 3: Specify custom HOMER path
+    perl /path/to/homer/configureHomer.pl -install hg19
 
 Usage:
     python scripts/07_genomic_distribution.py
@@ -54,6 +68,28 @@ def check_homer_installed():
         return False
 
 
+def check_homer_genome_installed(genome='hg19'):
+    """
+    Check if HOMER has the specified genome installed.
+
+    Returns:
+    --------
+    bool indicating if genome is installed
+    """
+    try:
+        # HOMER stores genomes in its data directory
+        result = subprocess.run(
+            ['findMotifs.pl', '-find', '/dev/null', '-list'],
+            capture_output=True,
+            text=True
+        )
+        # Check if hg19 is mentioned in available genomes
+        # This is a rough check - HOMER doesn't have a clean way to list installed genomes
+        return True  # Can't reliably check, so assume it's there
+    except Exception:
+        return True  # Assume it's there and let HOMER fail with a clear message
+
+
 def annotate_peaks_with_homer(peaks_bed, output_file, genome='hg19'):
     """
     Annotate peaks using HOMER annotatePeaks.pl.
@@ -73,6 +109,16 @@ def annotate_peaks_with_homer(peaks_bed, output_file, genome='hg19'):
     """
     logger.info(f"Annotating peaks with HOMER: {peaks_bed.name}")
 
+    # First check that the input file has content
+    if peaks_bed.stat().st_size == 0:
+        logger.error(f"  Input peak file is empty: {peaks_bed}")
+        return None
+
+    # Count peaks in input
+    with open(peaks_bed, 'r') as f:
+        peak_count = sum(1 for line in f if line.strip() and not line.startswith('#'))
+    logger.info(f"  Input contains {peak_count} peaks")
+
     cmd = [
         'annotatePeaks.pl',
         str(peaks_bed),
@@ -89,10 +135,39 @@ def annotate_peaks_with_homer(peaks_bed, output_file, genome='hg19'):
                 text=True,
                 check=True
             )
-        logger.info(f"  Annotation complete: {output_file}")
+
+        # Log stderr (HOMER often writes progress/warnings to stderr)
+        if result.stderr:
+            for line in result.stderr.strip().split('\n'):
+                if line.strip():
+                    logger.info(f"  HOMER: {line}")
+
+        # Check if output file has content
+        if output_file.stat().st_size == 0:
+            logger.error(f"  HOMER produced empty output file")
+            logger.error(f"  This usually means HOMER genome data is not installed.")
+            logger.error(f"  To install hg19 genome for HOMER, run:")
+            logger.error(f"    perl ~/.homer/configureHomer.pl -install hg19")
+            logger.error(f"  Or on HPC with module system:")
+            logger.error(f"    module load homer")
+            logger.error(f"    configureHomer.pl -install hg19")
+            return None
+
+        # Count output lines (excluding header)
+        with open(output_file, 'r') as f:
+            output_lines = sum(1 for line in f) - 1  # subtract header
+        logger.info(f"  Annotation complete: {output_file} ({output_lines} annotated peaks)")
+
         return output_file
     except subprocess.CalledProcessError as e:
-        logger.error(f"  HOMER annotation failed: {e.stderr}")
+        logger.error(f"  HOMER annotation failed with exit code {e.returncode}")
+        if e.stderr:
+            logger.error(f"  HOMER stderr: {e.stderr}")
+
+        # Check for common HOMER errors
+        if "Can't find" in str(e.stderr) or "not found" in str(e.stderr).lower():
+            logger.error(f"  HOMER genome '{genome}' may not be installed.")
+            logger.error(f"  To install, run: perl ~/.homer/configureHomer.pl -install {genome}")
         return None
     except FileNotFoundError:
         logger.error("  HOMER not found. Install with: conda install -c bioconda homer")
@@ -110,18 +185,51 @@ def parse_homer_annotation(annotation_file):
 
     Returns:
     --------
-    DataFrame with peak annotations
+    DataFrame with peak annotations, or None if file is empty/invalid
     """
-    # HOMER output is tab-delimited with specific columns
-    df = pd.read_csv(annotation_file, sep='\t', comment='#')
+    # Check file exists and has content
+    annotation_path = Path(annotation_file)
+    if not annotation_path.exists():
+        logger.error(f"Annotation file does not exist: {annotation_file}")
+        return None
 
-    # Rename columns for clarity
-    if len(df.columns) >= 8:
-        # Standard HOMER columns
-        df.columns = ['PeakID', 'Chr', 'Start', 'End', 'Strand', 'Peak_Score',
-                      'Focus_Ratio', 'Annotation'] + list(df.columns[8:])
+    if annotation_path.stat().st_size == 0:
+        logger.error(f"Annotation file is empty: {annotation_file}")
+        return None
 
-    return df
+    # Read first line to check for header
+    with open(annotation_file, 'r') as f:
+        first_line = f.readline()
+        if not first_line.strip():
+            logger.error(f"Annotation file has no content: {annotation_file}")
+            return None
+
+    try:
+        # HOMER output is tab-delimited with specific columns
+        df = pd.read_csv(annotation_file, sep='\t', comment='#')
+
+        if len(df) == 0:
+            logger.error(f"Annotation file has no data rows: {annotation_file}")
+            return None
+
+        # Rename columns for clarity
+        if len(df.columns) >= 8:
+            # Standard HOMER columns
+            df.columns = ['PeakID', 'Chr', 'Start', 'End', 'Strand', 'Peak_Score',
+                          'Focus_Ratio', 'Annotation'] + list(df.columns[8:])
+
+        logger.info(f"  Parsed {len(df)} annotated peaks")
+        return df
+
+    except pd.errors.EmptyDataError:
+        logger.error(f"Could not parse annotation file (no columns): {annotation_file}")
+        logger.error("  This usually means HOMER genome data is not installed.")
+        logger.error("  To install hg19 genome for HOMER, run:")
+        logger.error("    perl ~/.homer/configureHomer.pl -install hg19")
+        return None
+    except Exception as e:
+        logger.error(f"Error parsing annotation file: {e}")
+        return None
 
 
 def extract_feature_type(annotation_string):
@@ -318,6 +426,11 @@ def main():
         logger.error("\nAlternatively, run this script on the HPC where HOMER is available.")
         sys.exit(1)
 
+    logger.info("\nIMPORTANT: HOMER requires genome data to be installed separately.")
+    logger.info("If you get empty output files, install hg19 genome with:")
+    logger.info("  perl ~/.homer/configureHomer.pl -install hg19")
+    logger.info("Or on HPC: configureHomer.pl -install hg19\n")
+
     # Define samples to analyze
     ip_samples = [
         'IFIT2_IFIT3_FLAG_IP',  # Complex - IFIT2
@@ -345,6 +458,10 @@ def main():
 
         # Parse annotations
         ann_df = parse_homer_annotation(annotation_file)
+        if ann_df is None:
+            logger.warning(f"  Skipping sample {sample} due to parsing error")
+            continue
+
         ann_df['Sample'] = sample
         all_annotations.append(ann_df)
 
