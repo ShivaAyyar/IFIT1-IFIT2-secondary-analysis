@@ -16,6 +16,11 @@ dependencies:
   - samtools        # BAM file processing
   - bedtools        # Genomic interval operations
 
+  # Extended analysis tools
+  - homer           # Peak annotation and motif analysis
+  - deeptools       # Metagene profiles and coverage analysis
+  - meme            # Motif discovery (STREME, MEME, FIMO)
+
   # Perl for Yeo lab normalization scripts
   - perl            # Required for Yeo lab normalization scripts
   - perl-statistics-basic          # Perl Statistics::Basic module
@@ -36,5 +41,7 @@ dependencies:
     - pysam
     - pybedtools
     - pyBigWig
+    - gprofiler-official  # GO/KEGG/Reactome enrichment analysis
+    - biopython           # Sequence handling for motif analysis
     - --no-build-isolation
     - git+https://github.com/YeoLab/clipper.git@5d865bb17b2bc6787b4c382bc857119ae917ad59  # Yeo lab CLIPper (specific commit from eCLIP)

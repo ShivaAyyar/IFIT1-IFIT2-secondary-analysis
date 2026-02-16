@@ -3,7 +3,9 @@
     "allow": [
       "Bash(curl:*)",
       "Bash(chmod:*)",
-      "Bash(del \"c:\\\\Users\\\\s3ayy\\\\OneDrive\\\\Documents\\\\GitHub\\\\IFIT1-IFIT2-secondary-analysis\\\\environment_py38.yml\")"
+      "Bash(del \"c:\\\\Users\\\\s3ayy\\\\OneDrive\\\\Documents\\\\GitHub\\\\IFIT1-IFIT2-secondary-analysis\\\\environment_py38.yml\")",
+      "Bash(wc:*)",
+      "Bash(python3:*)"
     ]
   }
 }
