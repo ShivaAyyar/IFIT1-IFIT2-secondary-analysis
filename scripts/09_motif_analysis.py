@@ -439,11 +439,31 @@ def main():
 
     # Check for genome FASTA
     genome_fasta = REFERENCE_DIR / 'hg19.fa'
-    if not genome_fasta.exists():
-        genome_fasta = REFERENCE_DIR / 'hg19.fa.gz'
+    genome_fasta_gz = REFERENCE_DIR / 'hg19.fa.gz'
+
+    if not genome_fasta.exists() and genome_fasta_gz.exists():
+        # bedtools cannot use gzip-compressed FASTA, need to decompress
+        logger.info(f"Decompressing {genome_fasta_gz.name} for bedtools...")
+        logger.info("  (This may take a few minutes and ~3GB disk space)")
+
+        import gzip
+        import shutil
+
+        try:
+            with gzip.open(genome_fasta_gz, 'rb') as f_in:
+                with open(genome_fasta, 'wb') as f_out:
+                    shutil.copyfileobj(f_in, f_out)
+            logger.info(f"  Decompressed to {genome_fasta}")
+        except Exception as e:
+            logger.error(f"  Failed to decompress genome: {e}")
+            logger.error("  You can manually decompress with: gunzip -k data/reference/hg19.fa.gz")
+            sys.exit(1)
+
     if not genome_fasta.exists():
         logger.error(f"Genome FASTA not found at {REFERENCE_DIR}")
         logger.error("Please download hg19.fa to the reference directory")
+        logger.error("  wget https://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.fa.gz")
+        logger.error("  gunzip hg19.fa.gz")
         sys.exit(1)
 
     # Define samples
